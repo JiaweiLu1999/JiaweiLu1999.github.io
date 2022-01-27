@@ -8,7 +8,7 @@ cover: true
 
 # Hello World!
 
-**Welcome to my zone!**.
+**Welcome to my zone!**
 
 This site is my **portfolio** and **blog** where I express myself and share my ideas, experience and knowledge.
 
