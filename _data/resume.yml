@@ -82,7 +82,7 @@ projects:
     endDate: "2021-12-24"
     summary: "In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, 
     defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects. 
-    You can find our final paper [here](https://github.com/JiaweiLu1999/DRL-Object-Detection/blob/main/paper/E6885_Final_Project.pdf)."
+    You can find our final paper [here](/papers/E6885_Final_Project.pdf)."
     url: "https://github.com/JiaweiLu1999/DRL-Object-Detection"
     highlights:
       - "Replaced feature extractor part of Q-Network with several advanced CNN network in state space."
@@ -95,7 +95,7 @@ projects:
     endDate: "2021-12-24"
     summary: "We implemented mask mixture training and energy normalization. Those two changes have been proved to successfully improve the robustness of the SSI-ResU-Net. 
     Besides, a combination of those two modifications can further improve the generalizing ability of SSI-ResU-Net. 
-    You can find our final paper [here](https://github.com/JiaweiLu1999/E4040-Final-Project-21Fall/blob/master/E4040.2021Fall.YZJH.report.ys3493.zy2501.jl5999.pdf)."
+    You can find our final paper [here](/papers/E4040.2021Fall.YZJH.report.ys3493.zy2501.jl5999.pdf)."
     url: "https://github.com/JiaweiLu1999/E4040-Final-Project-21Fall"
     highlights:
       - "Implemented a modified version of U-Net named SSI-ResU-Net."
@@ -116,7 +116,7 @@ projects:
     endDate: "2021-10-15"
     summary: "We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach, 
     we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset."
-    url: "https://mj-hwang.github.io/data/20pal.pdf"
+    url: "/papers/20pal.pdf"
     highlights:
       - "Used the Annotation Tool to select pixels in each frame of the video in the data set."
       - "Designed the corresponding algorithm to improve the picture stability."

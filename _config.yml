@@ -479,7 +479,7 @@ jekyll_compose:
           url: https://example.com
 
 # jekyll-feed settings
-feed:
-  categories:
-    - devlog
-    - review
+# feed:
+#   categories:
+#     - devlog
+#     - review

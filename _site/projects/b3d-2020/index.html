@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="zh, en">
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Motion Planning in Understructured Road Environments with Stacked Reservation Grids | Jiawei Lu</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Motion Planning in Understructured Road Environments with Stacked Reservation Grids" />
+<meta name="author" content="Jiawei Lu" />
+<meta property="og:locale" content="zh, en" />
+<meta name="description" content="“We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach, we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset. “" />
+<meta property="og:description" content="“We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach, we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset. “" />
+<link rel="canonical" href="http://localhost:4000/projects/b3d-2020/" />
+<meta property="og:url" content="http://localhost:4000/projects/b3d-2020/" />
+<meta property="og:site_name" content="Jiawei Lu" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/b3d.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/b3d.jpg" />
+<meta property="twitter:title" content="Motion Planning in Understructured Road Environments with Stacked Reservation Grids" />
+<script type="application/ld+json">
+{"image":{"srcset":{"1920w":"/assets/img/projects/b3d.jpg","960w":"/assets/img/projects/b3d@0,5x.jpg","480w":"/assets/img/projects/b3d@0,25x.jpg"},"url":"http://localhost:4000/assets/img/projects/b3d.jpg","@type":"imageObject"},"headline":"Motion Planning in Understructured Road Environments with Stacked Reservation Grids","dateModified":"2020-02-01T00:00:00-05:00","datePublished":"2020-02-01T00:00:00-05:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"author":{"@type":"Person","name":"Jiawei Lu"},"url":"http://localhost:4000/projects/b3d-2020/","@type":"WebPage","description":"“We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach, we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset. “","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Deep Learning,Reinforcement Learning">
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Jiawei Lu">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Jiawei Lu">
+
+<meta name="generator" content="Hydejack v9.1.5" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/projects/b3d-2020/" hreflang="zh, en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+  <link rel="dns-prefetch" href="/assets/js/search-worker-9.1.5.js" as="worker" id="_hrefSearch">
+
+
+
+
+
+
+<!-- For sidebar folder -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="/assets/js/sidebar-folder.js"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-68290006-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-68290006-3');
+</script>
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script");n.src=e,t&&a(n,"load",t,{once:!0});t=c.scripts[0];return t.parentNode.insertBefore(n,t),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._advertise = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-01-27T22:33:26-05:00',
+  };
+  w._clapButton = false;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.5.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR%7CJetBrains+Mono%7CNanum+Gothic+Coding&display=swap" id="_fontsPreload">
+
+
+
+
+<!--<![endif]-->
+
+
+
+
+
+</head>
+
+<body class="dark-mode no-break-layout no-large-headings">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  !function(e,s){var d="light-mode",o="dark-mode",a=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(o=(e=a<=e._sunrise||a>=e._sunset?o:d)==o?d:o,s.body.classList.add(e),s.body.classList.remove(o))}(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-project"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/projects/">projects</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>b3d-2020</span>
+        
+      </li>
+    
+  
+</ul></nav>
+
+  
+
+
+
+
+
+
+
+
+
+
+<article
+  id="project"
+  class="page mb6"
+  role="article"
+  vocab="http://schema.org/" typeof="CreativeWork" resource="#project"
+  >
+  <header>
+    <h1 class="page-title" property="name">Motion Planning in Understructured Road Environments with Stacked Reservation Grids</h1>
+
+    <p class="post-date heading">
+      <span>
+        
+
+        
+          <a href="/projects.html" class="flip-title" property="genre">Projects</a>
+        
+
+        
+          |
+          <time datetime="2020-02-01T00:00:00-05:00">2020</time>
+          
+        
+      </span>
+
+      <span class="ellipsis ml1" data-tippy-content="Links">
+        <span class="sr-only">| Links:</span>
+        <span class="icon-link" title="Links"></span>
+        
+          <a class="external" href="/papers/20pal.pdf" property="sameAs">Paper</a>
+          
+        
+      </span>
+    </p>
+
+    
+    <div class="img-wrapper lead aspect-ratio sixteen-nine ">
+      
+        
+
+
+<img
+  
+    src="/assets/img/projects/b3d.jpg"
+    srcset="/assets/img/projects/b3d.jpg 1920w,/assets/img/projects/b3d@0,5x.jpg 960w,/assets/img/projects/b3d@0,25x.jpg 480w"
+    sizes="(min-width:90em)48rem,(min-width:54em)42rem,(min-width:42em)38rem,100vw"
+  
+  alt="Motion Planning in Understructured Road Environments with Stacked Reservation Grids"
+  
+  property="image"
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+      
+    </div>
+
+    
+
+
+
+  
+    <p class="note-sm" property="description">
+      “We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach,  we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset. “
+
+    </p>
+  
+
+
+    <meta property="disambiguatingDescription" content="We propose a new data structure named stacked reservation grid (SRG). To test our proposed approach, we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset."/>
+  </header>
+
+  <ul>
+  <li><strong>Abstract</strong></li>
+</ul>
+
+<p>Motion planning of autonomous vehicles in understructured road environments is challenging owing to a lack of an efficient and analyzable representation of the contextual information. On one hand, idealistic representations like splines, while efficient and interpretable, are not versatile enough to encode the full complexity of the environment. On the other hand, high-fidelity representations like images, although rich in contents, are computationally expensive to decode and are not readily analyzable.</p>
+
+<p>To address this problem, we propose a new data structure named stacked reservation grid (SRG). We show that SRG can encode a vast amount of information from the environment without loss of computational efficiency and analytical tractability. We first define SRG by drawing a comparison with the classical data structure, i.e., the occupancy grid. Next, we describe how to compute SRG offline from a continuous history of occupancy grids. After, we propose a neural network model to estimate SRG from a recent motion history of the surrounding objects.</p>
+
+<p>Finally, we show that SRG can be efficiently applied in a linear program to solve motion planning. To test our proposed approach, we build a dataset named the Berkeley Deep Drive Drone (B3D) dataset and describe how to develop a validation procedure using the B3D dataset. The dataset and related codes will be open sourced at https://fywu85.github.io/b3d/.</p>
+
+</article>
+
+
+  
+    <hr class="dingbat related mb6" />
+  
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/jiawei-1.jpg"
+    
+    
+  
+  alt="Jiawei Lu"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>MSEE student at <a href="https://www.ee.columbia.edu/">Columbia Univeristy</a>.<br />
+Please check my <a href="/resume/">Resume</a> to find out more about me!<br /></p>
+
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/jiaweilucolumbia" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/JiaweiLu1999" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/javeylew" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:jl5999@columbia.edu" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb4" role="complementary">  <h2>Other Projects</h2>  <div class="columns">              <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/dl-4040project-2021/#project"  >  <meta property="name" content="A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization"/>  <meta property="image" content="/assets/img/projects/SSI-ResU-Net.png"/>  <a href="/projects/dl-4040project-2021/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img ">              <img      src="/assets/img/projects/SSI-ResU-Net.png"    srcset="/assets/img/projects/SSI-ResU-Net.png 1920w,/assets/img/projects/SSI-ResU-Net@0,5x.png 960w,/assets/img/projects/SSI-ResU-Net@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/dl-4040project-2021/" class="flip-title" property="mainEntityOfPage">A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      We implemented mask mixture training and energy normalization. Those two changes have been proved to successfully improve the robustness of the SSI-ResU-Net. Besides, a combination of those two modifications can further improve the generalizing ability of SSI-ResU-Net.    </p>      <a class="fill-card no-hover" href="/projects/dl-4040project-2021/" tabindex="-1"><span class="sr-only">Continue reading A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization</span></a></article>      </div>                  <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/iot-4764project-2021/#project"  >  <meta property="name" content="Smart Vending Machine"/>  <meta property="image" content="/assets/img/projects/iot.jpg"/>  <a href="/projects/iot-4764project-2021/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img ">              <img      src="/assets/img/projects/iot.jpg"    srcset="/assets/img/projects/iot.jpg 1920w,/assets/img/projects/iot@0,5x.jpg 960w,/assets/img/projects/iot@0,25x.jpg 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Smart Vending Machine"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/iot-4764project-2021/" class="flip-title" property="mainEntityOfPage">Smart Vending Machine</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      We design a Smart Vending Machine based on Raspberry Pi 4B. We can buy things in two ways: Face Login or Android App. <a href="https://www.youtube.com/watch?v=YiR1l8RYqwU">Here is a live demo of our product!</a>    </p>      <a class="fill-card no-hover" href="/projects/iot-4764project-2021/" tabindex="-1"><span class="sr-only">Continue reading Smart Vending Machine</span></a></article>      </div>      </div></aside>
+
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2022 Jiawei Lu. All rights reserved.
+</small></p>
+  
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky no-fouc">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/jiawei.jpg" class="avatar" alt="Jiawei Lu" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Jiawei Lu</h2></a>
+    
+    
+      <p class="">
+        MSEE @ Columbia
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+          <div class="list-wrapper">
+            <a  href="/about/" class="sidebar-nav-item"  >About Me</a>
+            
+          </div>
+          
+        </li>
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+          <div class="list-wrapper">
+            <a  href="/resume/" class="sidebar-nav-item"  >Resume</a>
+            
+          </div>
+          
+        </li>
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+          <div class="list-wrapper">
+            <a  href="/projects.html" class="sidebar-nav-item"  >Projects</a>
+            
+          </div>
+          
+        </li>
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+            <input type="checkbox" id="folder-checkbox-12" />
+          
+          <div class="list-wrapper">
+            <a  href="/studylog/" class="sidebar-nav-item"  >Study Blog</a>
+            
+              <button class="spread-btn" onclick="javascript:spread(12)">
+                <label id="spread-icon-12" class="material-icons">arrow_right</label>
+              </button>
+            
+          </div>
+          
+            <ul class="list-body">
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-cv/">Computer Vision</a>
+                </li>
+            
+          
+            
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-nlp/">Natrual Laguage Processing</a>
+                </li>
+            
+          
+            
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-ml/">Machine Learning</a>
+                </li>
+            
+          
+            
+                <li>
+                  <a class="sidebar-nav-subitem" href="/tag-dl/">Deep Learning</a>
+                </li>
+            </ul>
+          
+        </li>
+      
+    
+  
+    
+      
+        
+        
+        <li>
+          
+          <div class="list-wrapper">
+            <a  href="/tags/" class="sidebar-nav-item"  >Tags</a>
+            
+          </div>
+          
+        </li>
+      
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/jiaweilucolumbia" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/JiaweiLu1999" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/javeylew" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:jl5999@columbia.edu" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+<script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+<script src="/assets/js/hydejack-9.1.5.js" type="module"></script>
+<script src="/assets/js/LEGACY-hydejack-9.1.5.js" nomodule defer></script>
+
+
+
+
+<script type="module">
+  if ('serviceWorker' in navigator) {
+    /**/
+    navigator.serviceWorker.getRegistration()
+      .then(r => r.unregister())
+      .catch(() => {});
+    /**/
+  }
+</script>
+<!--<![endif]-->
+
+  
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <clap-config>
+    <clap-text at="1">Keep going!</clap-text>
+    <clap-text at="2">Keep going ×2!</clap-text>
+    <clap-text at="3">Give me more!</clap-text>
+    <clap-text at="5">Thank you, thank you</clap-text>
+    <clap-text at="7">Far too kind!</clap-text>
+    <clap-text at="10">Never gonna give me up?</clap-text>
+    <clap-text at="14">Never gonna let me down?</clap-text>
+    <clap-text at="20">Turn around and desert me!</clap-text>
+    <clap-text at="30">You're an addict!</clap-text>
+    <clap-text at="40">Son of a clapper!</clap-text>
+    <clap-text at="50">No way</clap-text>
+    <clap-text at="60">Go back to work!</clap-text>
+    <clap-text at="70">This is getting out of <em>hand</em></clap-text>
+    <clap-text at="80">Unbelievable</clap-text>
+    <clap-text at="90">PREPOSTEROUS</clap-text>
+    <clap-text at="100">I N S A N I T Y</clap-text>
+    <clap-text at="185"><span style="font-family:monospace">FEED ME A STRAY CAT</span></clap-text>
+  </clap-config>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_cookies-banner-template">
+  <div id="_cookies-banner" class="navbar fixed-bottom CookiesOK">
+    <div class="content">
+      <div class="nav-btn-bar">
+        <small class="faded">
+          <span>This site uses cookies. <a href="/cookies-policy/">Cookies Policy</a>.
+</span>
+          <button id="_cookies-ok" class="btn btn-primary btn-sm">Okay</button>
+        </small>
+      </div>
+    </div>
+  </div>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+
+</body>
+</html>
