@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-02T18:30:52-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-04T19:09:06-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Two sum&lt;/p&gt;
@@ -27,6 +27,192 @@
     &lt;ul&gt;
       &lt;li&gt;DP&lt;/li&gt;
       &lt;li&gt;Java vs Python&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Regular Expression Matching
+    &lt;ul&gt;
+      &lt;li&gt;Recursion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Container With Most Water
+    &lt;ul&gt;
+      &lt;li&gt;Two pointers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;3 Sum
+    &lt;ul&gt;
+      &lt;li&gt;2 sum&lt;/li&gt;
+      &lt;li&gt;Hashmap&lt;/li&gt;
+      &lt;li&gt;sort&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Letter Combinations of a Phone Number
+    &lt;ul&gt;
+      &lt;li&gt;Hashmap&lt;/li&gt;
+      &lt;li&gt;Recursion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remove Nth Node From End of List
+    &lt;ul&gt;
+      &lt;li&gt;Symmetric&lt;/li&gt;
+      &lt;li&gt;Two pointers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Valid Parentheses
+    &lt;ul&gt;
+      &lt;li&gt;Stack&lt;/li&gt;
+      &lt;li&gt;Hashmap for pair&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Generate Parentheses
+    &lt;ul&gt;
+      &lt;li&gt;DFS&lt;/li&gt;
+      &lt;li&gt;Stack&lt;/li&gt;
+      &lt;li&gt;DP&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Merge k Sorted Lists
+    &lt;ul&gt;
+      &lt;li&gt;Priority Queue
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Queue&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PriorityQueue&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Python &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(list)&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reverse Nodes in k-Group
+    &lt;ul&gt;
+      &lt;li&gt;Reverse list&lt;/li&gt;
+      &lt;li&gt;6 pointers: dummy, jump, l, r, prev, cur&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Next Permutation
+    &lt;ul&gt;
+      &lt;li&gt;Find Pattern: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums[i-1] &amp;lt; nums[i]&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Decreasing List&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Longest Valid Parentheses
+    &lt;ul&gt;
+      &lt;li&gt;Find Pattern: If ‘)’ more than ‘(‘, reset&lt;/li&gt;
+      &lt;li&gt;Stack&lt;/li&gt;
+      &lt;li&gt;Two traverse&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Search in Rotated Sorted Array
+    &lt;ul&gt;
+      &lt;li&gt;Binary Search&lt;/li&gt;
+      &lt;li&gt;Mind &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left &amp;lt;= mid&lt;/code&gt; since &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mid = (left + right)//2&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Find First and Last Position of Element in Sorted Array
+    &lt;ul&gt;
+      &lt;li&gt;Binary Search&lt;/li&gt;
+      &lt;li&gt;Find left most: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left = mid + 1, right = mid&lt;/code&gt;
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python = 
+  while left &amp;lt; right:
+      mid = (left + right) // 2
+      if nums[mid] &amp;lt; target:
+          left = mid + 1
+      else:
+          right = mid
+ &lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Find right most: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left = mid, right = mid - 1&lt;/code&gt;
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python = 
+  while left &amp;lt; right:
+      mid = (left + right + 1) // 2
+      if nums[mid] &amp;gt; target:
+          right = mid - 1
+      else:
+          left = mid
+ &lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Search Insert Position
+    &lt;ul&gt;
+      &lt;li&gt;Binary Search&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Combination Sum
+    &lt;ul&gt;
+      &lt;li&gt;Backtracking/DFS
+        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;First Missing Positive
+    &lt;ul&gt;
+      &lt;li&gt;Find Pattern: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1,2,...,n+1]&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Hash &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums[nums[i]%n] += n&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Trapping Rain Water
+    &lt;ul&gt;
+      &lt;li&gt;DP: store leftMax and rightMax&lt;/li&gt;
+      &lt;li&gt;Two pointers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jump Game II
+    &lt;ul&gt;
+      &lt;li&gt;Two pointers: left for n steps, right for n+1 steps&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Permutations
+    &lt;ul&gt;
+      &lt;li&gt;DFS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rotate Image
+    &lt;ul&gt;
+      &lt;li&gt;List transportation with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zip()&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotate = flip + trans&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Group Anagrams
+    &lt;ul&gt;
+      &lt;li&gt;permutations have the same characters: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted()&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dict&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Maximum Subarray
+    &lt;ul&gt;
+      &lt;li&gt;Divide and Conquer&lt;/li&gt;
+      &lt;li&gt;DP&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jump Game
+    &lt;ul&gt;
+      &lt;li&gt;two pointers&lt;/li&gt;
+      &lt;li&gt;from end to start: where is the last reachable point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Merge Intervals
+    &lt;ul&gt;
+      &lt;li&gt;Graph&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sort()&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;max()&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unique Paths
+    &lt;ul&gt;
+      &lt;li&gt;DP&lt;/li&gt;
+      &lt;li&gt;Math $C_m^n$&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Minimum Path Sum
+    &lt;ul&gt;
+      &lt;li&gt;DP&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Climbing Stairs
+    &lt;ul&gt;
+      &lt;li&gt;DP&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry></feed>

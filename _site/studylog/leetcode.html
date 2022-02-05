@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Leetcode" />
 <script type="application/ld+json">
-{"headline":"Leetcode","dateModified":"2022-02-02T00:00:00-05:00","datePublished":"2022-02-02T00:00:00-05:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/leetcode.html"},"author":{"@type":"Person","name":"Jiawei Lu"},"url":"http://localhost:4000/studylog/leetcode.html","@type":"BlogPosting","description":"Two sum","@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"headline":"Leetcode","dateModified":"2022-02-02T00:00:00-05:00","datePublished":"2022-02-02T00:00:00-05:00","url":"http://localhost:4000/studylog/leetcode.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/leetcode.html"},"description":"Two sum","author":{"@type":"Person","name":"Jiawei Lu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -120,7 +120,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-02-02T18:30:52-05:00',
+    INDEX_KEY: 'index--2022-02-04T19:09:06-05:00',
   };
   w._clapButton = false;
 }(window);</script>
@@ -286,6 +286,192 @@
     <ul>
       <li>DP</li>
       <li>Java vs Python</li>
+    </ul>
+  </li>
+  <li>Regular Expression Matching
+    <ul>
+      <li>Recursion</li>
+    </ul>
+  </li>
+  <li>Container With Most Water
+    <ul>
+      <li>Two pointers</li>
+    </ul>
+  </li>
+  <li>3 Sum
+    <ul>
+      <li>2 sum</li>
+      <li>Hashmap</li>
+      <li>sort</li>
+    </ul>
+  </li>
+  <li>Letter Combinations of a Phone Number
+    <ul>
+      <li>Hashmap</li>
+      <li>Recursion</li>
+    </ul>
+  </li>
+  <li>Remove Nth Node From End of List
+    <ul>
+      <li>Symmetric</li>
+      <li>Two pointers</li>
+    </ul>
+  </li>
+  <li>Valid Parentheses
+    <ul>
+      <li>Stack</li>
+      <li>Hashmap for pair</li>
+    </ul>
+  </li>
+  <li>Generate Parentheses
+    <ul>
+      <li>DFS</li>
+      <li>Stack</li>
+      <li>DP</li>
+    </ul>
+  </li>
+  <li>Merge k Sorted Lists
+    <ul>
+      <li>Priority Queue
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kn">from</span> <span class="nn">Queue</span> <span class="kn">import</span> <span class="n">PriorityQueue</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Python <code class="language-plaintext highlighter-rouge">sorted(list)</code></li>
+    </ul>
+  </li>
+  <li>Reverse Nodes in k-Group
+    <ul>
+      <li>Reverse list</li>
+      <li>6 pointers: dummy, jump, l, r, prev, cur</li>
+    </ul>
+  </li>
+  <li>Next Permutation
+    <ul>
+      <li>Find Pattern: <code class="language-plaintext highlighter-rouge">nums[i-1] &lt; nums[i]</code></li>
+      <li>Decreasing List</li>
+    </ul>
+  </li>
+  <li>Longest Valid Parentheses
+    <ul>
+      <li>Find Pattern: If ‘)’ more than ‘(‘, reset</li>
+      <li>Stack</li>
+      <li>Two traverse</li>
+    </ul>
+  </li>
+  <li>Search in Rotated Sorted Array
+    <ul>
+      <li>Binary Search</li>
+      <li>Mind <code class="language-plaintext highlighter-rouge">left &lt;= mid</code> since <code class="language-plaintext highlighter-rouge">mid = (left + right)//2</code></li>
+    </ul>
+  </li>
+  <li>Find First and Last Position of Element in Sorted Array
+    <ul>
+      <li>Binary Search</li>
+      <li>Find left most: <code class="language-plaintext highlighter-rouge">left = mid + 1, right = mid</code>
+  <code class="language-plaintext highlighter-rouge">python = 
+  while left &lt; right:
+      mid = (left + right) // 2
+      if nums[mid] &lt; target:
+          left = mid + 1
+      else:
+          right = mid
+ </code></li>
+      <li>Find right most: <code class="language-plaintext highlighter-rouge">left = mid, right = mid - 1</code>
+  <code class="language-plaintext highlighter-rouge">python = 
+  while left &lt; right:
+      mid = (left + right + 1) // 2
+      if nums[mid] &gt; target:
+          right = mid - 1
+      else:
+          left = mid
+ </code></li>
+    </ul>
+  </li>
+  <li>Search Insert Position
+    <ul>
+      <li>Binary Search</li>
+    </ul>
+  </li>
+  <li>Combination Sum
+    <ul>
+      <li>Backtracking/DFS
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">target</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">return</span>
+      <span class="k">elif</span> <span class="n">target</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="n">res</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+      <span class="k">else</span><span class="p">:</span>
+          <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+              <span class="n">dfs</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">:],</span> <span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">res</span><span class="p">)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>First Missing Positive
+    <ul>
+      <li>Find Pattern: <code class="language-plaintext highlighter-rouge">[1,2,...,n+1]</code></li>
+      <li>Hash <code class="language-plaintext highlighter-rouge">nums[nums[i]%n] += n</code></li>
+    </ul>
+  </li>
+  <li>Trapping Rain Water
+    <ul>
+      <li>DP: store leftMax and rightMax</li>
+      <li>Two pointers</li>
+    </ul>
+  </li>
+  <li>Jump Game II
+    <ul>
+      <li>Two pointers: left for n steps, right for n+1 steps</li>
+    </ul>
+  </li>
+  <li>Permutations
+    <ul>
+      <li>DFS</li>
+    </ul>
+  </li>
+  <li>Rotate Image
+    <ul>
+      <li>List transportation with <code class="language-plaintext highlighter-rouge">zip()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">rotate = flip + trans</code></li>
+    </ul>
+  </li>
+  <li>Group Anagrams
+    <ul>
+      <li>permutations have the same characters: <code class="language-plaintext highlighter-rouge">sorted()</code> + <code class="language-plaintext highlighter-rouge">dict</code></li>
+    </ul>
+  </li>
+  <li>Maximum Subarray
+    <ul>
+      <li>Divide and Conquer</li>
+      <li>DP</li>
+    </ul>
+  </li>
+  <li>Jump Game
+    <ul>
+      <li>two pointers</li>
+      <li>from end to start: where is the last reachable point</li>
+    </ul>
+  </li>
+  <li>Merge Intervals
+    <ul>
+      <li>Graph</li>
+      <li><code class="language-plaintext highlighter-rouge">sort()</code> + <code class="language-plaintext highlighter-rouge">max()</code></li>
+    </ul>
+  </li>
+  <li>Unique Paths
+    <ul>
+      <li>DP</li>
+      <li>Math $C_m^n$</li>
+    </ul>
+  </li>
+  <li>Minimum Path Sum
+    <ul>
+      <li>DP</li>
+    </ul>
+  </li>
+  <li>Climbing Stairs
+    <ul>
+      <li>DP</li>
     </ul>
   </li>
 </ol>
