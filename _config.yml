@@ -213,7 +213,7 @@ disqus:                jiawei-lu
 giscus:
   repo:                "JiaweiLu1999/JiaweiLu1999.github.io"
   repo-id:             "R_kgDOGt0vAg"
-  category:            "Announcements"
+  category:            "Comments"
   category-id:         "DIC_kwDOGt0vAs4CA218"
   mapping:             "pathname"
   reaction-enabled:    "1"
