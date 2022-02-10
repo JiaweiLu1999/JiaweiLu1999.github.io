@@ -1,5 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-05T16:22:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-09T22:15:02-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Derivative
+    &lt;ul&gt;
+      &lt;li&gt;Scalar&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Directional Derivative
+    &lt;ul&gt;
+      &lt;li&gt;Scalar&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gradient
+    &lt;ul&gt;
+      &lt;li&gt;Vector
+        &lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;import numpy as np
+import scipy.signal as sig
+data = np.array([[0, 105, 0], [40, 255, 90], [0, 55, 0]])
+G_x = sig.convolve2d(data, np.array([[-1, 0, 1]]), mode=&apos;valid&apos;)
+G_y = sig.convolve2d(data, np.array([[-1], [0], [1]]), mode=&apos;valid&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Common Image Processing Kernels(&lt;a href=&quot;https://zhuanlan.zhihu.com/p/67197912&quot;&gt;Useful URL&lt;/a&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;Prewitt operator&lt;/li&gt;
+      &lt;li&gt;Sobel operator&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;histogram-of-oriented-gradients-hog&quot;&gt;Histogram of Oriented Gradients (HOG)&lt;/h2&gt;
+&lt;p&gt;Useful &lt;a href=&quot;https://zhuanlan.zhihu.com/p/85829145&quot;&gt;URL&lt;/a&gt; in zhihu.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-hog-works&quot;&gt;How HOG works&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Preprocess the image, including resizing and color normalization.
+    &lt;ul&gt;
+      &lt;li&gt;Gamma Correction&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;\begin{equation}
+f(x) = x^{\gamma}
+\end{equation}&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# Gamma Correction
+import cv2
+import numpy as np
+img = cv2.imread(&apos;gamma.jpg&apos;, 0)
+img2 = np.power(img/float(np.max(img)), 1.5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Compute the gradient vector of every pixel, as well as its magnitude and direction&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;\begin{equation}
+g = \sqrt{g_x^2+g_y^2} \ 
+\theta = \arctan \frac{g_y}{g_x}
+\end{equation}&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;import cv2
+import numpy as np
+
+# Read image
+img = cv2.imread(&apos;runner.jpg&apos;)
+img = np.float32(img) / 255.0  # 归一化
+
+# x,y gradient
+gx = cv2.Sobel(img, cv2.CV_32F, 1, 0, ksize=1)
+gy = cv2.Sobel(img, cv2.CV_32F, 0, 1, ksize=1)
+
+# gradient
+mag, angle = cv2.cartToPolar(gx, gy, angleInDegrees=True)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Divide the image into many 8x8 pixel cells. In each cell, the magnitude values of these 64 cells are binned and cumulatively added into 9 buckets of unsigned direction (no sign, so 0-180 degree rather than 0-360 degree; this is a practical choice based on empirical experiments).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Then we slide a 2x2 cells (thus 16x16 pixels) block across the image. In each block region, 4 histograms of 4 cells are concatenated into one-dimensional vector of 36 values and then normalized to have an unit weight. The final HOG feature vector is the concatenation of all the block vectors. It can be fed into a classifier like SVM for learning object recognition tasks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# HOG
+from skimage import feature, exposure
+import cv2
+image = cv2.imread(&apos;/home/zxd/Pictures/Selection_018.jpg&apos;)
+fd, hog_image = feature.hog(image, orientations=9, pixels_per_cell=(16, 16),
+                    cells_per_block=(2, 2), visualize=True)
+
+# Rescale histogram for better display
+hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
+
+cv2.imshow(&apos;img&apos;, image)
+cv2.imshow(&apos;hog&apos;, hog_image_rescaled)
+cv2.waitKey(0)==ord(&apos;q&apos;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;image-segmentation-felzenszwalbs-algorithm&quot;&gt;Image Segmentation (Felzenszwalb’s Algorithm)&lt;/h2&gt;
+
+&lt;h3 id=&quot;graph-construction&quot;&gt;Graph Construction&lt;/h3&gt;
+
+&lt;p&gt;There are two approaches to constructing a graph out of an image.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Grid Graph: Each pixel is only connected with surrounding neighbours (8 other cells in total). The edge weight is the absolute difference between the intensity values of the pixels.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Two sum&lt;/p&gt;
 
@@ -249,4 +369,152 @@
       &lt;li&gt;Backtracking / DFS&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry></feed>
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;oa&quot;&gt;OA&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Merge Sort: Counting Inversions&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the &apos;countInversions&apos; function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def countInversions(arr):
+    # Write your code here
+    temp_arr = [0]*len(arr)
+    return mergeSort(arr, temp_arr, 0, len(arr) - 1)
+
+def mergeSort(arr, temp_arr, left, right):
+    inv_cnt = 0
+    if left &amp;lt; right:
+        mid = (left + right) // 2
+        inv_cnt += mergeSort(arr, temp_arr, left, mid)
+        inv_cnt += mergeSort(arr, temp_arr, mid + 1, right)
+        inv_cnt += merge(arr, temp_arr, left, mid, right)
+    return inv_cnt
+
+def merge(arr, temp_arr, left, mid, right):
+    i, j, k = left, mid+1, left
+    inv_cnt = 0
+    while i &amp;lt;= mid and j &amp;lt;= right:
+        if arr[i] &amp;gt; arr[j]:
+            inv_cnt += mid - i + 1
+            temp_arr[k] = arr[j]
+            j += 1
+
+        else:
+            temp_arr[k] = arr[i]
+            i += 1
+        k += 1
+    
+    while i &amp;lt;= mid:
+        temp_arr[k] = arr[i]
+        i += 1
+        k += 1
+    while j &amp;lt;= right:
+        temp_arr[k] = arr[j]
+        j += 1
+        k += 1
+    
+    for x in range(left, right + 1):
+        arr[x] = temp_arr[x]
+    
+    return inv_cnt
+    
+
+if __name__ == &apos;__main__&apos;:
+    fptr = open(os.environ[&apos;OUTPUT_PATH&apos;], &apos;w&apos;)
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        arr = list(map(int, input().rstrip().split()))
+
+        result = countInversions(arr)
+
+        fptr.write(str(result) + &apos;\n&apos;)
+
+    fptr.close()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stars and Bars:
+```python=
+def stars_and_bars(s, startIndex, endIndex):
+ bars = {}&lt;/p&gt;
+
+    &lt;p&gt;cnt = 0
+ for i in range(len(s)):
+     if s[i] == “|”:
+         bars[i] = cnt
+         cnt += 1
+ lst = list(bars)
+ startIndex, endIndex = [x-1 for x in startIndex], &lt;br /&gt;
+                        [x-1 for x in endIndex]
+ start_bar, end_bar = [], []&lt;/p&gt;
+
+    &lt;p&gt;for i in range(len(startIndex)):
+     start_bar.append(binary_start(lst, startIndex[i]))
+ for i in range(len(endIndex)):
+     end_bar.append(binary_end(lst, endIndex[i]))&lt;/p&gt;
+
+    &lt;p&gt;print(bars)
+ print(start_bar, end_bar)&lt;/p&gt;
+
+    &lt;p&gt;res = 0
+ for i in range(len(start_bar)):&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; res += max(0, (end_bar[i] - start_bar[i] - 1) - \
+            (bars[end_bar[i]] - bars[start_bar[i]] - 1))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;return res&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;def binary_start(nums, target):
+    left, right = 0, len(nums) -1&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while left &amp;lt; right:
+    mid = (left+right)//2
+    if nums[mid] == target:
+        return nums[mid]
+    elif nums[mid] &amp;gt; target:
+        right = mid
+    else:
+        left = mid + 1
+return nums[right]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;def binary_end(nums, target):
+    left, right = 0, len(nums) -1&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while left &amp;lt; right:
+    mid = (left+right+1)//2
+    if nums[mid] == target:
+        return nums[mid]
+    elif nums[mid] &amp;gt; target:
+        right = mid - 1
+    else:
+        left = mid  
+return nums[left]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;```&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry></feed>

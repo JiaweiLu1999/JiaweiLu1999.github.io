@@ -120,7 +120,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-02-05T16:22:04-05:00',
+    INDEX_KEY: 'index--2022-02-09T22:15:02-05:00',
   };
   w._clapButton = false;
 }(window);</script>
@@ -509,6 +509,154 @@
     </ul>
   </li>
 </ol>
+
+<h1 id="oa">OA</h1>
+
+<ol>
+  <li>Merge Sort: Counting Inversions</li>
+</ol>
+
+<pre><code class="language-python=">#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'countInversions' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def countInversions(arr):
+    # Write your code here
+    temp_arr = [0]*len(arr)
+    return mergeSort(arr, temp_arr, 0, len(arr) - 1)
+
+def mergeSort(arr, temp_arr, left, right):
+    inv_cnt = 0
+    if left &lt; right:
+        mid = (left + right) // 2
+        inv_cnt += mergeSort(arr, temp_arr, left, mid)
+        inv_cnt += mergeSort(arr, temp_arr, mid + 1, right)
+        inv_cnt += merge(arr, temp_arr, left, mid, right)
+    return inv_cnt
+
+def merge(arr, temp_arr, left, mid, right):
+    i, j, k = left, mid+1, left
+    inv_cnt = 0
+    while i &lt;= mid and j &lt;= right:
+        if arr[i] &gt; arr[j]:
+            inv_cnt += mid - i + 1
+            temp_arr[k] = arr[j]
+            j += 1
+
+        else:
+            temp_arr[k] = arr[i]
+            i += 1
+        k += 1
+    
+    while i &lt;= mid:
+        temp_arr[k] = arr[i]
+        i += 1
+        k += 1
+    while j &lt;= right:
+        temp_arr[k] = arr[j]
+        j += 1
+        k += 1
+    
+    for x in range(left, right + 1):
+        arr[x] = temp_arr[x]
+    
+    return inv_cnt
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        arr = list(map(int, input().rstrip().split()))
+
+        result = countInversions(arr)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+</code></pre>
+
+<ol>
+  <li>
+    <p>Stars and Bars:
+```python=
+def stars_and_bars(s, startIndex, endIndex):
+ bars = {}</p>
+
+    <p>cnt = 0
+ for i in range(len(s)):
+     if s[i] == “|”:
+         bars[i] = cnt
+         cnt += 1
+ lst = list(bars)
+ startIndex, endIndex = [x-1 for x in startIndex], <br />
+                        [x-1 for x in endIndex]
+ start_bar, end_bar = [], []</p>
+
+    <p>for i in range(len(startIndex)):
+     start_bar.append(binary_start(lst, startIndex[i]))
+ for i in range(len(endIndex)):
+     end_bar.append(binary_end(lst, endIndex[i]))</p>
+
+    <p>print(bars)
+ print(start_bar, end_bar)</p>
+
+    <p>res = 0
+ for i in range(len(start_bar)):</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> res += max(0, (end_bar[i] - start_bar[i] - 1) - \
+            (bars[end_bar[i]] - bars[start_bar[i]] - 1))
+</code></pre></div>    </div>
+
+    <p>return res</p>
+  </li>
+</ol>
+
+<p>def binary_start(nums, target):
+    left, right = 0, len(nums) -1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while left &lt; right:
+    mid = (left+right)//2
+    if nums[mid] == target:
+        return nums[mid]
+    elif nums[mid] &gt; target:
+        right = mid
+    else:
+        left = mid + 1
+return nums[right]
+</code></pre></div></div>
+
+<p>def binary_end(nums, target):
+    left, right = 0, len(nums) -1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while left &lt; right:
+    mid = (left+right+1)//2
+    if nums[mid] == target:
+        return nums[mid]
+    elif nums[mid] &gt; target:
+        right = mid - 1
+    else:
+        left = mid  
+return nums[left]
+</code></pre></div></div>
+
+<p>```</p>
 
   
 </article>

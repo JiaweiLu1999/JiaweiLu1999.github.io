@@ -18,22 +18,22 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Machine Learning | Jiawei Lu</title>
+<title>Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS | Jiawei Lu</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Machine Learning" />
+<meta property="og:title" content="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" />
 <meta name="author" content="Jiawei Lu" />
 <meta property="og:locale" content="zh, en" />
-<meta name="description" content="Machine Learning related posts." />
-<meta property="og:description" content="Machine Learning related posts." />
-<link rel="canonical" href="http://localhost:4000/tag-ml/" />
-<meta property="og:url" content="http://localhost:4000/tag-ml/" />
+<meta name="description" content="Jan 28, 2021. The raw blog URL." />
+<meta property="og:description" content="Jan 28, 2021. The raw blog URL." />
+<link rel="canonical" href="http://localhost:4000/studylog/ODDP1.html" />
+<meta property="og:url" content="http://localhost:4000/studylog/ODDP1.html" />
 <meta property="og:site_name" content="Jiawei Lu" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-02-09T22:15:02-05:00" />
+<meta property="article:published_time" content="2022-02-09T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Machine Learning" />
+<meta property="twitter:title" content="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" />
 <script type="application/ld+json">
-{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"headline":"Machine Learning","dateModified":"2022-02-09T22:15:02-05:00","datePublished":"2022-02-09T22:15:02-05:00","url":"http://localhost:4000/tag-ml/","@type":"WebPage","description":"Machine Learning related posts.","author":{"@type":"Person","name":"Jiawei Lu"},"@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"headline":"Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS","dateModified":"2022-02-09T00:00:00-05:00","datePublished":"2022-02-09T00:00:00-05:00","url":"http://localhost:4000/studylog/ODDP1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/ODDP1.html"},"description":"Jan 28, 2021. The raw blog URL.","author":{"@type":"Person","name":"Jiawei Lu"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -64,7 +64,7 @@
 
 
 
-<link rel="alternate" href="http://localhost:4000/tag-ml/" hreflang="zh, en">
+<link rel="alternate" href="http://localhost:4000/studylog/ODDP1.html" hreflang="zh, en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
 
@@ -189,7 +189,7 @@
 
   <main
   id="_main"
-  class="content layout-tag-list"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -200,50 +200,383 @@
       <li>
         
           <span>/</span>
-          <span>tag-ml</span>
+          
+          
+          <a href="/studylog/">studylog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>ODDP1.html</span>
         
       </li>
     
   
 </ul></nav>
 
-  <article class="page mb6" role="article">
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-studylog-ODDP1" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Machine Learning</h1>
+    <h1 class="post-title flip-project-title">
+      
+        Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-02-09T00:00:00-05:00">09 Feb 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-dl/" class="flip-title">Deep Learning</a>
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+
     
 
 
 
-  
-    <p class="note-sm" >
-      Machine Learning related posts.
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
   
+    <p>Jan 28, 2021.
+The raw blog <a href="https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html">URL</a>.</p>
 
+<h2 id="image-gradient-vector">Image Gradient Vector</h2>
 
+<ul>
+  <li>Derivative
+    <ul>
+      <li>Scalar</li>
+    </ul>
+  </li>
+  <li>Directional Derivative
+    <ul>
+      <li>Scalar</li>
+    </ul>
+  </li>
+  <li>Gradient
+    <ul>
+      <li>Vector
+        <pre><code class="language-python=">import numpy as np
+import scipy.signal as sig
+data = np.array([[0, 105, 0], [40, 255, 90], [0, 55, 0]])
+G_x = sig.convolve2d(data, np.array([[-1, 0, 1]]), mode='valid')
+G_y = sig.convolve2d(data, np.array([[-1], [0], [1]]), mode='valid')
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>Common Image Processing Kernels(<a href="https://zhuanlan.zhihu.com/p/67197912">Useful URL</a>)
+    <ul>
+      <li>Prewitt operator</li>
+      <li>Sobel operator</li>
+    </ul>
+  </li>
+</ul>
 
+<h2 id="histogram-of-oriented-gradients-hog">Histogram of Oriented Gradients (HOG)</h2>
+<p>Useful <a href="https://zhuanlan.zhihu.com/p/85829145">URL</a> in zhihu.</p>
 
+<h3 id="how-hog-works">How HOG works</h3>
+<ol>
+  <li>Preprocess the image, including resizing and color normalization.
+    <ul>
+      <li>Gamma Correction</li>
+    </ul>
+  </li>
+</ol>
 
+<p>\begin{equation}
+f(x) = x^{\gamma}
+\end{equation}</p>
 
+<pre><code class="language-python="># Gamma Correction
+import cv2
+import numpy as np
+img = cv2.imread('gamma.jpg', 0)
+img2 = np.power(img/float(np.max(img)), 1.5)
+</code></pre>
 
+<ol>
+  <li>Compute the gradient vector of every pixel, as well as its magnitude and direction</li>
+</ol>
 
+<p>\begin{equation}
+g = \sqrt{g_x^2+g_y^2} \ 
+\theta = \arctan \frac{g_y}{g_x}
+\end{equation}</p>
 
+<pre><code class="language-python=">import cv2
+import numpy as np
 
+# Read image
+img = cv2.imread('runner.jpg')
+img = np.float32(img) / 255.0  # 归一化
+
+# x,y gradient
+gx = cv2.Sobel(img, cv2.CV_32F, 1, 0, ksize=1)
+gy = cv2.Sobel(img, cv2.CV_32F, 0, 1, ksize=1)
+
+# gradient
+mag, angle = cv2.cartToPolar(gx, gy, angleInDegrees=True)
+</code></pre>
+
+<ol>
+  <li>
+    <p>Divide the image into many 8x8 pixel cells. In each cell, the magnitude values of these 64 cells are binned and cumulatively added into 9 buckets of unsigned direction (no sign, so 0-180 degree rather than 0-360 degree; this is a practical choice based on empirical experiments).</p>
+  </li>
+  <li>
+    <p>Then we slide a 2x2 cells (thus 16x16 pixels) block across the image. In each block region, 4 histograms of 4 cells are concatenated into one-dimensional vector of 36 values and then normalized to have an unit weight. The final HOG feature vector is the concatenation of all the block vectors. It can be fed into a classifier like SVM for learning object recognition tasks.</p>
+  </li>
+</ol>
+
+<pre><code class="language-python="># HOG
+from skimage import feature, exposure
+import cv2
+image = cv2.imread('/home/zxd/Pictures/Selection_018.jpg')
+fd, hog_image = feature.hog(image, orientations=9, pixels_per_cell=(16, 16),
+                    cells_per_block=(2, 2), visualize=True)
+
+# Rescale histogram for better display
+hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
+
+cv2.imshow('img', image)
+cv2.imshow('hog', hog_image_rescaled)
+cv2.waitKey(0)==ord('q')
+</code></pre>
+
+<h2 id="image-segmentation-felzenszwalbs-algorithm">Image Segmentation (Felzenszwalb’s Algorithm)</h2>
+
+<h3 id="graph-construction">Graph Construction</h3>
+
+<p>There are two approaches to constructing a graph out of an image.</p>
+
+<ol>
+  <li>
+    <p>Grid Graph: Each pixel is only connected with surrounding neighbours (8 other cells in total). The edge weight is the absolute difference between the intensity values of the pixels.</p>
+  </li>
+  <li>
+    <p>Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.</p>
+  </li>
+</ol>
+
+  
 </article>
 
 
+
+<applause-button class="mb6"
+    color=rgb(79,177,186)
+    url=http://localhost:4000/studylog/ODDP1.html >
+  </applause-button>
+
+
+
+
+
+
   
-    <hr class="dingbat related mb6" />
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/jiawei-1.jpg"
+    
+    
+  
+  alt="Jiawei Lu"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>MSEE student at <a href="https://www.ee.columbia.edu/">Columbia Univeristy</a>.<br />
+Please check my <a href="/resume/">Resume</a> to find out more about me!<br /></p>
+
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/jiaweilucolumbia" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/JiaweiLu1999" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/javeylew" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:jl5999@columbia.edu" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  
+
+  
+  
+    <script src="https://giscus.app/client.js"
+            data-repo=JiaweiLu1999/JiaweiLu1999.github.io
+            data-repo-id=R_kgDOGt0vAg
+            data-category=Comments
+            data-category-id=DIC_kwDOGt0vAs4CA218
+            data-mapping=pathname
+            data-reactions-enabled=1
+            data-emit-metadata=0
+            data-theme=dark_dimmed
+            data-lang=en
+            crossorigin=anonymous
+            async>
+    </script>
   
 
 
+</aside>
 
+
+  
 
 
   
