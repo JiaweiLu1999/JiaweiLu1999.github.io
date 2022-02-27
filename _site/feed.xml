@@ -1,5 +1,171 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-09T22:15:02-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-26T20:55:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">NLP Lecture 02</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02" /><published>2022-02-26T00:00:00-05:00</published><updated>2022-02-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+
+&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
+  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
+  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
+  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
+  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
+  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
+  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
+&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
+
+&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
+&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
+
+&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
+&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
+
+&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
+
+&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
+  &lt;li&gt;random variable \(X\)&lt;/li&gt;
+  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
+  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
+  &lt;li&gt;conditional probability: 
+\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Independent:
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(A) = P(A|B)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(A, B) = P(A) \cdot P(B)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conditionally Independent
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(B|A,C) =P(B|A)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
+  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
+  &lt;li&gt;Two approaches:
+    &lt;ul&gt;
+      &lt;li&gt;Discriminative algorithms learn 
+  \(P(y | x)\) 
+  directly.&lt;/li&gt;
+      &lt;li&gt;Generative algorithms use Bayes rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
+  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
+      &lt;li&gt;decision trees&lt;/li&gt;
+      &lt;li&gt;random forests&lt;/li&gt;
+      &lt;li&gt;neural networks&lt;/li&gt;
+      &lt;li&gt;log-linear models&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
+  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
+  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;Naive Bayes&lt;/li&gt;
+      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
+      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
+      &lt;li&gt;PCFGs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
+
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\begin{split}
+    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
+    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
+\end{split}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+y* = \arg \max_y P(y) \Pi_i P(x_i|y)
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
+&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
+  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
+  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
