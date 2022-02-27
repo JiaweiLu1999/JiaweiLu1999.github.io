@@ -1,171 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-26T20:55:45-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">NLP Lecture 02</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02" /><published>2022-02-26T00:00:00-05:00</published><updated>2022-02-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
-
-&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
-  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
-  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
-  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
-  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
-  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
-  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
-&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
-
-&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
-&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
-
-&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
-&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
-
-&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
-
-&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
-  &lt;li&gt;random variable \(X\)&lt;/li&gt;
-  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
-  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
-  &lt;li&gt;conditional probability: 
-\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Independent:
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(A) = P(A|B)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(A, B) = P(A) \cdot P(B)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conditionally Independent
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(B|A,C) =P(B|A)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
-  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
-  &lt;li&gt;Two approaches:
-    &lt;ul&gt;
-      &lt;li&gt;Discriminative algorithms learn 
-  \(P(y | x)\) 
-  directly.&lt;/li&gt;
-      &lt;li&gt;Generative algorithms use Bayes rule
-  \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
-  \end{equation}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
-  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
-  &lt;li&gt;Examples:
-    &lt;ul&gt;
-      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
-      &lt;li&gt;decision trees&lt;/li&gt;
-      &lt;li&gt;random forests&lt;/li&gt;
-      &lt;li&gt;neural networks&lt;/li&gt;
-      &lt;li&gt;log-linear models&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
-  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
-  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
-  \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;Examples:
-    &lt;ul&gt;
-      &lt;li&gt;Naive Bayes&lt;/li&gt;
-      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
-      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
-      &lt;li&gt;PCFGs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
-
-&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-\begin{split}
-    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
-    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
-\end{split}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-y* = \arg \max_y P(y) \Pi_i P(x_i|y)
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
-&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
-  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
-  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-27T00:56:18-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
@@ -683,4 +517,404 @@ return nums[right]
 return nums[left]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;```&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry></feed>
+&lt;p&gt;```&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 02</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+
+&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
+  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
+  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
+  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
+  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
+  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
+  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
+&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
+
+&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
+&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
+
+&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
+&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
+
+&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
+
+&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
+  &lt;li&gt;random variable \(X\)&lt;/li&gt;
+  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
+  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
+  &lt;li&gt;conditional probability: 
+\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Independent:
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(A) = P(A|B)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(A, B) = P(A) \cdot P(B)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conditionally Independent
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(B|A,C) =P(B|A)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
+  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
+  &lt;li&gt;Two approaches:
+    &lt;ul&gt;
+      &lt;li&gt;Discriminative algorithms learn 
+  \(P(y | x)\) 
+  directly.&lt;/li&gt;
+      &lt;li&gt;Generative algorithms use Bayes rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
+  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
+      &lt;li&gt;decision trees&lt;/li&gt;
+      &lt;li&gt;random forests&lt;/li&gt;
+      &lt;li&gt;neural networks&lt;/li&gt;
+      &lt;li&gt;log-linear models&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
+  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
+  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;Naive Bayes&lt;/li&gt;
+      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
+      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
+      &lt;li&gt;PCFGs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
+
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\begin{split}
+    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
+    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
+\end{split}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+y* = \arg \max_y P(y) \Pi_i P(x_i|y)
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
+&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
+  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
+  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry><entry><title type="html">NLP Lecture 03</title><link href="http://localhost:4000/studylog/NLP_lecture03.html" rel="alternate" type="text/html" title="NLP Lecture 03" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture03</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture03.html">&lt;p&gt;Keywords: n-gram language models&lt;/p&gt;
+
+&lt;h2 id=&quot;language-modeling&quot;&gt;Language Modeling&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Task: predict the next word given the context.&lt;/li&gt;
+  &lt;li&gt;Used in speech recognition, handwritten character recognition, spelling correction, text entry UI, machine translation,…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;probability-of-the-next-word&quot;&gt;Probability of the Next Word&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: We do not need to model domain, syntactic, and lexical knowledge perfectly.&lt;/li&gt;
+  &lt;li&gt;Instead, we can rely on the notion of probability of a sequence (letters, words…).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;markov-assumption&quot;&gt;Markov Assumption&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;\(P(w_n|w_1, w_2, ..., w_{n-1})\)
+  is difficult to estimate.&lt;/li&gt;
+  &lt;li&gt;The longer the sequence becomes, the less likely \(w_1 w_2 w_3 ... w_{n-1}\) will appear in training data.&lt;/li&gt;
+  &lt;li&gt;Instead, we make the following simple independence assumption (Markov assumption): The probability to see wn depends only on the previous \(k-1\) words.
+  \begin{equation}
+  P(w_n|w_1, w_2, w_3, …, w_{n-1}) \approx P(w_n|w_{n-k+1}, …, w_{n-1})
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;n-grams&quot;&gt;n-grams&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The sequence \(w_n\) is a unigram.&lt;/li&gt;
+  &lt;li&gt;The sequence \(w_{n-1}, w_n\) is a bigram.&lt;/li&gt;
+  &lt;li&gt;The sequence \(w_{n-2}, w_{n-1}, w_n\) is a trigram.&lt;/li&gt;
+  &lt;li&gt;The sequence \(w_{n-3}, w_{n-2}, w_{n-1}, w_n\) is a quadrigram…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bi-gram-language-model&quot;&gt;Bi-gram Language Model&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Using the Markov assumption and the chain rule:
+  \begin{equation}
+  P(w_1, w_2, w_3, …, w_n) \approx P(w_1) \cdot P(w_2|w_1) \cdot P(w_3|w_2) \cdots P(w_n|w_{n-1})
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;More consistent to use only bigrams:
+  \begin{equation}
+  P(w_1|start) \cdot P(w_2|w_1) \cdot P(w_3|w_2) \cdots P(w_n|w_{n-1}) \cdot P(end|w_n)
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;variable-length-language-models&quot;&gt;Variable-Length Language Models&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We typically don’t know what the length of the sentence is.&lt;/li&gt;
+  &lt;li&gt;Instead, we use a special marker END/STOP that indicates the end of a sentence.&lt;/li&gt;
+  &lt;li&gt;We typically just augment the sentence with START and END/STOP markers to provide the appropriate context. 
+(START i want to eat Chinese food END)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;log-probabilities&quot;&gt;Log Probabilities&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Probabilities can become very small (a few orders of magnitude per token).&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We often work with log probabilities in practice.
+  \begin{equation}
+  p(w_1…w_n) = \Pi_{i=1}^np(w_i|w_{i-1})
+  \end{equation}&lt;/p&gt;
+
+    &lt;p&gt;\begin{equation}
+  \log p(w_1…w_n) = \sum_{i=1}^n \log p(w_i|w_{i-1})
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;estimating-n-gram-probabilities&quot;&gt;Estimating n-gram Probabilities&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We can estimate n-gram probabilities using maximum likelihood estimates.
+  \begin{equation}
+  p(w|u) = \frac{count(u,w)}{count(u)}
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Or for trigrams:
+  \begin{equation}
+  p(w|u, v) = \frac{count(w,u,w)}{count(u, v)}
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unseen-tokens&quot;&gt;Unseen Tokens&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Typical approach to unseen tokens:
+    &lt;ul&gt;
+      &lt;li&gt;Start with a specific lexicon of known tokens.&lt;/li&gt;
+      &lt;li&gt;Replace all tokens in the training and testing corpus that are not in the lexicon with an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UNK&lt;/code&gt; token.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Practical approach:
+    &lt;ul&gt;
+      &lt;li&gt;Lexicon contains all words that appear more than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt; times in the training corpus.&lt;/li&gt;
+      &lt;li&gt;Replace all other tokens with UNK.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;unseen-contexts&quot;&gt;Unseen Contexts&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Two basic approaches:
+    &lt;ul&gt;
+      &lt;li&gt;Smoothing / Discounting: Move some probability mass from seen trigrams to unseen trigrams.&lt;/li&gt;
+      &lt;li&gt;Back-off: Use n-1-…, n-2-… grams to compute n-gram probability.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Other techniques:
+    &lt;ul&gt;
+      &lt;li&gt;Class-based backoff, use back-off probability for a specific word class / part-of-speech.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;zipfs-law&quot;&gt;Zipf’s Law&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Problem: n-grams (and most other linguistic phenomena) follow a Zipfian distribution.&lt;/li&gt;
+  &lt;li&gt;A few words occur very frequently.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Most words occur very rarely. Many are seen only once.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Zipf’s law: a word’s frequency is approximately inversely proportional to its rank in the word distribution list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;smoothing&quot;&gt;Smoothing&lt;/h2&gt;
+&lt;p&gt;Smoothing flattens spiky distributions.&lt;/p&gt;
+
+&lt;h3 id=&quot;additive-smoothing&quot;&gt;Additive Smoothing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Classic approach: Laplacian, a.k.a. additive smoothing.&lt;/p&gt;
+
+    &lt;p&gt;\begin{equation}
+  P(w_i) = \frac{count(w_i) + 1}{N+V}
+  \end{equation}&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;N is the number of tokens&lt;/li&gt;
+      &lt;li&gt;V is the number of types (i.e. size of the vocabulary)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\begin{equation}
+  P(w|u) = \frac{count(u, w) + 1}{count(u) + V}
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Inaccurate in practice.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linear-interpolation&quot;&gt;Linear Interpolation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Use denser distributions of shorter ngrams to “fill in” sparse ngram distributions.&lt;/p&gt;
+
+    &lt;p&gt;\begin{equation}
+  P(w|u, v) = \lambda_1 \cdot p_{mle}(w|u,v) + \lambda_2 \cdot p_{mle}(w|v) + \lambda_3 \cdot p_{mle}(w)
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Where, \(\lambda_1, \lambda_2, \lambda_3 &amp;gt; 0\) and \(\lambda_1 + \lambda_2 + \lambda_3 = 1\).&lt;/li&gt;
+  &lt;li&gt;Works well in practice (but not a lot of theoretical justification why).&lt;/li&gt;
+  &lt;li&gt;Parameters can be estimated on development data (for example, using Expectation Maximization).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;discounting&quot;&gt;Discounting&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: set aside some probability mass, then fill in the missing mass using back-off.&lt;/li&gt;
+  &lt;li&gt;\(count^*(v, w) = count(v, w) - \beta\) where \(0&amp;lt;\beta&amp;lt;1\).&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Then for all seen bigrams: $$ p(w&lt;/td&gt;
+          &lt;td&gt;v) = \frac{count^*(v, w)}{count(v)}.&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For each context v the missing probability mass is
+  \begin{equation}
+  \alpha(v) = 1 - \sum_{w:c(v,w)&amp;gt;0} \frac{count^*(v, w)}{count(v)}
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;We can now divide this held-out mass between the unseen words (evenly or using back-off).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;katz-backoff&quot;&gt;Katz’ Backoff&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Divide the held-out probability mass proportionally to the unigram probability of the unseen words in context v.&lt;/p&gt;
+
+    &lt;p&gt;\begin{equation}
+  p(w|v) = 
+  \begin{cases}
+  &amp;amp; \frac{count^*(v, w)}{count(v)} &amp;amp; if count(v,w) &amp;gt; 0, &lt;br /&gt;
+  &amp;amp; \alpha(v) \times \frac{p_{mle}(w)}{\sum_{u:count(v,u) = 0}p_{mle(u)}} &amp;amp; otherwise.
+  \end{cases}
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;evaluating-n-gram-models&quot;&gt;Evaluating n-gram models&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Extrinsic evaluation: Apply the model in an application (for example language classification). Evaluate the application.&lt;/li&gt;
+  &lt;li&gt;Intrinsic evaluation: measure how well the model approximates unseen language data.
+    &lt;ul&gt;
+      &lt;li&gt;Can compute the probability of each sentence according to the model. Higher probability -&amp;gt; better model.&lt;/li&gt;
+      &lt;li&gt;Typically we compute Perplexity instead.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;perplexity&quot;&gt;Perplexity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Perplexity (per word) measures how well the ngram model predicts the sample.&lt;/li&gt;
+  &lt;li&gt;Given a corpus of ‘m’ sentences ‘\(s_i\)’, where ‘M’ is total number of tokens in the corpus&lt;/li&gt;
+  &lt;li&gt;Perplexity is defined as \(2^{-l}\), where \(l = \frac{1}{M} \sum_{i=1}^m \log_2 p(s_i)\).&lt;/li&gt;
+  &lt;li&gt;Lower perplexity = better model. Intuition:
+    &lt;ul&gt;
+      &lt;li&gt;Assume we are predicting one word at a time.&lt;/li&gt;
+      &lt;li&gt;With uniform distribution, all successor words are equally likely. Perplexity is equal to vocabulary size.
+• Perplexity can be thought of as “effective vocabulary size”.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: n-gram language models</summary></entry></feed>
