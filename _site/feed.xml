@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-27T00:56:18-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-27T23:58:54-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
@@ -514,10 +514,192 @@ return nums[right]
         right = mid - 1
     else:
         left = mid  
-return nums[left]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+return nums[left] ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 04</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
 
-&lt;p&gt;```&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 02</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
+  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
+  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Classes of words that behave alike:
+    &lt;ul&gt;
+      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
+      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
+      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;~9 traditional parts-of-speech:
+    &lt;ul&gt;
+      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
+  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
+    &lt;ol&gt;
+      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
+      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
+  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
+  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
+  &lt;li&gt;Markov assumption: Next state depends only on current state.
+\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
+  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generative (Bayesian) probability model.
+  Observations: sequences of words.
+  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
+    &lt;ul&gt;
+      &lt;li&gt;
+\[t_0 = START\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There are two types of probabilities:
+  Transition Probabilities and Emission Probabilities.
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
+  \end{equation}
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decoding: 
+  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Evaluation: 
+  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Training: 
+  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
+  \begin{equation}
+  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
+    &lt;ul&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instead of using a unigram context, use a bigram context.
+    &lt;ul&gt;
+      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
+  \begin{equation}
+  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
+  \begin{equation}
+  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
+  \end{equation}
+  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
+  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
+  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
+  \begin{equation}
+  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
+  &lt;li&gt;Need to compute: 
+  \begin{equation}
+  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
+    &lt;ul&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry><entry><title type="html">NLP Lecture 02</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
 
 &lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
 &lt;ul&gt;
