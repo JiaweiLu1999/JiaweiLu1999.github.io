@@ -1,5 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-02-27T23:58:54-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-03-04T12:41:52-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">CV II Lecture 06</title><link href="http://localhost:4000/studylog/CV_lecture06.html" rel="alternate" type="text/html" title="CV II Lecture 06" /><published>2022-03-04T00:00:00-05:00</published><updated>2022-03-04T00:00:00-05:00</updated><id>http://localhost:4000/studylog/CV_lecture06</id><content type="html" xml:base="http://localhost:4000/studylog/CV_lecture06.html">&lt;h2 id=&quot;behavior-continuum&quot;&gt;Behavior Continuum&lt;/h2&gt;
+
+&lt;h2 id=&quot;representing-video&quot;&gt;Representing Video&lt;/h2&gt;
+
+&lt;h2 id=&quot;3d-convolutional-networks&quot;&gt;3D convolutional Networks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;2D convolutions vs. 3D convolutions&lt;/li&gt;
+  &lt;li&gt;3D filters at the first layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-stream-network&quot;&gt;2-Stream Network&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spatial Stream ConvNet&lt;/li&gt;
+  &lt;li&gt;Tenporal Stream ConvNet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;recurrent-neural-network&quot;&gt;Recurrent Neural Network&lt;/h2&gt;
+
+&lt;h3 id=&quot;forward-function&quot;&gt;forward function&lt;/h3&gt;
+
+&lt;p&gt;\begin{equation}
+h_i = f(w_{hx}^T x_i + w_{hh}^Th_{i-1})
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+y_i = f(w_{yh}^T h_i)
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;vanishingexploding-gradient&quot;&gt;Vanishing/Exploding Gradient&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Forward pass:
+  \begin{equation}
+  z_i = f(w_x^T x_i + w^T z_{i-1})
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gradients:
+  \begin{equation}
+  \frac{dL}{dw} = \frac{dL}{dz_{i+1}} \frac{dz_{i+1}}{dz_i} \frac{z_i}{dw}
+  \end{equation}&lt;/p&gt;
+
+    &lt;p&gt;\begin{equation}
+  \frac{dL}{dw} = \frac{dL}{dz_T} (\prod_{j=i}^{T-1}\frac{dz_{j+1}}{dz_j}) \frac{dz_i}{dw}
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;long-short-term-memory-lstm&quot;&gt;Long Short-Term Memory (LSTM)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;colah’s blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;future-generation&quot;&gt;Future Generation&lt;/h2&gt;
+&lt;p&gt;\begin{equation}
+x_t \rightarrow f(x_t; w) \rightarrow x_{t+1}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;minimize-euclidean-distance&quot;&gt;Minimize Euclidean distance:&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+\min_w \sum_i || f(x_t^i;w) - x_{t+1}^i||_2^2
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;train&quot;&gt;Train&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+\min_f \sum_i ||f(x_t^i) - g(x_{t+1}^i)||_2^2
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\min_{f,\delta} \sum_i \sum_k^K \delta_k^i \cdot ||f_k(x_t^i) - g(x_{t+1}^i)||_2^2
+\end{equation}
+s.t. \(\delta^i \in{0,1}^K\) and \(||\delta^i||_1 = 1 \ \forall_i\)&lt;/p&gt;
+
+&lt;h3 id=&quot;expectation-maximization&quot;&gt;Expectation-Maximization&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;E Step: Fill in missing variables and estimate latent variables&lt;/li&gt;
+  &lt;li&gt;M Step: Fit the model (with back-propagation in this case)&lt;/li&gt;
+  &lt;li&gt;Repeat&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
