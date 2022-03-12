@@ -18,22 +18,22 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Coding Interview | Jiawei Lu</title>
+<title>NLP Lecture 05: Introduction to Syntax and Formal Languages | Jiawei Lu</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Coding Interview" />
+<meta property="og:title" content="NLP Lecture 05: Introduction to Syntax and Formal Languages" />
 <meta name="author" content="Jiawei Lu" />
 <meta property="og:locale" content="zh, en" />
-<meta name="description" content="Self-study for coding interview preparation." />
-<meta property="og:description" content="Self-study for coding interview preparation." />
-<link rel="canonical" href="http://localhost:4000/tag-coding-interview/" />
-<meta property="og:url" content="http://localhost:4000/tag-coding-interview/" />
+<meta name="description" content="Keywords: Introduction to Syntax and Formal Languages." />
+<meta property="og:description" content="Keywords: Introduction to Syntax and Formal Languages." />
+<link rel="canonical" href="http://localhost:4000/studylog/NLP_lecture05.html" />
+<meta property="og:url" content="http://localhost:4000/studylog/NLP_lecture05.html" />
 <meta property="og:site_name" content="Jiawei Lu" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-03-12T18:55:49-05:00" />
+<meta property="article:published_time" content="2022-02-09T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Coding Interview" />
+<meta property="twitter:title" content="NLP Lecture 05: Introduction to Syntax and Formal Languages" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"WebPage","url":"http://localhost:4000/tag-coding-interview/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Self-study for coding interview preparation.","headline":"Coding Interview","dateModified":"2022-03-12T18:55:49-05:00","datePublished":"2022-03-12T18:55:49-05:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"BlogPosting","url":"http://localhost:4000/studylog/NLP_lecture05.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Keywords: Introduction to Syntax and Formal Languages.","headline":"NLP Lecture 05: Introduction to Syntax and Formal Languages","dateModified":"2022-02-09T00:00:00-05:00","datePublished":"2022-02-09T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/NLP_lecture05.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -64,7 +64,7 @@
 
 
 
-<link rel="alternate" href="http://localhost:4000/tag-coding-interview/" hreflang="zh, en">
+<link rel="alternate" href="http://localhost:4000/studylog/NLP_lecture05.html" hreflang="zh, en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
 
@@ -189,7 +189,7 @@
 
   <main
   id="_main"
-  class="content layout-tag-list"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -200,67 +200,363 @@
       <li>
         
           <span>/</span>
-          <span>tag-coding-interview</span>
+          
+          
+          <a href="/studylog/">studylog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>NLP_lecture05.html</span>
         
       </li>
     
   
 </ul></nav>
 
-  <article class="page mb6" role="article">
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-studylog-NLP_lecture05" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Coding Interview</h1>
+    <h1 class="post-title flip-project-title">
+      
+        NLP Lecture 05: Introduction to Syntax and Formal Languages
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-02-09T00:00:00-05:00">09 Feb 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-nlp/" class="flip-title">Natrual Laguage Processing</a>
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+
     
 
 
 
-  
-    <p class="note-sm" >
-      Self-study for coding interview preparation.
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
   
+    <p>Keywords: Introduction to Syntax and Formal Languages.</p>
 
+<h2 id="syntax">Syntax</h2>
+<h3 id="syntax-as-an-interface">Syntax as an Interface</h3>
+<ul>
+  <li>Syntax can be seen as the interface between morphology (structure of words) and semantics.</li>
+  <li>Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.</li>
+</ul>
 
+<h3 id="key-concepts-of-syntax">Key Concepts of Syntax</h3>
+<ul>
+  <li>Constituency and Recursion.</li>
+  <li>Dependency.</li>
+  <li>Grammatical Relations.</li>
+  <li>Subcategorization.</li>
+  <li>Long-distance dependencies</li>
+</ul>
 
+<h2 id="constituents">Constituents</h2>
+<p>A constituent is a group of words that behave as a single unit (within a hierarchical structure).</p>
 
+<h3 id="constituency">Constituency</h3>
+<p>There is a great number of constituency tests. They typically involve moving constituents around or replacing them.</p>
+<ul>
+  <li>Topicalization</li>
+  <li>Pro-form Substitution</li>
+  <li>Wh-question test.</li>
+</ul>
 
+<h3 id="constituent-labels">Constituent Labels</h3>
+<ul>
+  <li>Choose constituents so each one has one non-bracketed word: the head.</li>
+  <li>Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP</li>
+</ul>
 
+<h2 id="recursion-in-language">Recursion in Language</h2>
+<ul>
+  <li>One of the most important attributes of Natural Languages is that they are recursive.</li>
+  <li>There are infinitely many sentences in a language, but in predictable structures.</li>
+</ul>
 
+<h2 id="context-free-grammars-cfg">Context Free Grammars (CFG)</h2>
+<p>A context free grammar is defined by:</p>
+<ul>
+  <li>Set of <strong>terminal symbols</strong> \(\Sigma\).</li>
+  <li>Set of <strong>non-terminal symbols</strong> \(N\).</li>
+  <li>A <strong>start symbol</strong> \(S \in N\).</li>
+  <li>Set \(R\) of <strong>productions</strong> of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.</li>
+</ul>
 
+<h3 id="language-of-a-cfg">Language of a CFG</h3>
+<ul>
+  <li>Given a CFG \(G=(N, \Sigma,R,S)\):
+    <ul>
+      <li>Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).</li>
+      <li>\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.</li>
+      <li>\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.</li>
+      <li>The language of G is defined as the set of all terminal strings that can be derived from the start symbol.</li>
+      <li>
+\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="derivations-and-derived-strings">Derivations and Derived Strings</h3>
+<ul>
+  <li>CFG is a string rewriting formalism, so the derived objects are strings.</li>
+  <li>A derivation is a sequence of rewriting steps.</li>
+  <li>CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.</li>
+  <li>Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.</li>
+  <li>The derivation tree implies a parse tree.</li>
+</ul>
+
+<h2 id="regular-grammars">Regular Grammars</h2>
+<p>A regular grammar is defined by:</p>
+<ul>
+  <li>Set of <strong>terminal symbols</strong> \(\Sigma\).</li>
+  <li>Set of <strong>non-terminal symbols</strong> \(N\).</li>
+  <li>A <strong>start symbol</strong> \(S \in N\).</li>
+  <li>Set \(R\) of <strong>productions</strong> of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).</li>
+</ul>
+
+<h3 id="finite-state-automata">Finite State Automata</h3>
+<ul>
+  <li>Regular grammars can be implemented as finite state automata.</li>
+  <li>The set of all regular languages is strictly smaller than the set of context-free languages.</li>
+</ul>
+
+<h2 id="center-embeddings">Center Embeddings</h2>
+<ul>
+  <li>Problem: Regular grammars cannot capture long-distance dependencies.</li>
+</ul>
+
+<h2 id="formal-grammar-and-parsing">Formal Grammar and Parsing</h2>
+<ul>
+  <li>Formal Grammars are used in linguistics, NLP, programming languages.</li>
+  <li>We want to build a compact model that describes a complete language.</li>
+  <li>Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).</li>
+  <li>We also want to recover the structure imposed by the grammar (parsing problem).</li>
+</ul>
 
   
-  
-    
-    <h2 id="y-2022" class="hr">2022</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li class="h4">
-  <a href="/studylog/leetcode.html" class="flip-title"><span>Leetcode</span></a>
-  <time class="faded fine" datetime="2022-02-02T00:00:00-05:00">02 Feb</time>
-</li>
-
-  </ul>
-
-
 </article>
 
 
+
+<applause-button class="mb6"
+    color=rgb(79,177,186)
+    url=http://localhost:4000/studylog/NLP_lecture05.html >
+  </applause-button>
+
+
+
+
+
+
   
-    <hr class="dingbat related mb6" />
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/jiawei-1.jpg"
+    
+    
+  
+  alt="Jiawei Lu"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>MSEE student at <a href="https://www.ee.columbia.edu/">Columbia Univeristy</a>.<br />
+Please check my <a href="/resume/">Resume</a> to find out more about me!<br /></p>
+
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/jiaweilucolumbia" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/JiaweiLu1999" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/javeylew" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:jl5999@columbia.edu" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  
+
+  
+  
+    <script src="https://giscus.app/client.js"
+            data-repo=JiaweiLu1999/JiaweiLu1999.github.io
+            data-repo-id=R_kgDOGt0vAg
+            data-category=Comments
+            data-category-id=DIC_kwDOGt0vAs4CA218
+            data-mapping=pathname
+            data-reactions-enabled=1
+            data-emit-metadata=0
+            data-theme=dark_dimmed
+            data-lang=en
+            crossorigin=anonymous
+            async>
+    </script>
   
 
 
+</aside>
 
+
+  
 
 
   
