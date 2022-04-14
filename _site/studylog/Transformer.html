@@ -18,20 +18,22 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Jiawei Lu | MSEE @ Columbia</title>
+<title>Transformer | Jiawei Lu</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Jiawei Lu" />
+<meta property="og:title" content="Transformer" />
 <meta name="author" content="Jiawei Lu" />
 <meta property="og:locale" content="zh, en" />
 <meta name="description" content="Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning." />
 <meta property="og:description" content="Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<link rel="canonical" href="http://localhost:4000/studylog/Transformer.html" />
+<meta property="og:url" content="http://localhost:4000/studylog/Transformer.html" />
 <meta property="og:site_name" content="Jiawei Lu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-14T00:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Jiawei Lu" />
+<meta property="twitter:title" content="Transformer" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"WebPage","url":"http://localhost:4000/404.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning.","headline":"Jiawei Lu","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"BlogPosting","url":"http://localhost:4000/studylog/Transformer.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning.","headline":"Transformer","dateModified":"2022-04-14T00:00:00-04:00","datePublished":"2022-04-14T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/Transformer.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -62,7 +64,7 @@
 
 
 
-<link rel="alternate" href="http://localhost:4000/404.html" hreflang="zh, en">
+<link rel="alternate" href="http://localhost:4000/studylog/Transformer.html" hreflang="zh, en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
 
@@ -187,7 +189,7 @@
 
   <main
   id="_main"
-  class="content layout-not-found"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -198,7 +200,16 @@
       <li>
         
           <span>/</span>
-          <span>404.html</span>
+          
+          
+          <a href="/studylog/">studylog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>Transformer.html</span>
         
       </li>
     
@@ -207,21 +218,305 @@
 
   
 
-<div class="page">
-  <h1 class="page-title">404: Page Not Found</h1>
+
+
+
+
+
+
+
+
+
+<article id="post-studylog-Transformer" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Transformer
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-04-14T00:00:00-04:00">14 Apr 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-dl/" class="flip-title">Deep Learning</a>
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
   <div class="hr pb0"></div>
 
-  
-  
-    
-    
-    <p class="lead">
-      Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
-<a href="/">Head back home</a> to try finding it again.
 
-    </p>
+  </header>
+
   
+    <p><img src="/assets/img/blog/2022-04-14/1.png" alt="transformer struct" /></p>
+
+<p class="figcaption">The full model architecture of the transformer.[3]</p>
+
+<p>“<a href="https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention is All you Need</a>” (Vaswani, et al., 2017), without a doubt, is one of the most impactful and interesting paper in 2017. It presented a lot of improvements to the soft attention and make it possible to do seq2seq modeling without recurrent network units. The proposed “transformer” model is entirely built on the self-attention mechanisms without using sequence-aligned recurrent architecture.</p>
+
+<p>The secret recipe is carried in its model architecture.</p>
+
+<h2 id="key-value-and-query">Key, Value and Query</h2>
+<p>The major component in the transformer is the unit of multi-head self-attention mechanism. The transformer views the encoded representation of the input as a set of <strong>key-value</strong> pairs, \((\mathbf{K}, \mathbf{V})\), both of dimension \(n\) (input sequence length); in the context of NMT, both the keys and values are the encoder hidden states. In the decoder, the previous output is compressed into a <strong>query</strong> (\(\mathbf{Q}\) of dimension \(m\)) and the next output is produced by mapping this query and the set of keys and values.</p>
+
+<p>The transformer adopts the scaled dot-product attention: the output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys:</p>
+
+\[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left( \frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{n}}\right) \mathbf{V}\]
+
+<h2 id="multi-head-self-attention">Multi-Head Self-Attention</h2>
+<p>Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, “multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.”</p>
+
+\[\begin{align}
+\text{MultiHead}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) &amp; = [\text{head}_1; ...; \text{head}_h]\mathbf{W}^O \\
+\text{where head_i} &amp; = \text{Attention}(\mathbf{QW}_i^Q, \mathbf{KW}_i^K, \mathbf{VW}_i^V)
+\end{align}\]
+
+<p>where \(\mathbf{W}_i^Q\), \(\mathbf{W}_i^K\), \(\mathbf{W}_i^V\) and \(\mathbf{W}_i^O\) are parameter matrices to be learned.</p>
+
+<h2 id="encoder">Encoder</h2>
+<p>The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.</p>
+
+<ul>
+  <li>A stack of \(N=6\) identical layers.</li>
+  <li>Each layer has a <strong>multi-head self-attention layer</strong> and a simple position-wise <strong>fully connected feed-forward network</strong>.</li>
+  <li>Each sub-layer adopts a <strong>residual</strong> connection and a layer <strong>normalization</strong>. All the sub-layers output data of the same dimension \(d_\text{model} = 512\).</li>
+</ul>
+
+<h2 id="decoder">Decoder</h2>
+<p>The decoder is able to retrieval from the encoded representation.</p>
+
+<ul>
+  <li>A stack of N = 6 identical layers</li>
+  <li>Each layer has two sub-layers of multi-head attention mechanisms and one sub-layer of fully-connected feed-forward network.</li>
+  <li>Similar to the encoder, each sub-layer adopts a residual connection and a layer normalization.</li>
+  <li>The first multi-head attention sub-layer is modified to prevent positions from attending to subsequent positions, as we don’t want to look into the future of the target sequence when predicting the current position.</li>
+</ul>
+
+<h2 id="full-architecture">Full Architecture</h2>
+<p>Finally here is the complete view of the transformer’s architecture:</p>
+
+<ul>
+  <li>Both the source and target sequences first go through embedding layers to produce data of the same dimension \(d_\text{model} = 512\).</li>
+  <li>To preserve the position information, a sinusoid-wave-based positional encoding is applied and summed with the embedding output.</li>
+  <li>A softmax and linear layer are added to the final decoder output.</li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] <a href="https://lilianweng.github.io/posts/2018-06-24-attention/">Lil’Log: Attention? Attention!</a></p>
+
+<p>[2] <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></p>
+
+<p>[3] <a href="https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All You Need</a></p>
+
+  
+</article>
+
+
+
+<applause-button class="mb6"
+    color=rgb(79,177,186)
+    url=http://localhost:4000/studylog/Transformer.html >
+  </applause-button>
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/jiawei-1.jpg"
+    
+    
+  
+  alt="Jiawei Lu"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>MSEE student at <a href="https://www.ee.columbia.edu/">Columbia Univeristy</a>.<br />
+Please check my <a href="/resume/">Resume</a> to find out more about me!<br /></p>
+
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/jiaweilucolumbia" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/JiaweiLu1999" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/javeylew" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:jl5999@columbia.edu" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
 </div>
+
+  </aside>
+
+
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  
+
+  
+  
+    <script src="https://giscus.app/client.js"
+            data-repo=JiaweiLu1999/JiaweiLu1999.github.io
+            data-repo-id=R_kgDOGt0vAg
+            data-category=Comments
+            data-category-id=DIC_kwDOGt0vAs4CA218
+            data-mapping=pathname
+            data-reactions-enabled=1
+            data-emit-metadata=0
+            data-theme=dark_dimmed
+            data-lang=en
+            crossorigin=anonymous
+            async>
+    </script>
+  
+
+
+</aside>
+
+
+  
+
 
   
 <footer class="content" role="contentinfo">

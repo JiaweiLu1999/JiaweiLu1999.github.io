@@ -1,5 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-04-13T22:09:48-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Attention Mechanism</title><link href="http://localhost:4000/studylog/Attention.html" rel="alternate" type="text/html" title="Attention Mechanism" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Attention</id><content type="html" xml:base="http://localhost:4000/studylog/Attention.html">&lt;h2 id=&quot;encoder-decoder-in-nlp&quot;&gt;Encoder-Decoder in NLP&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-04-14T14:48:56-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
+
+&lt;p&gt;“&lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention is All you Need&lt;/a&gt;” (Vaswani, et al., 2017), without a doubt, is one of the most impactful and interesting paper in 2017. It presented a lot of improvements to the soft attention and make it possible to do seq2seq modeling without recurrent network units. The proposed “transformer” model is entirely built on the self-attention mechanisms without using sequence-aligned recurrent architecture.&lt;/p&gt;
+
+&lt;p&gt;The secret recipe is carried in its model architecture.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-value-and-query&quot;&gt;Key, Value and Query&lt;/h2&gt;
+&lt;p&gt;The major component in the transformer is the unit of multi-head self-attention mechanism. The transformer views the encoded representation of the input as a set of &lt;strong&gt;key-value&lt;/strong&gt; pairs, \((\mathbf{K}, \mathbf{V})\), both of dimension \(n\) (input sequence length); in the context of NMT, both the keys and values are the encoder hidden states. In the decoder, the previous output is compressed into a &lt;strong&gt;query&lt;/strong&gt; (\(\mathbf{Q}\) of dimension \(m\)) and the next output is produced by mapping this query and the set of keys and values.&lt;/p&gt;
+
+&lt;p&gt;The transformer adopts the scaled dot-product attention: the output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys:&lt;/p&gt;
+
+\[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left( \frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{n}}\right) \mathbf{V}\]
+
+&lt;h2 id=&quot;multi-head-self-attention&quot;&gt;Multi-Head Self-Attention&lt;/h2&gt;
+&lt;p&gt;Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, “multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.”&lt;/p&gt;
+
+\[\begin{align}
+\text{MultiHead}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) &amp;amp; = [\text{head}_1; ...; \text{head}_h]\mathbf{W}^O \\
+\text{where head_i} &amp;amp; = \text{Attention}(\mathbf{QW}_i^Q, \mathbf{KW}_i^K, \mathbf{VW}_i^V)
+\end{align}\]
+
+&lt;p&gt;where \(\mathbf{W}_i^Q\), \(\mathbf{W}_i^K\), \(\mathbf{W}_i^V\) and \(\mathbf{W}_i^O\) are parameter matrices to be learned.&lt;/p&gt;
+
+&lt;h2 id=&quot;encoder&quot;&gt;Encoder&lt;/h2&gt;
+&lt;p&gt;The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A stack of \(N=6\) identical layers.&lt;/li&gt;
+  &lt;li&gt;Each layer has a &lt;strong&gt;multi-head self-attention layer&lt;/strong&gt; and a simple position-wise &lt;strong&gt;fully connected feed-forward network&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Each sub-layer adopts a &lt;strong&gt;residual&lt;/strong&gt; connection and a layer &lt;strong&gt;normalization&lt;/strong&gt;. All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;decoder&quot;&gt;Decoder&lt;/h2&gt;
+&lt;p&gt;The decoder is able to retrieval from the encoded representation.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A stack of N = 6 identical layers&lt;/li&gt;
+  &lt;li&gt;Each layer has two sub-layers of multi-head attention mechanisms and one sub-layer of fully-connected feed-forward network.&lt;/li&gt;
+  &lt;li&gt;Similar to the encoder, each sub-layer adopts a residual connection and a layer normalization.&lt;/li&gt;
+  &lt;li&gt;The first multi-head attention sub-layer is modified to prevent positions from attending to subsequent positions, as we don’t want to look into the future of the target sequence when predicting the current position.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;full-architecture&quot;&gt;Full Architecture&lt;/h2&gt;
+&lt;p&gt;Finally here is the complete view of the transformer’s architecture:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Both the source and target sequences first go through embedding layers to produce data of the same dimension \(d_\text{model} = 512\).&lt;/li&gt;
+  &lt;li&gt;To preserve the position information, a sinusoid-wave-based positional encoding is applied and summed with the embedding output.&lt;/li&gt;
+  &lt;li&gt;A softmax and linear layer are added to the final decoder output.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;[1] &lt;a href=&quot;https://lilianweng.github.io/posts/2018-06-24-attention/&quot;&gt;Lil’Log: Attention? Attention!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&quot;https://jalammar.github.io/illustrated-transformer/&quot;&gt;The Illustrated Transformer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] &lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention Is All You Need&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html"></summary></entry><entry><title type="html">Attention Mechanism</title><link href="http://localhost:4000/studylog/Attention.html" rel="alternate" type="text/html" title="Attention Mechanism" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Attention</id><content type="html" xml:base="http://localhost:4000/studylog/Attention.html">&lt;h2 id=&quot;encoder-decoder-in-nlp&quot;&gt;Encoder-Decoder in NLP&lt;/h2&gt;
 
 &lt;p&gt;Encoder-Decoder This framework is a good illustration of the core ideas of machine learning:&lt;/p&gt;
 
@@ -213,7 +272,107 @@ s.t. \(\delta^i \in{0,1}^K\) and \(||\delta^i||_1 = 1 \ \forall_i\)&lt;/p&gt;
   &lt;li&gt;E Step: Fill in missing variables and estimate latent variables&lt;/li&gt;
   &lt;li&gt;M Step: Fit the model (with back-propagation in this case)&lt;/li&gt;
   &lt;li&gt;Repeat&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">NLP Lecture 05: Introduction to Syntax and Formal Languages</title><link href="http://localhost:4000/studylog/NLP_lecture05.html" rel="alternate" type="text/html" title="NLP Lecture 05: Introduction to Syntax and Formal Languages" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture05</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture05.html">&lt;p&gt;Keywords: Introduction to Syntax and Formal Languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
+&lt;h3 id=&quot;syntax-as-an-interface&quot;&gt;Syntax as an Interface&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Syntax can be seen as the interface between morphology (structure of words) and semantics.&lt;/li&gt;
+  &lt;li&gt;Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;key-concepts-of-syntax&quot;&gt;Key Concepts of Syntax&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Constituency and Recursion.&lt;/li&gt;
+  &lt;li&gt;Dependency.&lt;/li&gt;
+  &lt;li&gt;Grammatical Relations.&lt;/li&gt;
+  &lt;li&gt;Subcategorization.&lt;/li&gt;
+  &lt;li&gt;Long-distance dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;constituents&quot;&gt;Constituents&lt;/h2&gt;
+&lt;p&gt;A constituent is a group of words that behave as a single unit (within a hierarchical structure).&lt;/p&gt;
+
+&lt;h3 id=&quot;constituency&quot;&gt;Constituency&lt;/h3&gt;
+&lt;p&gt;There is a great number of constituency tests. They typically involve moving constituents around or replacing them.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Topicalization&lt;/li&gt;
+  &lt;li&gt;Pro-form Substitution&lt;/li&gt;
+  &lt;li&gt;Wh-question test.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;constituent-labels&quot;&gt;Constituent Labels&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Choose constituents so each one has one non-bracketed word: the head.&lt;/li&gt;
+  &lt;li&gt;Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;recursion-in-language&quot;&gt;Recursion in Language&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;One of the most important attributes of Natural Languages is that they are recursive.&lt;/li&gt;
+  &lt;li&gt;There are infinitely many sentences in a language, but in predictable structures.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;context-free-grammars-cfg&quot;&gt;Context Free Grammars (CFG)&lt;/h2&gt;
+&lt;p&gt;A context free grammar is defined by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
+  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
+  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;language-of-a-cfg&quot;&gt;Language of a CFG&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given a CFG \(G=(N, \Sigma,R,S)\):
+    &lt;ul&gt;
+      &lt;li&gt;Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).&lt;/li&gt;
+      &lt;li&gt;\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.&lt;/li&gt;
+      &lt;li&gt;\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.&lt;/li&gt;
+      &lt;li&gt;The language of G is defined as the set of all terminal strings that can be derived from the start symbol.&lt;/li&gt;
+      &lt;li&gt;
+\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;derivations-and-derived-strings&quot;&gt;Derivations and Derived Strings&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;CFG is a string rewriting formalism, so the derived objects are strings.&lt;/li&gt;
+  &lt;li&gt;A derivation is a sequence of rewriting steps.&lt;/li&gt;
+  &lt;li&gt;CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.&lt;/li&gt;
+  &lt;li&gt;Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.&lt;/li&gt;
+  &lt;li&gt;The derivation tree implies a parse tree.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;regular-grammars&quot;&gt;Regular Grammars&lt;/h2&gt;
+&lt;p&gt;A regular grammar is defined by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
+  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
+  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;finite-state-automata&quot;&gt;Finite State Automata&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular grammars can be implemented as finite state automata.&lt;/li&gt;
+  &lt;li&gt;The set of all regular languages is strictly smaller than the set of context-free languages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;center-embeddings&quot;&gt;Center Embeddings&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Problem: Regular grammars cannot capture long-distance dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;formal-grammar-and-parsing&quot;&gt;Formal Grammar and Parsing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Formal Grammars are used in linguistics, NLP, programming languages.&lt;/li&gt;
+  &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
+  &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
+  &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
@@ -333,107 +492,191 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;
     &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">NLP Lecture 05: Introduction to Syntax and Formal Languages</title><link href="http://localhost:4000/studylog/NLP_lecture05.html" rel="alternate" type="text/html" title="NLP Lecture 05: Introduction to Syntax and Formal Languages" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture05</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture05.html">&lt;p&gt;Keywords: Introduction to Syntax and Formal Languages.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
 
-&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
-&lt;h3 id=&quot;syntax-as-an-interface&quot;&gt;Syntax as an Interface&lt;/h3&gt;
+&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Syntax can be seen as the interface between morphology (structure of words) and semantics.&lt;/li&gt;
-  &lt;li&gt;Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.&lt;/li&gt;
+  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
+  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
+  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;key-concepts-of-syntax&quot;&gt;Key Concepts of Syntax&lt;/h3&gt;
+&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Constituency and Recursion.&lt;/li&gt;
-  &lt;li&gt;Dependency.&lt;/li&gt;
-  &lt;li&gt;Grammatical Relations.&lt;/li&gt;
-  &lt;li&gt;Subcategorization.&lt;/li&gt;
-  &lt;li&gt;Long-distance dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;constituents&quot;&gt;Constituents&lt;/h2&gt;
-&lt;p&gt;A constituent is a group of words that behave as a single unit (within a hierarchical structure).&lt;/p&gt;
-
-&lt;h3 id=&quot;constituency&quot;&gt;Constituency&lt;/h3&gt;
-&lt;p&gt;There is a great number of constituency tests. They typically involve moving constituents around or replacing them.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Topicalization&lt;/li&gt;
-  &lt;li&gt;Pro-form Substitution&lt;/li&gt;
-  &lt;li&gt;Wh-question test.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;constituent-labels&quot;&gt;Constituent Labels&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Choose constituents so each one has one non-bracketed word: the head.&lt;/li&gt;
-  &lt;li&gt;Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recursion-in-language&quot;&gt;Recursion in Language&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;One of the most important attributes of Natural Languages is that they are recursive.&lt;/li&gt;
-  &lt;li&gt;There are infinitely many sentences in a language, but in predictable structures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;context-free-grammars-cfg&quot;&gt;Context Free Grammars (CFG)&lt;/h2&gt;
-&lt;p&gt;A context free grammar is defined by:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;language-of-a-cfg&quot;&gt;Language of a CFG&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given a CFG \(G=(N, \Sigma,R,S)\):
+  &lt;li&gt;Classes of words that behave alike:
     &lt;ul&gt;
-      &lt;li&gt;Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.&lt;/li&gt;
-      &lt;li&gt;The language of G is defined as the set of all terminal strings that can be derived from the start symbol.&lt;/li&gt;
-      &lt;li&gt;
-\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
-      &lt;/li&gt;
+      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
+      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
+      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;~9 traditional parts-of-speech:
+    &lt;ul&gt;
+      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;derivations-and-derived-strings&quot;&gt;Derivations and Derived Strings&lt;/h3&gt;
+&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;CFG is a string rewriting formalism, so the derived objects are strings.&lt;/li&gt;
-  &lt;li&gt;A derivation is a sequence of rewriting steps.&lt;/li&gt;
-  &lt;li&gt;CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.&lt;/li&gt;
-  &lt;li&gt;Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.&lt;/li&gt;
-  &lt;li&gt;The derivation tree implies a parse tree.&lt;/li&gt;
+  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
+  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
+    &lt;ol&gt;
+      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
+      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;regular-grammars&quot;&gt;Regular Grammars&lt;/h2&gt;
-&lt;p&gt;A regular grammar is defined by:&lt;/p&gt;
+&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).&lt;/li&gt;
+  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
+  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;finite-state-automata&quot;&gt;Finite State Automata&lt;/h3&gt;
+&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Regular grammars can be implemented as finite state automata.&lt;/li&gt;
-  &lt;li&gt;The set of all regular languages is strictly smaller than the set of context-free languages.&lt;/li&gt;
+  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
+  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
+  &lt;li&gt;Markov assumption: Next state depends only on current state.
+\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
+  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;center-embeddings&quot;&gt;Center Embeddings&lt;/h2&gt;
+&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Problem: Regular grammars cannot capture long-distance dependencies.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generative (Bayesian) probability model.
+  Observations: sequences of words.
+  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
+    &lt;ul&gt;
+      &lt;li&gt;
+\[t_0 = START\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There are two types of probabilities:
+  Transition Probabilities and Emission Probabilities.
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
+  \end{equation}
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;formal-grammar-and-parsing&quot;&gt;Formal Grammar and Parsing&lt;/h2&gt;
+&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Formal Grammars are used in linguistics, NLP, programming languages.&lt;/li&gt;
-  &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
-  &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
-  &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decoding: 
+  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Evaluation: 
+  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Training: 
+  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
+  \begin{equation}
+  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
+    &lt;ul&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instead of using a unigram context, use a bigram context.
+    &lt;ul&gt;
+      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
+  \begin{equation}
+  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
+  \begin{equation}
+  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
+  \end{equation}
+  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
+  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
+  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
+  \begin{equation}
+  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
+  &lt;li&gt;Need to compute: 
+  \begin{equation}
+  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
+    &lt;ul&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Two sum&lt;/p&gt;
 
@@ -829,191 +1072,7 @@ return nums[right]
     else:
         left = mid  
 return nums[left] ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
-
-&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
-  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
-  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Classes of words that behave alike:
-    &lt;ul&gt;
-      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
-      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
-      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;~9 traditional parts-of-speech:
-    &lt;ul&gt;
-      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
-  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
-    &lt;ol&gt;
-      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
-      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
-  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
-  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
-  &lt;li&gt;Markov assumption: Next state depends only on current state.
-\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
-  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Generative (Bayesian) probability model.
-  Observations: sequences of words.
-  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
-    &lt;ul&gt;
-      &lt;li&gt;
-\[t_0 = START\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There are two types of probabilities:
-  Transition Probabilities and Emission Probabilities.
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
-  \end{equation}
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Decoding: 
-  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Evaluation: 
-  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Training: 
-  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
-  \begin{equation}
-  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Instead of using a unigram context, use a bigram context.
-    &lt;ul&gt;
-      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
-  \begin{equation}
-  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
-  \begin{equation}
-  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
-  \end{equation}
-  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
-  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
-  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
-  \begin{equation}
-  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
-  &lt;li&gt;Need to compute: 
-  \begin{equation}
-  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry><entry><title type="html">NLP Lecture 02: Naive Bayes’ Classifier</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02: Naive Bayes’ Classifier" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 02: Naive Bayes’ Classifier</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02: Naive Bayes’ Classifier" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
 
 &lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
 &lt;ul&gt;
