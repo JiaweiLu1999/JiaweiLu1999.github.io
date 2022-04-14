@@ -18,24 +18,22 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Improvements of Active Object Localization with Deep Reinforcement Learning | Jiawei Lu</title>
+<title>Attention Mechanism | Jiawei Lu</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Improvements of Active Object Localization with Deep Reinforcement Learning" />
+<meta property="og:title" content="Attention Mechanism" />
 <meta name="author" content="Jiawei Lu" />
 <meta property="og:locale" content="zh, en" />
-<meta name="description" content="“In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects.”" />
-<meta property="og:description" content="“In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects.”" />
-<link rel="canonical" href="http://localhost:4000/projects/rl-object-detection-2021/" />
-<meta property="og:url" content="http://localhost:4000/projects/rl-object-detection-2021/" />
+<meta name="description" content="Encoder-Decoder in NLP" />
+<meta property="og:description" content="Encoder-Decoder in NLP" />
+<link rel="canonical" href="http://localhost:4000/studylog/Attention.html" />
+<meta property="og:url" content="http://localhost:4000/studylog/Attention.html" />
 <meta property="og:site_name" content="Jiawei Lu" />
-<meta property="og:image" content="http://localhost:4000/assets/img/projects/rl-object-detection-2021.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-11-10T00:00:00-05:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/rl-object-detection-2021.jpg" />
-<meta property="twitter:title" content="Improvements of Active Object Localization with Deep Reinforcement Learning" />
+<meta property="article:published_time" content="2022-04-13T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Attention Mechanism" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jiawei Lu"},"image":{"srcset":{"1920w":"/assets/img/projects/rl-object-detection-2021.jpg","960w":"/assets/img/projects/rl-object-detection-2021@0,5x.jpg","480w":"/assets/img/projects/rl-object-detection-2021@0,25x.jpg"},"url":"http://localhost:4000/assets/img/projects/rl-object-detection-2021.jpg","@type":"imageObject"},"@type":"WebPage","url":"http://localhost:4000/projects/rl-object-detection-2021/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"“In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects.”","headline":"Improvements of Active Object Localization with Deep Reinforcement Learning","dateModified":"2021-11-10T00:00:00-05:00","datePublished":"2021-11-10T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"BlogPosting","url":"http://localhost:4000/studylog/Attention.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Encoder-Decoder in NLP","headline":"Attention Mechanism","dateModified":"2022-04-13T00:00:00-04:00","datePublished":"2022-04-13T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/Attention.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -66,7 +64,7 @@
 
 
 
-<link rel="alternate" href="http://localhost:4000/projects/rl-object-detection-2021/" hreflang="zh, en">
+<link rel="alternate" href="http://localhost:4000/studylog/Attention.html" hreflang="zh, en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
 
@@ -191,7 +189,7 @@
 
   <main
   id="_main"
-  class="content layout-project"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -204,14 +202,14 @@
           <span>/</span>
           
           
-          <a href="/projects/">projects</a>
+          <a href="/studylog/">studylog</a>
         
       </li>
     
       <li>
         
           <span>/</span>
-          <span>rl-object-detection-2021</span>
+          <span>Attention.html</span>
         
       </li>
     
@@ -229,95 +227,186 @@
 
 
 
-<article
-  id="project"
-  class="page mb6"
-  role="article"
-  vocab="http://schema.org/" typeof="CreativeWork" resource="#project"
-  >
+<article id="post-studylog-Attention" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title" property="name">Improvements of Active Object Localization with Deep Reinforcement Learning</h1>
+    <h1 class="post-title flip-project-title">
+      
+        Attention Mechanism
+      
+    </h1>
 
-    <p class="post-date heading">
-      <span>
-        
-
-        
-          <a href="/projects.html" class="flip-title" property="genre">Projects</a>
-        
-
-        
-          |
-          <time datetime="2021-11-10T00:00:00-05:00">2021</time>
-          
-        
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2022-04-13T00:00:00-04:00">13 Apr 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-dl/" class="flip-title">Deep Learning</a>
       </span>
-
-      <span class="ellipsis ml1" data-tippy-content="Links">
-        <span class="sr-only">| Links:</span>
-        <span class="icon-link" title="Links"></span>
-        
-          <a class="external" href="/papers/E6885_Final_Project.pdf" property="sameAs">Paper</a>
-          |
-        
-          <a class="external" href="https://github.com/JiaweiLu1999/DRL-Object-Detection" property="sameAs">GitHub</a>
-          
-        
-      </span>
-    </p>
-
-    
-    <div class="img-wrapper lead aspect-ratio sixteen-nine ">
       
         
-
-
-<img
-  
-    src="/assets/img/projects/rl-object-detection-2021.jpg"
-    srcset="/assets/img/projects/rl-object-detection-2021.jpg 1920w,/assets/img/projects/rl-object-detection-2021@0,5x.jpg 960w,/assets/img/projects/rl-object-detection-2021@0,25x.jpg 480w"
-    sizes="(min-width:90em)48rem,(min-width:54em)42rem,(min-width:42em)38rem,100vw"
-  
-  alt="Improvements of Active Object Localization with Deep Reinforcement Learning"
-  
-  property="image"
-  width="864"
-  height="486"
-  loading="lazy"
-/>
-
       
     </div>
 
     
+    
+
+    
 
 
 
-  
-    <p class="note-sm" property="description">
-      “In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation,  defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects.”
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
-    <meta property="disambiguatingDescription" content="In this project, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects."/>
   </header>
 
-  <ul>
-  <li><strong>Abstract</strong></li>
+  
+    <h2 id="encoder-decoder-in-nlp">Encoder-Decoder in NLP</h2>
+
+<p>Encoder-Decoder This framework is a good illustration of the core ideas of machine learning:</p>
+
+<blockquote>
+  <p>Transforming real-world problems into mathematical problems and solving real-world problems by solving mathematical problems.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Encoder’s role is to “transform real problems into mathematical problems.”</p>
+  </li>
+  <li>
+    <p>Decoder’s role is to “solve mathematical problems and transform them into real-world solutions.”</p>
+  </li>
 </ul>
 
-<p>Object localization is a research area with wide range of application scenarios, which has been extensively explored. However, there is a trend to incorporate deep reinforcement learning recently because it is believed to conform better to natural object searching process by human. Although several previous works have built a concrete basis by defining state, action and reward, there is still much field to explore for higher efficiency and accuracy.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+  <li>Regardless of the length of the input and output, the length of the vector in the middle (the output of encoder) is fixed (this is also its drawback, as explained below).</li>
+  <li>Different encoders and decoders can be selected depending on the task (can be one RNN But usually its variant LSTM Or CRANE).</li>
+</ul>
 
-<p>In this paper, we proposed several improvement in four aspects, including using advanced CNNs to generate state representation, defining more flexible action spaces, changing reward function to avoid undesired activity in agent and using mask instead cross for multiple objects. All these improvements are tested with extensive experiments and proved its effectiveness. They are also flexible enough to get incorporated into other works to achieve even higher performance.</p>
+<p>As long as it conforms to the above framework, it can be collectively referred to as the Encoder-Decoder model. Speaking of the Encoder-Decoder model, a term is often mentioned - Seq2Seq.</p>
 
+<h3 id="seq2seq">Seq2Seq</h3>
+
+<p>Seq2Seq (short for Sequence-to-sequence), as literally, enters a sequence and outputs another sequence. The most important aspect of this structure is that the length of the input sequence and the output sequence are variable.</p>
+
+<h3 id="origin-of-seq2seq">Origin of Seq2Seq</h3>
+
+<p>Before the Seq2Seq framework was proposed, deep neural networks achieved very good results in image classification and other issues. In the problem that it is good at solving, the input and output can usually be represented as a fixed-length vector. If the length is slightly changed, the zero-padding operation is used.</p>
+
+<p>However, many important issues, such as machine translation, speech recognition, automatic dialogue, etc., are expressed in sequence, and their length is not known in advance. Therefore, how to break through the limitations of the previous deep neural network, so that it can adapt to these scenarios, has become a research hotspot since 2013, and the Seq2Seq framework came into being.</p>
+
+<h3 id="relationship-between-seq2seq-and-encoder-decoder">Relationship between “Seq2Seq” and “Encoder-Decoder”</h3>
+
+<p>Seq2Seq does not specifically refer to specific methods. For the purpose of “input is a sequence, output is also a sequence”, it can be collectively referred to as Seq2Seq model.</p>
+
+<p>The specific methods used by Seq2Seq are basically in the scope of the Encoder-Decoder model.</p>
+
+<p>To sum up:</p>
+
+<ul>
+  <li>Seq2Seq belongs to the broad category of Encoder-Decoder</li>
+  <li>Seq2Seq emphasizes the purpose, Encoder-Decoder emphasizes the method</li>
+</ul>
+
+<h3 id="defects-of-encoder-decoder">Defects of Encoder-Decoder</h3>
+
+<p>When the input information is too long, some information will be lost in the output.</p>
+
+<p>Attention solves the problem of information loss.</p>
+
+<h2 id="principle-of-attention">Principle of Attention</h2>
+
+<p>Attention is a technique that mimics cognitive attention. The effect enhances some parts of the input data while diminishing other parts — the thought being that the network should devote more focus to that small but important part of the data. Learning which part of the data is more important than others depends on the context and is trained by gradient descent.</p>
+
+<p>In a nutshell, attention in deep learning can be broadly interpreted as a vector of importance weights: in order to predict or infer one element, such as a pixel in an image or a word in a sentence, we estimate using the attention vector how strongly it is correlated with (or “attends to” as you may have read in many papers) other elements and take the sum of their values weighted by the attention vector as the approximation of the target.</p>
+
+<h2 id="definition-of-attention-mechanism-in-neural-machine-translation">Definition of Attention Mechanism in Neural Machine Translation</h2>
+
+<p>Say, we have a source sequence \(\mathbf{x}\) of length \(n\) and try to output a target sequence \(y\) of length \(m\):</p>
+
+\[\begin{align}
+    \mathbf{x} &amp; = [x_1, x_2, ..., x_n]\\
+    \mathbf{y} &amp; = [y_1, y_2, ..., y_m]
+\end{align}\]
+
+<p>The encoder is a bidirectional RNN (or other recurrent network setting of your choice) with a forward hidden state \(\overrightarrow{\mathbf{h}_i}\) and a backward one \(\overleftarrow{\mathbf{h}_i}\). A simple concatenation of two represents the encoder state. The motivation is to include both the preceding and following words in the annotation of one word.</p>
+
+\[\mathbf{h}_i = [\overrightarrow{\mathbf{h}_i}^\top; \overleftarrow{\mathbf{h}_i}^\top]^\top, \ i = 1,...,n\]
+
+<p>The decoder network has hidden state \(\mathbf{s}_t = f(\mathbf{s}_{t-1}, y_{t-1}, \mathbf{c}_t)\) for the output word at position \(t\), \(t = 1, ..., m\), where the context vector \(\mathbf{c}_t\) is a sum of hidden states of the input sequence, weighted by alignment scores:</p>
+
+\[\begin{align}
+    \mathbf{c}_t &amp; = \sum_{i=1}^n \alpha_{t,i} \mathbf{h_i} \\
+    \alpha_{t,i} &amp; = \text{align}(y_t, x_i) \\
+    &amp; = \frac{\exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_i))}{\sum_{i' = 1}^n \exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_{i'}))}
+\end{align}\]
+
+<p>The alignment model assigns a score \(\alpha_{t, i}\) to the pair of input at position \(i\) and output at position \(t\), \((y_t, x_i)\),  based on how well they match. The set of \(\{\alpha_{t, i\}\) are weights defining how much of each source hidden state should be considered for each output. In Bahdanau’s paper, the alignment score \(\alpha\) is parametrized by a <strong>feed-forward network</strong> with a single hidden layer and this network is jointly trained with other parts of the model. The score function is therefore in the following form, given that tanh is used as the non-linear activation function:</p>
+
+<p>\(\text{score}(\mathbf{s}_t, \mathbf{h}_i) = \mathbf{v}_a^\top \tanh \left( \mathbf{W}_a \left[ \mathbf{s}_t; \mathbf{h}_i \right] \right)\)
+where both \(\mathbf{v}_a\) and \(\mathbf{W}_a\) are weight matrices to be learned in the alignment model.</p>
+
+<h2 id="self-attention">Self-Attention</h2>
+<p>Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. It has been shown to be very useful in machine reading, abstractive summarization, or image description generation.</p>
+
+<p>The long short-term memory network paper used self-attention to do machine reading. In the example below, the self-attention mechanism enables us to learn the correlation between the current words and the previous part of the sentence.</p>
+
+<h2 id="soft-vs-hard-attention">Soft vs Hard Attention</h2>
+<p>In the <a href="http://proceedings.mlr.press/v37/xuc15.pdf">show, attend and tell</a> paper, attention mechanism is applied to images to generate captions. The image is first encoded by a CNN to extract features. Then a LSTM decoder consumes the convolution features to produce descriptive words one by one, where the weights are learned through attention. The visualization of the attention weights clearly demonstrates which regions of the image the model is paying attention to so as to output a certain word.</p>
+
+<p>This paper first proposed the distinction between “soft” vs “hard” attention, based on whether the attention has access to the entire image or only a patch:</p>
+
+<ul>
+  <li>Soft Attention: the alignment weights are learned and placed “softly” over all patches in the source image; essentially the same type of attention as in <a href="https://arxiv.org/abs/1409.0473">Bahdanau et al., 2015</a>.
+    <ul>
+      <li>Pro: the model is smooth and differentiable.</li>
+      <li>Con: expensive when the source input is large.</li>
+    </ul>
+  </li>
+  <li>Hard Attention: only selects one patch of the image to attend to at a time.
+    <ul>
+      <li>Pro: less calculation at the inference time.</li>
+      <li>Con: the model is non-differentiable and requires more complicated techniques such as variance reduction or reinforcement learning to train. (<a href="https://arxiv.org/abs/1508.04025">Luong, et al., 2015</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="advantage-of-attention-mechanism">Advantage of Attention mechanism</h2>
+
+<p>3 main reasons:</p>
+
+<ul>
+  <li>Less source</li>
+</ul>
+
+<p>In comparison, the complexity is smaller and the parameters are less than CNN and RNN based model. Therefore, the requirements for computing power are even smaller.</p>
+
+<ul>
+  <li>High speed</li>
+</ul>
+
+<p>Attention solves the problem that RNN cannot be computed in parallel. Each step of the Attention mechanism calculation does not depend on the calculation results of the previous step, so it can be processed in parallel as CNN.</p>
+
+<ul>
+  <li>Good result</li>
+</ul>
+
+<p>Before the introduction of the Attention mechanism, there was a problem that everyone had been annoyed: long-distance information would be weakened, just like people with weak memory, and the same thing could not be remembered in the past.</p>
+
+<p>However, Attention can make model focus without losing important information.</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] Lil’Log: Attention? Attention! (<a href="https://lilianweng.github.io/posts/2018-06-24-attention/#definition">Link</a>)</p>
+
+<p>[2] Zhihu BLOG (<a href="https://zhuanlan.zhihu.com/p/91839581">Link</a>)</p>
+
+  
 </article>
 
 
-  
-    <hr class="dingbat related mb6" />
-  
+
+<applause-button class="mb6"
+    color=rgb(79,177,186)
+    url=http://localhost:4000/studylog/Attention.html >
+  </applause-button>
 
 
 
@@ -480,14 +569,30 @@ Please check my <a href="/resume/">Resume</a> to find out more about me!<br /></
 
   
     
-
-
-  <aside class="other-projects related mb4" role="complementary">  <h2>Other Projects</h2>  <div class="columns">              <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/dl-4040project-2021/#project"  >  <meta property="name" content="A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization"/>  <meta property="image" content="/assets/img/projects/SSI-ResU-Net.png"/>  <a href="/projects/dl-4040project-2021/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img ">              <img      src="/assets/img/projects/SSI-ResU-Net.png"    srcset="/assets/img/projects/SSI-ResU-Net.png 1920w,/assets/img/projects/SSI-ResU-Net@0,5x.png 960w,/assets/img/projects/SSI-ResU-Net@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/dl-4040project-2021/" class="flip-title" property="mainEntityOfPage">A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      We implemented mask mixture training and energy normalization. Those two changes have been proved to successfully improve the robustness of the SSI-ResU-Net. Besides, a combination of those two modifications can further improve the generalizing ability of SSI-ResU-Net.    </p>      <a class="fill-card no-hover" href="/projects/dl-4040project-2021/" tabindex="-1"><span class="sr-only">Continue reading A New Backbone for Hyperspectral Image Construction and Improvement based on Mask Mixture Training and Energy Normalization</span></a></article>      </div>                  <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/iot-4764project-2021/#project"  >  <meta property="name" content="Smart Vending Machine"/>  <meta property="image" content="/assets/img/projects/iot.jpg"/>  <a href="/projects/iot-4764project-2021/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img ">              <img      src="/assets/img/projects/iot.jpg"    srcset="/assets/img/projects/iot.jpg 1920w,/assets/img/projects/iot@0,5x.jpg 960w,/assets/img/projects/iot@0,25x.jpg 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Smart Vending Machine"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/iot-4764project-2021/" class="flip-title" property="mainEntityOfPage">Smart Vending Machine</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      We design a Smart Vending Machine based on Raspberry Pi 4B. We can buy things in two ways: Face Login or Android App. <a href="https://www.youtube.com/watch?v=YiR1l8RYqwU">Here is a live demo of our product!</a>    </p>      <a class="fill-card no-hover" href="/projects/iot-4764project-2021/" tabindex="-1"><span class="sr-only">Continue reading Smart Vending Machine</span></a></article>      </div>      </div></aside>
-
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
   
 
   
-    
+  
+    <script src="https://giscus.app/client.js"
+            data-repo=JiaweiLu1999/JiaweiLu1999.github.io
+            data-repo-id=R_kgDOGt0vAg
+            data-category=Comments
+            data-category-id=DIC_kwDOGt0vAs4CA218
+            data-mapping=pathname
+            data-reactions-enabled=1
+            data-emit-metadata=0
+            data-theme=dark_dimmed
+            data-lang=en
+            crossorigin=anonymous
+            async>
+    </script>
+  
+
+
+</aside>
+
 
   
 

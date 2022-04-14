@@ -1,5 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-03-12T18:55:49-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">CV II Lecture 06</title><link href="http://localhost:4000/studylog/CV_lecture06.html" rel="alternate" type="text/html" title="CV II Lecture 06" /><published>2022-03-04T00:00:00-05:00</published><updated>2022-03-04T00:00:00-05:00</updated><id>http://localhost:4000/studylog/CV_lecture06</id><content type="html" xml:base="http://localhost:4000/studylog/CV_lecture06.html">&lt;h2 id=&quot;behavior-continuum&quot;&gt;Behavior Continuum&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-04-13T22:09:48-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Attention Mechanism</title><link href="http://localhost:4000/studylog/Attention.html" rel="alternate" type="text/html" title="Attention Mechanism" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Attention</id><content type="html" xml:base="http://localhost:4000/studylog/Attention.html">&lt;h2 id=&quot;encoder-decoder-in-nlp&quot;&gt;Encoder-Decoder in NLP&lt;/h2&gt;
+
+&lt;p&gt;Encoder-Decoder This framework is a good illustration of the core ideas of machine learning:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Transforming real-world problems into mathematical problems and solving real-world problems by solving mathematical problems.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Encoder’s role is to “transform real problems into mathematical problems.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decoder’s role is to “solve mathematical problems and transform them into real-world solutions.”&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regardless of the length of the input and output, the length of the vector in the middle (the output of encoder) is fixed (this is also its drawback, as explained below).&lt;/li&gt;
+  &lt;li&gt;Different encoders and decoders can be selected depending on the task (can be one RNN But usually its variant LSTM Or CRANE).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As long as it conforms to the above framework, it can be collectively referred to as the Encoder-Decoder model. Speaking of the Encoder-Decoder model, a term is often mentioned - Seq2Seq.&lt;/p&gt;
+
+&lt;h3 id=&quot;seq2seq&quot;&gt;Seq2Seq&lt;/h3&gt;
+
+&lt;p&gt;Seq2Seq (short for Sequence-to-sequence), as literally, enters a sequence and outputs another sequence. The most important aspect of this structure is that the length of the input sequence and the output sequence are variable.&lt;/p&gt;
+
+&lt;h3 id=&quot;origin-of-seq2seq&quot;&gt;Origin of Seq2Seq&lt;/h3&gt;
+
+&lt;p&gt;Before the Seq2Seq framework was proposed, deep neural networks achieved very good results in image classification and other issues. In the problem that it is good at solving, the input and output can usually be represented as a fixed-length vector. If the length is slightly changed, the zero-padding operation is used.&lt;/p&gt;
+
+&lt;p&gt;However, many important issues, such as machine translation, speech recognition, automatic dialogue, etc., are expressed in sequence, and their length is not known in advance. Therefore, how to break through the limitations of the previous deep neural network, so that it can adapt to these scenarios, has become a research hotspot since 2013, and the Seq2Seq framework came into being.&lt;/p&gt;
+
+&lt;h3 id=&quot;relationship-between-seq2seq-and-encoder-decoder&quot;&gt;Relationship between “Seq2Seq” and “Encoder-Decoder”&lt;/h3&gt;
+
+&lt;p&gt;Seq2Seq does not specifically refer to specific methods. For the purpose of “input is a sequence, output is also a sequence”, it can be collectively referred to as Seq2Seq model.&lt;/p&gt;
+
+&lt;p&gt;The specific methods used by Seq2Seq are basically in the scope of the Encoder-Decoder model.&lt;/p&gt;
+
+&lt;p&gt;To sum up:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Seq2Seq belongs to the broad category of Encoder-Decoder&lt;/li&gt;
+  &lt;li&gt;Seq2Seq emphasizes the purpose, Encoder-Decoder emphasizes the method&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;defects-of-encoder-decoder&quot;&gt;Defects of Encoder-Decoder&lt;/h3&gt;
+
+&lt;p&gt;When the input information is too long, some information will be lost in the output.&lt;/p&gt;
+
+&lt;p&gt;Attention solves the problem of information loss.&lt;/p&gt;
+
+&lt;h2 id=&quot;principle-of-attention&quot;&gt;Principle of Attention&lt;/h2&gt;
+
+&lt;p&gt;Attention is a technique that mimics cognitive attention. The effect enhances some parts of the input data while diminishing other parts — the thought being that the network should devote more focus to that small but important part of the data. Learning which part of the data is more important than others depends on the context and is trained by gradient descent.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, attention in deep learning can be broadly interpreted as a vector of importance weights: in order to predict or infer one element, such as a pixel in an image or a word in a sentence, we estimate using the attention vector how strongly it is correlated with (or “attends to” as you may have read in many papers) other elements and take the sum of their values weighted by the attention vector as the approximation of the target.&lt;/p&gt;
+
+&lt;h2 id=&quot;definition-of-attention-mechanism-in-neural-machine-translation&quot;&gt;Definition of Attention Mechanism in Neural Machine Translation&lt;/h2&gt;
+
+&lt;p&gt;Say, we have a source sequence \(\mathbf{x}\) of length \(n\) and try to output a target sequence \(y\) of length \(m\):&lt;/p&gt;
+
+\[\begin{align}
+    \mathbf{x} &amp;amp; = [x_1, x_2, ..., x_n]\\
+    \mathbf{y} &amp;amp; = [y_1, y_2, ..., y_m]
+\end{align}\]
+
+&lt;p&gt;The encoder is a bidirectional RNN (or other recurrent network setting of your choice) with a forward hidden state \(\overrightarrow{\mathbf{h}_i}\) and a backward one \(\overleftarrow{\mathbf{h}_i}\). A simple concatenation of two represents the encoder state. The motivation is to include both the preceding and following words in the annotation of one word.&lt;/p&gt;
+
+\[\mathbf{h}_i = [\overrightarrow{\mathbf{h}_i}^\top; \overleftarrow{\mathbf{h}_i}^\top]^\top, \ i = 1,...,n\]
+
+&lt;p&gt;The decoder network has hidden state \(\mathbf{s}_t = f(\mathbf{s}_{t-1}, y_{t-1}, \mathbf{c}_t)\) for the output word at position \(t\), \(t = 1, ..., m\), where the context vector \(\mathbf{c}_t\) is a sum of hidden states of the input sequence, weighted by alignment scores:&lt;/p&gt;
+
+\[\begin{align}
+    \mathbf{c}_t &amp;amp; = \sum_{i=1}^n \alpha_{t,i} \mathbf{h_i} \\
+    \alpha_{t,i} &amp;amp; = \text{align}(y_t, x_i) \\
+    &amp;amp; = \frac{\exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_i))}{\sum_{i&apos; = 1}^n \exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_{i&apos;}))}
+\end{align}\]
+
+&lt;p&gt;The alignment model assigns a score \(\alpha_{t, i}\) to the pair of input at position \(i\) and output at position \(t\), \((y_t, x_i)\),  based on how well they match. The set of \(\{\alpha_{t, i\}\) are weights defining how much of each source hidden state should be considered for each output. In Bahdanau’s paper, the alignment score \(\alpha\) is parametrized by a &lt;strong&gt;feed-forward network&lt;/strong&gt; with a single hidden layer and this network is jointly trained with other parts of the model. The score function is therefore in the following form, given that tanh is used as the non-linear activation function:&lt;/p&gt;
+
+&lt;p&gt;\(\text{score}(\mathbf{s}_t, \mathbf{h}_i) = \mathbf{v}_a^\top \tanh \left( \mathbf{W}_a \left[ \mathbf{s}_t; \mathbf{h}_i \right] \right)\)
+where both \(\mathbf{v}_a\) and \(\mathbf{W}_a\) are weight matrices to be learned in the alignment model.&lt;/p&gt;
+
+&lt;h2 id=&quot;self-attention&quot;&gt;Self-Attention&lt;/h2&gt;
+&lt;p&gt;Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. It has been shown to be very useful in machine reading, abstractive summarization, or image description generation.&lt;/p&gt;
+
+&lt;p&gt;The long short-term memory network paper used self-attention to do machine reading. In the example below, the self-attention mechanism enables us to learn the correlation between the current words and the previous part of the sentence.&lt;/p&gt;
+
+&lt;h2 id=&quot;soft-vs-hard-attention&quot;&gt;Soft vs Hard Attention&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href=&quot;http://proceedings.mlr.press/v37/xuc15.pdf&quot;&gt;show, attend and tell&lt;/a&gt; paper, attention mechanism is applied to images to generate captions. The image is first encoded by a CNN to extract features. Then a LSTM decoder consumes the convolution features to produce descriptive words one by one, where the weights are learned through attention. The visualization of the attention weights clearly demonstrates which regions of the image the model is paying attention to so as to output a certain word.&lt;/p&gt;
+
+&lt;p&gt;This paper first proposed the distinction between “soft” vs “hard” attention, based on whether the attention has access to the entire image or only a patch:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Soft Attention: the alignment weights are learned and placed “softly” over all patches in the source image; essentially the same type of attention as in &lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;Pro: the model is smooth and differentiable.&lt;/li&gt;
+      &lt;li&gt;Con: expensive when the source input is large.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hard Attention: only selects one patch of the image to attend to at a time.
+    &lt;ul&gt;
+      &lt;li&gt;Pro: less calculation at the inference time.&lt;/li&gt;
+      &lt;li&gt;Con: the model is non-differentiable and requires more complicated techniques such as variance reduction or reinforcement learning to train. (&lt;a href=&quot;https://arxiv.org/abs/1508.04025&quot;&gt;Luong, et al., 2015&lt;/a&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;advantage-of-attention-mechanism&quot;&gt;Advantage of Attention mechanism&lt;/h2&gt;
+
+&lt;p&gt;3 main reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Less source&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In comparison, the complexity is smaller and the parameters are less than CNN and RNN based model. Therefore, the requirements for computing power are even smaller.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High speed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Attention solves the problem that RNN cannot be computed in parallel. Each step of the Attention mechanism calculation does not depend on the calculation results of the previous step, so it can be processed in parallel as CNN.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Good result&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before the introduction of the Attention mechanism, there was a problem that everyone had been annoyed: long-distance information would be weakened, just like people with weak memory, and the same thing could not be remembered in the past.&lt;/p&gt;
+
+&lt;p&gt;However, Attention can make model focus without losing important information.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[1] Lil’Log: Attention? Attention! (&lt;a href=&quot;https://lilianweng.github.io/posts/2018-06-24-attention/#definition&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;[2] Zhihu BLOG (&lt;a href=&quot;https://zhuanlan.zhihu.com/p/91839581&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Encoder-Decoder in NLP</summary></entry><entry><title type="html">CV II Lecture 06</title><link href="http://localhost:4000/studylog/CV_lecture06.html" rel="alternate" type="text/html" title="CV II Lecture 06" /><published>2022-03-04T00:00:00-05:00</published><updated>2022-03-04T00:00:00-05:00</updated><id>http://localhost:4000/studylog/CV_lecture06</id><content type="html" xml:base="http://localhost:4000/studylog/CV_lecture06.html">&lt;h2 id=&quot;behavior-continuum&quot;&gt;Behavior Continuum&lt;/h2&gt;
 
 &lt;h2 id=&quot;representing-video&quot;&gt;Representing Video&lt;/h2&gt;
 
