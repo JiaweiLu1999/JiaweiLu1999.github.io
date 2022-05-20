@@ -35,11 +35,11 @@ Useful Links:
 
 
 ## Collaborative Reports
-Reports let you organize and embed visualizations, describe your findings, share updates with collaborators, and more.
-
 <p>
-<iframe width="735" height="414" src="https://www.youtube.com/embed/2xeJIv_K_eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="735" height="414" src="https://www.youtube.com/embed/2xeJIv_K_eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+
+Reports let you organize and embed visualizations, describe your findings, share updates with collaborators, and more.
 
 ### Typical use cases for reports
 
