@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T00:06:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T10:07:34-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">ZK Lab 01: Preparation</title><link href="http://localhost:4000/studylog/Preparation.html" rel="alternate" type="text/html" title="ZK Lab 01: Preparation" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Preparation</id><content type="html" xml:base="http://localhost:4000/studylog/Preparation.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
@@ -75,7 +75,67 @@
       &lt;li&gt;Create and apply stress tests using data.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+
+&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
+&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+
+&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;models&lt;/li&gt;
+  &lt;li&gt;datasets&lt;/li&gt;
+  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versioning&lt;/li&gt;
+  &lt;li&gt;commit history and diffs&lt;/li&gt;
+  &lt;li&gt;branches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
+  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
+  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
+  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
+&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
+&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+
+&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/XvSGPZFEjDY&quot;&gt;[Link]&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
+&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/rkCly_cbMBk&quot;&gt;[Link]&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
 

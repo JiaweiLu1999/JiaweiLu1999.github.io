@@ -120,7 +120,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2022-05-20T00:06:24-04:00',
+    INDEX_KEY: 'index--2022-05-20T10:07:34-04:00',
   };
   w._clapButton = false;
 }(window);</script>
@@ -335,6 +335,66 @@
     </ul>
   </li>
 </ul>
+
+<h2 id="hugging-face"><a href="https://huggingface.co/">Hugging Face</a></h2>
+
+<h3 id="goal">Goal</h3>
+<p>Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.</p>
+
+<h3 id="repository">Repository</h3>
+<p>The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.</p>
+
+<p>The Hub currently hosts three different repo types:</p>
+<ul>
+  <li>models</li>
+  <li>datasets</li>
+  <li>Spaces, which are ML demo apps</li>
+</ul>
+
+<p>These repositories have multiple advantages over other hosting solutions:</p>
+<ul>
+  <li>versioning</li>
+  <li>commit history and diffs</li>
+  <li>branches</li>
+</ul>
+
+<p>On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:</p>
+<ul>
+  <li>Model repos provide useful metadata about their tasks, languages, metrics, etc.</li>
+  <li>Anyone can play with the model directly in the browser!</li>
+  <li>Training metrics charts are displayed if the repository contains TensorBoard traces.</li>
+  <li>An API is provided to use the models in production settings.</li>
+  <li><a href="https://huggingface.co/docs/hub/libraries">Over 10 frameworks</a> such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.</li>
+</ul>
+
+<h3 id="widget">widget</h3>
+<p>Many model repos have a widget that allows anyone to do inference directly in the browser.</p>
+
+<p>Some examples:</p>
+
+<ul>
+  <li><a href="https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London">Named Entity Recognition</a> using spaCy[https://spacy.io/].</li>
+  <li><a href="https://huggingface.co/google/vit-base-patch16-224">Image Classification</a> using <a href="https://github.com/huggingface/transformers">Transformers</a>.</li>
+  <li><a href="https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train">Text to Speech</a> using <a href="https://github.com/espnet/espnet">ESPnet</a>.</li>
+  <li><a href="https://huggingface.co/osanseviero/full-sentence-distillroberta3">Sentence Similarity</a> using <a href="https://github.com/UKPLab/sentence-transformers">Sentence Transformers</a>.</li>
+</ul>
+
+<p>You can try out all the widgets <a href="https://huggingface-widgets.netlify.app/">here</a>.</p>
+
+<h3 id="inference-api">Inference API</h3>
+<p>The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.</p>
+
+<h3 id="explore-hugging-face-hub">Explore Hugging Face Hub</h3>
+<p>YouTube <a href="https://youtu.be/XvSGPZFEjDY">[Link]</a>.</p>
+
+<h3 id="models-type-of-inference-api-and-widget">Model’s Type of Inference API and Widget</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pipeline_tag</code>: determine which pipeline and widget to display</li>
+  <li><code class="language-plaintext highlighter-rouge">config.json</code>: transformers</li>
+</ul>
+
+<h3 id="loadpush-fromto-the-hub">Load/Push from/to the Hub</h3>
+<p>YouTube <a href="https://youtu.be/rkCly_cbMBk">[Link]</a></p>
 
   
 </article>
