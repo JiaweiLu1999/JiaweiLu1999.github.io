@@ -13,6 +13,9 @@ tags: zklab
 ### Definition
 Data-centric AI is the discipline of systematically engineering the data used to build an AI system.
 
+### Data-centric AI Resource Hub
+A place to share cutting edge techniques and best practices for using data centric AI methods to build successful machine learning systems.
+
 ### Topics
 #### [Labeling and Crowdsourcing](https://datacentricai.org/labeling-and-crowdsourcing/)
 

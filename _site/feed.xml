@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T00:00:45-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T00:06:24-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">ZK Lab 01: Preparation</title><link href="http://localhost:4000/studylog/Preparation.html" rel="alternate" type="text/html" title="ZK Lab 01: Preparation" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Preparation</id><content type="html" xml:base="http://localhost:4000/studylog/Preparation.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 &lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
+
+&lt;h3 id=&quot;data-centric-ai-resource-hub&quot;&gt;Data-centric AI Resource Hub&lt;/h3&gt;
+&lt;p&gt;A place to share cutting edge techniques and best practices for using data centric AI methods to build successful machine learning systems.&lt;/p&gt;
 
 &lt;h3 id=&quot;topics&quot;&gt;Topics&lt;/h3&gt;
 &lt;h4 id=&quot;labeling-and-crowdsourcing&quot;&gt;&lt;a href=&quot;https://datacentricai.org/labeling-and-crowdsourcing/&quot;&gt;Labeling and Crowdsourcing&lt;/a&gt;&lt;/h4&gt;
