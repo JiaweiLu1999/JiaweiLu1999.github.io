@@ -1,5 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T10:07:34-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">ZK Lab 01: Preparation</title><link href="http://localhost:4000/studylog/Preparation.html" rel="alternate" type="text/html" title="ZK Lab 01: Preparation" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Preparation</id><content type="html" xml:base="http://localhost:4000/studylog/Preparation.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T10:22:31-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #2: Tool - Hugging Face</title><link href="http://localhost:4000/studylog/tool_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Tool - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/tool_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+
+&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
+&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+
+&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;models&lt;/li&gt;
+  &lt;li&gt;datasets&lt;/li&gt;
+  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versioning&lt;/li&gt;
+  &lt;li&gt;commit history and diffs&lt;/li&gt;
+  &lt;li&gt;branches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
+  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
+  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
+  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
+&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
+&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+
+&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/XvSGPZFEjDY&quot;&gt;[Link]&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
+&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/rkCly_cbMBk&quot;&gt;[Link]&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 &lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
@@ -75,67 +133,7 @@
       &lt;li&gt;Create and apply stress tests using data.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
-&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
-
-&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
-&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
-
-&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;models&lt;/li&gt;
-  &lt;li&gt;datasets&lt;/li&gt;
-  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;versioning&lt;/li&gt;
-  &lt;li&gt;commit history and diffs&lt;/li&gt;
-  &lt;li&gt;branches&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
-  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
-  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
-  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
-&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
-
-&lt;p&gt;Some examples:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
-&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
-
-&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
-&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/XvSGPZFEjDY&quot;&gt;[Link]&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
-&lt;p&gt;YouTube &lt;a href=&quot;https://youtu.be/rkCly_cbMBk&quot;&gt;[Link]&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
 
@@ -408,107 +406,7 @@ s.t. \(\delta^i \in{0,1}^K\) and \(||\delta^i||_1 = 1 \ \forall_i\)&lt;/p&gt;
   &lt;li&gt;E Step: Fill in missing variables and estimate latent variables&lt;/li&gt;
   &lt;li&gt;M Step: Fit the model (with back-propagation in this case)&lt;/li&gt;
   &lt;li&gt;Repeat&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">NLP Lecture 05: Introduction to Syntax and Formal Languages</title><link href="http://localhost:4000/studylog/NLP_lecture05.html" rel="alternate" type="text/html" title="NLP Lecture 05: Introduction to Syntax and Formal Languages" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture05</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture05.html">&lt;p&gt;Keywords: Introduction to Syntax and Formal Languages.&lt;/p&gt;
-
-&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
-&lt;h3 id=&quot;syntax-as-an-interface&quot;&gt;Syntax as an Interface&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Syntax can be seen as the interface between morphology (structure of words) and semantics.&lt;/li&gt;
-  &lt;li&gt;Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;key-concepts-of-syntax&quot;&gt;Key Concepts of Syntax&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Constituency and Recursion.&lt;/li&gt;
-  &lt;li&gt;Dependency.&lt;/li&gt;
-  &lt;li&gt;Grammatical Relations.&lt;/li&gt;
-  &lt;li&gt;Subcategorization.&lt;/li&gt;
-  &lt;li&gt;Long-distance dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;constituents&quot;&gt;Constituents&lt;/h2&gt;
-&lt;p&gt;A constituent is a group of words that behave as a single unit (within a hierarchical structure).&lt;/p&gt;
-
-&lt;h3 id=&quot;constituency&quot;&gt;Constituency&lt;/h3&gt;
-&lt;p&gt;There is a great number of constituency tests. They typically involve moving constituents around or replacing them.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Topicalization&lt;/li&gt;
-  &lt;li&gt;Pro-form Substitution&lt;/li&gt;
-  &lt;li&gt;Wh-question test.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;constituent-labels&quot;&gt;Constituent Labels&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Choose constituents so each one has one non-bracketed word: the head.&lt;/li&gt;
-  &lt;li&gt;Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recursion-in-language&quot;&gt;Recursion in Language&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;One of the most important attributes of Natural Languages is that they are recursive.&lt;/li&gt;
-  &lt;li&gt;There are infinitely many sentences in a language, but in predictable structures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;context-free-grammars-cfg&quot;&gt;Context Free Grammars (CFG)&lt;/h2&gt;
-&lt;p&gt;A context free grammar is defined by:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;language-of-a-cfg&quot;&gt;Language of a CFG&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given a CFG \(G=(N, \Sigma,R,S)\):
-    &lt;ul&gt;
-      &lt;li&gt;Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.&lt;/li&gt;
-      &lt;li&gt;The language of G is defined as the set of all terminal strings that can be derived from the start symbol.&lt;/li&gt;
-      &lt;li&gt;
-\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;derivations-and-derived-strings&quot;&gt;Derivations and Derived Strings&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;CFG is a string rewriting formalism, so the derived objects are strings.&lt;/li&gt;
-  &lt;li&gt;A derivation is a sequence of rewriting steps.&lt;/li&gt;
-  &lt;li&gt;CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.&lt;/li&gt;
-  &lt;li&gt;Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.&lt;/li&gt;
-  &lt;li&gt;The derivation tree implies a parse tree.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;regular-grammars&quot;&gt;Regular Grammars&lt;/h2&gt;
-&lt;p&gt;A regular grammar is defined by:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;finite-state-automata&quot;&gt;Finite State Automata&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Regular grammars can be implemented as finite state automata.&lt;/li&gt;
-  &lt;li&gt;The set of all regular languages is strictly smaller than the set of context-free languages.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;center-embeddings&quot;&gt;Center Embeddings&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Problem: Regular grammars cannot capture long-distance dependencies.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;formal-grammar-and-parsing&quot;&gt;Formal Grammar and Parsing&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Formal Grammars are used in linguistics, NLP, programming languages.&lt;/li&gt;
-  &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
-  &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
-  &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
 The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
@@ -628,7 +526,107 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;
     &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">NLP Lecture 05: Introduction to Syntax and Formal Languages</title><link href="http://localhost:4000/studylog/NLP_lecture05.html" rel="alternate" type="text/html" title="NLP Lecture 05: Introduction to Syntax and Formal Languages" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture05</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture05.html">&lt;p&gt;Keywords: Introduction to Syntax and Formal Languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
+&lt;h3 id=&quot;syntax-as-an-interface&quot;&gt;Syntax as an Interface&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Syntax can be seen as the interface between morphology (structure of words) and semantics.&lt;/li&gt;
+  &lt;li&gt;Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;key-concepts-of-syntax&quot;&gt;Key Concepts of Syntax&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Constituency and Recursion.&lt;/li&gt;
+  &lt;li&gt;Dependency.&lt;/li&gt;
+  &lt;li&gt;Grammatical Relations.&lt;/li&gt;
+  &lt;li&gt;Subcategorization.&lt;/li&gt;
+  &lt;li&gt;Long-distance dependencies&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;constituents&quot;&gt;Constituents&lt;/h2&gt;
+&lt;p&gt;A constituent is a group of words that behave as a single unit (within a hierarchical structure).&lt;/p&gt;
+
+&lt;h3 id=&quot;constituency&quot;&gt;Constituency&lt;/h3&gt;
+&lt;p&gt;There is a great number of constituency tests. They typically involve moving constituents around or replacing them.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Topicalization&lt;/li&gt;
+  &lt;li&gt;Pro-form Substitution&lt;/li&gt;
+  &lt;li&gt;Wh-question test.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;constituent-labels&quot;&gt;Constituent Labels&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Choose constituents so each one has one non-bracketed word: the head.&lt;/li&gt;
+  &lt;li&gt;Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;recursion-in-language&quot;&gt;Recursion in Language&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;One of the most important attributes of Natural Languages is that they are recursive.&lt;/li&gt;
+  &lt;li&gt;There are infinitely many sentences in a language, but in predictable structures.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;context-free-grammars-cfg&quot;&gt;Context Free Grammars (CFG)&lt;/h2&gt;
+&lt;p&gt;A context free grammar is defined by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
+  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
+  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;language-of-a-cfg&quot;&gt;Language of a CFG&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given a CFG \(G=(N, \Sigma,R,S)\):
+    &lt;ul&gt;
+      &lt;li&gt;Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).&lt;/li&gt;
+      &lt;li&gt;\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.&lt;/li&gt;
+      &lt;li&gt;\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.&lt;/li&gt;
+      &lt;li&gt;The language of G is defined as the set of all terminal strings that can be derived from the start symbol.&lt;/li&gt;
+      &lt;li&gt;
+\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;derivations-and-derived-strings&quot;&gt;Derivations and Derived Strings&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;CFG is a string rewriting formalism, so the derived objects are strings.&lt;/li&gt;
+  &lt;li&gt;A derivation is a sequence of rewriting steps.&lt;/li&gt;
+  &lt;li&gt;CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.&lt;/li&gt;
+  &lt;li&gt;Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.&lt;/li&gt;
+  &lt;li&gt;The derivation tree implies a parse tree.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;regular-grammars&quot;&gt;Regular Grammars&lt;/h2&gt;
+&lt;p&gt;A regular grammar is defined by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
+  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
+  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;finite-state-automata&quot;&gt;Finite State Automata&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular grammars can be implemented as finite state automata.&lt;/li&gt;
+  &lt;li&gt;The set of all regular languages is strictly smaller than the set of context-free languages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;center-embeddings&quot;&gt;Center Embeddings&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Problem: Regular grammars cannot capture long-distance dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;formal-grammar-and-parsing&quot;&gt;Formal Grammar and Parsing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Formal Grammars are used in linguistics, NLP, programming languages.&lt;/li&gt;
+  &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
+  &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
+  &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Two sum&lt;/p&gt;
 
@@ -1442,170 +1440,4 @@ return nums[left] ```
 • Perplexity can be thought of as “effective vocabulary size”.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: n-gram language models</summary></entry><entry><title type="html">NLP Lecture 02: Naive Bayes’ Classifier</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02: Naive Bayes’ Classifier" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
-
-&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
-  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
-  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
-  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
-  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
-  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
-  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
-&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
-
-&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
-&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
-
-&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
-&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
-
-&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
-
-&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
-  &lt;li&gt;random variable \(X\)&lt;/li&gt;
-  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
-  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
-  &lt;li&gt;conditional probability: 
-\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Independent:
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(A) = P(A|B)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(A, B) = P(A) \cdot P(B)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conditionally Independent
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(B|A,C) =P(B|A)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
-  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
-  &lt;li&gt;Two approaches:
-    &lt;ul&gt;
-      &lt;li&gt;Discriminative algorithms learn 
-  \(P(y | x)\) 
-  directly.&lt;/li&gt;
-      &lt;li&gt;Generative algorithms use Bayes rule
-  \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
-  \end{equation}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
-  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
-  &lt;li&gt;Examples:
-    &lt;ul&gt;
-      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
-      &lt;li&gt;decision trees&lt;/li&gt;
-      &lt;li&gt;random forests&lt;/li&gt;
-      &lt;li&gt;neural networks&lt;/li&gt;
-      &lt;li&gt;log-linear models&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
-  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
-  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
-  \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;Examples:
-    &lt;ul&gt;
-      &lt;li&gt;Naive Bayes&lt;/li&gt;
-      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
-      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
-      &lt;li&gt;PCFGs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
-
-&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-\begin{split}
-    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
-    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
-\end{split}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-y* = \arg \max_y P(y) \Pi_i P(x_i|y)
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
-&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
-  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
-  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: n-gram language models</summary></entry></feed>
