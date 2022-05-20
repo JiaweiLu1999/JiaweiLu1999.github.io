@@ -1,12 +1,12 @@
 ---
 layout:   post
-title:    "[ZK Lab] #2: Tool - Hugging Face"
+title:    "[ZK Lab] #2: Platform - Hugging Face"
 subtitle: "BLOG + LINK"
 category: studylog
 tags: zklab
 ---
 
-# [ZK Lab] \#2: Tool - Hugging Face
+# [ZK Lab] #2: Platform - Hugging Face
 
 ## [Hugging Face](https://huggingface.co/)
 
@@ -49,12 +49,13 @@ You can try out all the widgets [here](https://huggingface-widgets.netlify.app/)
 The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.
 
 ### Explore Hugging Face Hub
-YouTube [[Link]](https://youtu.be/XvSGPZFEjDY).
+
+<iframe width="735" height="414" src="https://www.youtube.com/embed/XvSGPZFEjDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Model's Type of Inference API and Widget
 - `pipeline_tag`: determine which pipeline and widget to display
 - `config.json`: transformers
 
 ### Load/Push from/to the Hub
-YouTube [[Link]](https://youtu.be/rkCly_cbMBk)
 
+<iframe width="735" height="414" src="https://www.youtube.com/embed/rkCly_cbMBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
