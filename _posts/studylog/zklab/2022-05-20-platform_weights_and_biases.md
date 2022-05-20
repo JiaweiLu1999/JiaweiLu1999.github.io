@@ -79,11 +79,11 @@ Use W&B Tables to log, query, and analyze tabular data. Understand your datasets
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://wandb.me/sweeps-colab)
 
-Use Weights & Biases Sweeps to automate hyperparameter optimization and explore the space of possible models.
-
 <p>
 <iframe width="735" height="414" src="https://www.youtube.com/embed/9zrmUIlScdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+
+Use Weights & Biases Sweeps to automate hyperparameter optimization and explore the space of possible models.
 
 ## Model Management
 A Model Registry is a system of record for organizing ML Models - often serving as an interface between model producers and consumers. This guide will show you how to use W&B as a Model Registry to track and report on the complete workflow of developing a model:
