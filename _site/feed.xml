@@ -1,5 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-04-14T14:48:56-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T00:00:45-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">ZK Lab 01: Preparation</title><link href="http://localhost:4000/studylog/Preparation.html" rel="alternate" type="text/html" title="ZK Lab 01: Preparation" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Preparation</id><content type="html" xml:base="http://localhost:4000/studylog/Preparation.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
+&lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
+
+&lt;h3 id=&quot;topics&quot;&gt;Topics&lt;/h3&gt;
+&lt;h4 id=&quot;labeling-and-crowdsourcing&quot;&gt;&lt;a href=&quot;https://datacentricai.org/labeling-and-crowdsourcing/&quot;&gt;Labeling and Crowdsourcing&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Labeling and Crowdsourcing&quot; src=&quot;../../../assets/img/blog/2022-05-19/label-and-crowdsourcing.webp&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suggestions:
+    &lt;ul&gt;
+      &lt;li&gt;Label many of the examples yourself before designing the task.&lt;/li&gt;
+      &lt;li&gt;Pay and treat your workers fairly.&lt;/li&gt;
+      &lt;li&gt;Always start with small pilots.&lt;/li&gt;
+      &lt;li&gt;Always assume that the annotators are trying hard to build a model of your intentions: when something goes wrong, your reaction should be “what did I do wrong in communicating my intent?”, not “why weren’t they paying attention?”&lt;/li&gt;
+      &lt;li&gt;Train with feedback.&lt;/li&gt;
+      &lt;li&gt;It can often make sense to hire fewer people, more full time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;data-augmentation&quot;&gt;&lt;a href=&quot;https://datacentricai.org/data-augmentation/&quot;&gt;Data Augmentation&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Labeling and Crowdsourcing&quot; src=&quot;../../../assets/img/blog/2022-05-19/data-augmentation.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data limitations:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Domain gaps&lt;/strong&gt;: The data you train your model with is quite different from the data you have to predict on in the real world.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Data bias&lt;/strong&gt;: When the data you collect has imbalances due to societal bias, how can you design methods that can overcome them?&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Data noise&lt;/strong&gt;: Noise can come from a variety of sources, including where labels are ambiguous, cluttered, or otherwise corrupted.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Definition of Data Augmentation:
+    &lt;ul&gt;
+      &lt;li&gt;Self-Supervision: When you have limited labeled data, you can try combining it with unlabeled data.
+        &lt;ul&gt;
+          &lt;li&gt;rotation&lt;/li&gt;
+          &lt;li&gt;cropping&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Synthetic Data: While synthetic data is still in its infancy, there has been ongoing advances in generative models and it will become hugely important in the future for testing systems such as autonomous driving or robot learning.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data-centric principles in data augmentation:
+    &lt;ul&gt;
+      &lt;li&gt;Core: the balance of positive and negative examples.&lt;/li&gt;
+      &lt;li&gt;Also: combine self-supervision with weak supervision.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;data-in-deployment&quot;&gt;&lt;a href=&quot;https://datacentricai.org/data-in-deployment/&quot;&gt;Data in Deployment&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img alt=&quot;Labeling and Crowdsourcing&quot; src=&quot;../../../assets/img/blog/2022-05-19/data-in-deployment.jpeg&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Technical debt in machine learning:
+    &lt;ul&gt;
+      &lt;li&gt;The concept of technical debt originally comes from the world of software engineering, where it has often been found that pushing to develop software very quickly can create long term maintenance costs that must be paid back later, and that if left unaddressed can compound over time.&lt;/li&gt;
+      &lt;li&gt;ML code – the bit that we tend to think of as the cool part – is actually a small component of the overall system.&lt;/li&gt;
+      &lt;li&gt;In a lot of settings it is not actually statistically useful to get more data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Three places to start:
+    &lt;ul&gt;
+      &lt;li&gt;Audit and monitor data quality.&lt;/li&gt;
+      &lt;li&gt;Create data sheets for data sets.&lt;/li&gt;
+      &lt;li&gt;Create and apply stress tests using data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
 
@@ -492,191 +565,7 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;
     &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
-
-&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
-  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
-  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Classes of words that behave alike:
-    &lt;ul&gt;
-      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
-      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
-      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;~9 traditional parts-of-speech:
-    &lt;ul&gt;
-      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
-  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
-    &lt;ol&gt;
-      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
-      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
-  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
-  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
-  &lt;li&gt;Markov assumption: Next state depends only on current state.
-\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
-  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Generative (Bayesian) probability model.
-  Observations: sequences of words.
-  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
-    &lt;ul&gt;
-      &lt;li&gt;
-\[t_0 = START\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There are two types of probabilities:
-  Transition Probabilities and Emission Probabilities.
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
-  \end{equation}
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Decoding: 
-  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Evaluation: 
-  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Training: 
-  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
-  \begin{equation}
-  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Instead of using a unigram context, use a bigram context.
-    &lt;ul&gt;
-      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
-  \begin{equation}
-  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
-  \begin{equation}
-  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
-  \end{equation}
-  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
-  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
-  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
-  \begin{equation}
-  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
-  &lt;li&gt;Need to compute: 
-  \begin{equation}
-  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Two sum&lt;/p&gt;
 
@@ -1072,173 +961,191 @@ return nums[right]
     else:
         left = mid  
 return nums[left] ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 02: Naive Bayes’ Classifier</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02: Naive Bayes’ Classifier" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
 
-&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
+&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
-  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
-  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
-  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
-  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
-  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
-  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
+  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
+  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
+  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
-&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
+&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Classes of words that behave alike:
+    &lt;ul&gt;
+      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
+      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
+      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;~9 traditional parts-of-speech:
+    &lt;ul&gt;
+      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
-&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
+&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
+  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
+    &lt;ol&gt;
+      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
+      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
-&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
+&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
+  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
+&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
+  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
+  &lt;li&gt;Markov assumption: Next state depends only on current state.
+\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
+  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
-
+&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
+    &lt;p&gt;Generative (Bayesian) probability model.
+  Observations: sequences of words.
+  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
+    &lt;ul&gt;
+      &lt;li&gt;
+\[t_0 = START\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There are two types of probabilities:
+  Transition Probabilities and Emission Probabilities.
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
+  \end{equation}
+  \begin{equation}
+  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Decoding: 
+  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
+    &lt;p&gt;Evaluation: 
+  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Training: 
+  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
-
+&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
-  &lt;li&gt;random variable \(X\)&lt;/li&gt;
-  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
-  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
-  &lt;li&gt;conditional probability: 
-\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Independent:
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(A) = P(A|B)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(A, B) = P(A) \cdot P(B)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conditionally Independent
-    &lt;ul&gt;
-      &lt;li&gt;
-\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(B|A,C) =P(B|A)\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
-  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
-  &lt;li&gt;Two approaches:
-    &lt;ul&gt;
-      &lt;li&gt;Discriminative algorithms learn 
-  \(P(y | x)\) 
-  directly.&lt;/li&gt;
-      &lt;li&gt;Generative algorithms use Bayes rule
+  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
   \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
   \end{equation}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
+&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
-  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
-  &lt;li&gt;Examples:
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
     &lt;ul&gt;
-      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
-      &lt;li&gt;decision trees&lt;/li&gt;
-      &lt;li&gt;random forests&lt;/li&gt;
-      &lt;li&gt;neural networks&lt;/li&gt;
-      &lt;li&gt;log-linear models&lt;/li&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
+&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
-  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
-  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
-  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
+  &lt;li&gt;Instead of using a unigram context, use a bigram context.
+    &lt;ul&gt;
+      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
   \begin{equation}
-  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;Examples:
-    &lt;ul&gt;
-      &lt;li&gt;Naive Bayes&lt;/li&gt;
-      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
-      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
-      &lt;li&gt;PCFGs&lt;/li&gt;
-    &lt;/ul&gt;
+  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
+&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
+  \begin{equation}
+  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
+  \end{equation}
+  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
+  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
-\end{equation}&lt;/p&gt;
+&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
+  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
+  \begin{equation}
+  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
+  &lt;li&gt;Need to compute: 
+  \begin{equation}
+  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
+  \end{equation}&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;\begin{equation}
-\begin{split}
-    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
-    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
-\end{split}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-y* = \arg \max_y P(y) \Pi_i P(x_i|y)
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
-&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
+&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
-  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
-  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry><entry><title type="html">NLP Lecture 03: n-gram language models</title><link href="http://localhost:4000/studylog/NLP_lecture03.html" rel="alternate" type="text/html" title="NLP Lecture 03: n-gram language models" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture03</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture03.html">&lt;p&gt;Keywords: n-gram language models&lt;/p&gt;
+  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
+  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
+  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
+  &lt;li&gt;for \(k=1\) to \(n\):
+    &lt;ul&gt;
+      &lt;li&gt;for \(t \in T\):
+        &lt;ul&gt;
+          &lt;li&gt;
+\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry><entry><title type="html">NLP Lecture 03: n-gram language models</title><link href="http://localhost:4000/studylog/NLP_lecture03.html" rel="alternate" type="text/html" title="NLP Lecture 03: n-gram language models" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture03</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture03.html">&lt;p&gt;Keywords: n-gram language models&lt;/p&gt;
 
 &lt;h2 id=&quot;language-modeling&quot;&gt;Language Modeling&lt;/h2&gt;
 
@@ -1472,4 +1379,170 @@ P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
 • Perplexity can be thought of as “effective vocabulary size”.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: n-gram language models</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: n-gram language models</summary></entry><entry><title type="html">NLP Lecture 02: Naive Bayes’ Classifier</title><link href="http://localhost:4000/studylog/NLP_lecture02.html" rel="alternate" type="text/html" title="NLP Lecture 02: Naive Bayes’ Classifier" /><published>2022-01-26T00:00:00-05:00</published><updated>2022-01-26T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture02</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture02.html">&lt;p&gt;Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.&lt;/p&gt;
+
+&lt;h2 id=&quot;linguistic-terminology&quot;&gt;Linguistic Terminology&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sentence: Unit of written language.&lt;/li&gt;
+  &lt;li&gt;Utterance: Unit of spoken language.&lt;/li&gt;
+  &lt;li&gt;Word Form: the inflected form as it actually appears in the corpus. “produced”&lt;/li&gt;
+  &lt;li&gt;Word Stem: The part of the word that never changes between morphological variations. “produc”&lt;/li&gt;
+  &lt;li&gt;Lemma: an abstract base form, shared by word forms, having the same stem, part of speech, and word sense – stands for the class of words with stem. “produce”&lt;/li&gt;
+  &lt;li&gt;Type: number of distinct words in a corpus (vocabulary size).&lt;/li&gt;
+  &lt;li&gt;Token: Total number of word occurrences.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h2&gt;
+&lt;p&gt;The process of segmenting text (a sequence of characters) into a sequence of tokens (words).&lt;/p&gt;
+
+&lt;h2 id=&quot;lemmatization&quot;&gt;Lemmatization&lt;/h2&gt;
+&lt;p&gt;Converting Lemmas into their base form.&lt;/p&gt;
+
+&lt;h2 id=&quot;probabilities-in-nlp&quot;&gt;Probabilities in NLP&lt;/h2&gt;
+&lt;p&gt;Probabilities make it possible to combine evidence from multiple sources systematically to (using Bayesian statistics).&lt;/p&gt;
+
+&lt;h3 id=&quot;bayesian-statistics&quot;&gt;Bayesian Statistics&lt;/h3&gt;
+
+&lt;p&gt;Typically, we observe some evidence (for example, words in a document) and the goal is to infer the “correct” interpretation (for example, the topic of a text). Probabilities express the degree of belief we have in the possible interpretations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prior probabilities: Probability of an interpretation prior to seeing any evidence.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conditional (Posterior) probability: Probability of an interpretation after taking evidence into account.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;probability-basics&quot;&gt;Probability Basics&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sample space \(\Omega\)&lt;/li&gt;
+  &lt;li&gt;random variable \(X\)&lt;/li&gt;
+  &lt;li&gt;probability distribution \(P(\omega)\)&lt;/li&gt;
+  &lt;li&gt;joint probability: \(P(A, B)\)&lt;/li&gt;
+  &lt;li&gt;conditional probability: 
+\(P(A|B) = \frac{P(A,B)}{P(B)}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bayes-rule&quot;&gt;Bayes’ Rule&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Independent:
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(A) = P(A|B)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(A, B) = P(A) \cdot P(B)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conditionally Independent
+    &lt;ul&gt;
+      &lt;li&gt;
+\[P(B, C|A) = P(B|A) \cdot P(C|A)\]
+      &lt;/li&gt;
+      &lt;li&gt;
+\[P(B|A,C) =P(B|A)\]
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;probabilities-and-supervised-learning&quot;&gt;Probabilities and Supervised Learning&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Given: Training data consisting of training examples \(data = (x_1, y_1), …, (x_n, y_n)\).&lt;/li&gt;
+  &lt;li&gt;Goal: Learn a mapping \(h\) from \(x\) to \(y\).&lt;/li&gt;
+  &lt;li&gt;Two approaches:
+    &lt;ul&gt;
+      &lt;li&gt;Discriminative algorithms learn 
+  \(P(y | x)\) 
+  directly.&lt;/li&gt;
+      &lt;li&gt;Generative algorithms use Bayes rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discriminative-algorithms&quot;&gt;Discriminative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Model conditional distribution of the label given the data&lt;/li&gt;
+  &lt;li&gt;Learns decision boundaries that separate instances of the different classes.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check on which side of the decision boundary it falls.&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;support vector machine (SVM)&lt;/li&gt;
+      &lt;li&gt;decision trees&lt;/li&gt;
+      &lt;li&gt;random forests&lt;/li&gt;
+      &lt;li&gt;neural networks&lt;/li&gt;
+      &lt;li&gt;log-linear models&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generative-algorithms&quot;&gt;Generative Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assume the observed data is being “generated” by a “hidden” class label.&lt;/li&gt;
+  &lt;li&gt;Build a different model for each class.&lt;/li&gt;
+  &lt;li&gt;To predict a new example, check it under each of the models and see which one matches best.&lt;/li&gt;
+  &lt;li&gt;Estimate \(P(x|y)\) and \(P(y)\). Then use bases rule
+  \begin{equation}
+  P(y|x) = \frac{P(x|y) \cdot P(y)}{P(x)}
+  \end{equation}&lt;/li&gt;
+  &lt;li&gt;Examples:
+    &lt;ul&gt;
+      &lt;li&gt;Naive Bayes&lt;/li&gt;
+      &lt;li&gt;Hidden Markov Models&lt;/li&gt;
+      &lt;li&gt;Gaussian Mixture Models&lt;/li&gt;
+      &lt;li&gt;PCFGs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;naive-bayes&quot;&gt;Naive Bayes&lt;/h2&gt;
+
+&lt;h3 id=&quot;rules&quot;&gt;Rules&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+P(Label, X_1, …, X_d) = P(Label) \Pi_i P(X_i|Label)
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\begin{split}
+    P(Label|X_1, …, X_d) &amp;amp; = \frac{P(Label) \Pi_i P(X_i|Label)}{\Pi_i P(X_i)} &lt;br /&gt;
+    &amp;amp; = \alpha [P(Label) \Pi_i P(X_i|Label)]
+\end{split}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;naive-bayes-classifier&quot;&gt;Naive Bayes Classifier&lt;/h3&gt;
+&lt;p&gt;\begin{equation}
+y* = \arg \max_y P(y) \Pi_i P(x_i|y)
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;training-the-naive-bayes-classifier&quot;&gt;Training the Naive Bayes’ Classifier&lt;/h3&gt;
+&lt;p&gt;Estimate the prior and posterior probabilities using Maximum Likelihood Estimates (MLE)&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(y) = \frac{Count(y)}{\sum_{y’\in Y}Count(y’)}
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+P(x_i|y) = \frac{Count(x_i, y)}{Count(y)}
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;some-issues-to-consider&quot;&gt;Some Issues to Consider&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if there are words that do not appear in the training set? What if it appears only once?&lt;/li&gt;
+  &lt;li&gt;What if the plural of a word never appears in the training set?&lt;/li&gt;
+  &lt;li&gt;How are extremely common words (e.g., “the”, “a”) handled?&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Language Classification, Probability Review, Machine Learning Background, Naive Bayes’ Classifier.</summary></entry></feed>
