@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T11:17:55-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T11:23:07-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
@@ -96,7 +96,9 @@
 &lt;h2 id=&quot;collaborative-reports&quot;&gt;Collaborative Reports&lt;/h2&gt;
 &lt;p&gt;Reports let you organize and embed visualizations, describe your findings, share updates with collaborators, and more.&lt;/p&gt;
 
+&lt;p&gt;
 &lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/2xeJIv_K_eI&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
 
 &lt;h3 id=&quot;typical-use-cases-for-reports&quot;&gt;Typical use cases for reports&lt;/h3&gt;
 
@@ -140,7 +142,9 @@
 
 &lt;p&gt;Use Weights &amp;amp; Biases Sweeps to automate hyperparameter optimization and explore the space of possible models.&lt;/p&gt;
 
+&lt;p&gt;
 &lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/9zrmUIlScdY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&quot;model-management&quot;&gt;Model Management&lt;/h2&gt;
 &lt;p&gt;A Model Registry is a system of record for organizing ML Models - often serving as an interface between model producers and consumers. This guide will show you how to use W&amp;amp;B as a Model Registry to track and report on the complete workflow of developing a model:&lt;/p&gt;
