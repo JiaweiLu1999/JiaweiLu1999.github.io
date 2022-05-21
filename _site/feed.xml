@@ -1,65 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-20T11:27:48-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-21T11:35:18-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #4: Concept - Validation</title><link href="http://localhost:4000/studylog/concept_validation.html" rel="alternate" type="text/html" title="[ZK Lab] #4: Concept - Validation" /><published>2022-05-21T00:00:00-04:00</published><updated>2022-05-21T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_validation</id><content type="html" xml:base="http://localhost:4000/studylog/concept_validation.html">&lt;h2 id=&quot;validation-dataset&quot;&gt;Validation Dataset&lt;/h2&gt;
 
-&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
-&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+&lt;p&gt;A validation data set is a data-set of examples used to tune the hyperparameters (i.e. the architecture) of a classifier. It is sometimes also called the development set or the “dev set”. An example of a hyperparameter for artificial neural networks includes the number of hidden units in each layer. It, as well as the testing set (as mentioned below), should follow the same probability distribution as the training data set.&lt;/p&gt;
 
-&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
-&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+&lt;p&gt;In order to avoid overfitting, when any classification parameter needs to be adjusted, it is necessary to have a validation data set in addition to the training and test datasets. For example, if the most suitable classifier for the problem is sought, the training data set is used to train the different candidate classifiers, the validation data set is used to compare their performances and decide which one to take and, finally, the test data set is used to obtain the performance characteristics such as accuracy, sensitivity, specificity, F-measure, and so on. The validation data set functions as a hybrid: it is training data used for testing, but neither as part of the low-level training nor as part of the final testing.&lt;/p&gt;
 
-&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;models&lt;/li&gt;
-  &lt;li&gt;datasets&lt;/li&gt;
-  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The basic process of using a validation data set for model selection (as part of training data set, validation data set, and test data set) is:&lt;/p&gt;
 
-&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;versioning&lt;/li&gt;
-  &lt;li&gt;commit history and diffs&lt;/li&gt;
-  &lt;li&gt;branches&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Since our goal is to find the network having the best performance on new data, the simplest approach to the comparison of different networks is to evaluate the error function using data which is independent of that used for training. Various networks are trained by minimization of an appropriate error function defined with respect to a training data set. The performance of the networks is then compared by evaluating the error function using an independent validation set, and the network having the smallest error with respect to the validation set is selected. This approach is called the hold out method. Since this procedure can itself lead to some overfitting to the validation set, the performance of the selected network should be confirmed by measuring its performance on a third independent set of data called a test set.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
-  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
-  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
-  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;An application of this process is in early stopping, where the candidate models are successive iterations of the same network, and training stops when the error on the validation set grows, choosing the previous model (the one with minimum error).&lt;/p&gt;
 
-&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
-&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+&lt;h2 id=&quot;cross-validation&quot;&gt;Cross-validation&lt;/h2&gt;
+&lt;p&gt;In order to get more stable results and use all valuable data for training, a data set can be repeatedly split into several training and a validation datasets. This is known as cross-validation. To validate the model performance, an additional test data set held out from cross-validation is normally used.&lt;/p&gt;
 
-&lt;p&gt;Some examples:&lt;/p&gt;
+&lt;h3 id=&quot;k-fold-cross-validation&quot;&gt;k-Fold Cross-Validation&lt;/h3&gt;
+&lt;p&gt;Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.&lt;/p&gt;
+
+&lt;p&gt;The procedure has a single parameter called \(k\) that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called \(k\)-fold cross-validation. When a specific value for \(k\) is chosen, it may be used in place of \(k\) in the reference to the model, such as \(k=10\) becoming 10-fold cross-validation.&lt;/p&gt;
+
+&lt;p&gt;Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. That is, to use a limited sample in order to estimate how the model is expected to perform in general when used to make predictions on data not used during the training of the model.&lt;/p&gt;
+
+&lt;p&gt;It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate of the model skill than other methods, such as a simple train/test split.&lt;/p&gt;
+
+&lt;p&gt;The general procedure is as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Shuffle the dataset randomly.&lt;/li&gt;
+  &lt;li&gt;Split the dataset into \(k\) groups&lt;/li&gt;
+  &lt;li&gt;For each unique group:
+    &lt;ul&gt;
+      &lt;li&gt;Take the group as a hold out or test data set&lt;/li&gt;
+      &lt;li&gt;Take the remaining groups as a training data set&lt;/li&gt;
+      &lt;li&gt;Fit a model on the training set and evaluate it on the test set&lt;/li&gt;
+      &lt;li&gt;Retain the evaluation score and discard the model&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Summarize the skill of the model using the sample of model evaluation scores&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Importantly, each observation in the data sample is assigned to an individual group and stays in that group for the duration of the procedure. This means that each sample is given the opportunity to be used in the hold out set 1 time and used to train the model \(k-1\) times.&lt;/p&gt;
 
-&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
-&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+&lt;p&gt;It is also important that any preparation of the data prior to fitting the model occur on the CV-assigned training dataset within the loop rather than on the broader data set. This also applies to any tuning of hyperparameters. A failure to perform these operations within the loop may result in data leakage and an optimistic estimate of the model skill.&lt;/p&gt;
 
-&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+&lt;p&gt;The results of a k-fold cross-validation run are often summarized with the mean of the model skill scores. It is also good practice to include a measure of the variance of the skill scores, such as the standard deviation or standard error.&lt;/p&gt;
 
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets&quot;&gt;Wikipedia: Training, validation, and test data sets&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
-
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href=&quot;https://machinelearningmastery.com/k-fold-cross-validation/&quot;&gt;A Gentle Introduction to k-fold Cross-Validation&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Validation Dataset</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
 
 &lt;p&gt;Use W&amp;amp;B’s lightweight, interoperable tools to&lt;/p&gt;
 &lt;ul&gt;
@@ -140,11 +131,11 @@
 
 &lt;p&gt;&lt;a href=&quot;http://wandb.me/sweeps-colab&quot;&gt;&lt;img src=&quot;https://colab.research.google.com/assets/colab-badge.svg&quot; alt=&quot;Open In Colab&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Use Weights &amp;amp; Biases Sweeps to automate hyperparameter optimization and explore the space of possible models.&lt;/p&gt;
-
 &lt;p&gt;
 &lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/9zrmUIlScdY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/p&gt;
+
+&lt;p&gt;Use Weights &amp;amp; Biases Sweeps to automate hyperparameter optimization and explore the space of possible models.&lt;/p&gt;
 
 &lt;h2 id=&quot;model-management&quot;&gt;Model Management&lt;/h2&gt;
 &lt;p&gt;A Model Registry is a system of record for organizing ML Models - often serving as an interface between model producers and consumers. This guide will show you how to use W&amp;amp;B as a Model Registry to track and report on the complete workflow of developing a model:&lt;/p&gt;
@@ -155,7 +146,67 @@
   &lt;li&gt;Model Lineage Tracking &amp;amp; Reproducibility: Track the exact code, hyperparameters, &amp;amp; training dataset used to produce the model.&lt;/li&gt;
   &lt;li&gt;Model Lifecycle: Promote promising models to positions like “staging” or “production” - allowing downstream users to fetch the best model automatically.
 Model Reporting: Create a Report dashboard to summarize model progression and performance over time&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+
+&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
+&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+
+&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;models&lt;/li&gt;
+  &lt;li&gt;datasets&lt;/li&gt;
+  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versioning&lt;/li&gt;
+  &lt;li&gt;commit history and diffs&lt;/li&gt;
+  &lt;li&gt;branches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
+  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
+  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
+  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
+&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
+&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+
+&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 &lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
@@ -724,403 +775,7 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
   &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
   &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">Leetcode</title><link href="http://localhost:4000/studylog/leetcode.html" rel="alternate" type="text/html" title="Leetcode" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/leetcode</id><content type="html" xml:base="http://localhost:4000/studylog/leetcode.html">&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Two sum&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Hashmap&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Add two numbers
-    &lt;ul&gt;
-      &lt;li&gt;Linked List&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Longest Substring Without Repeating Characters
-    &lt;ul&gt;
-      &lt;li&gt;Two pointers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Median of Two Sorted Arrays
-    &lt;ul&gt;
-      &lt;li&gt;Median&lt;/li&gt;
-      &lt;li&gt;Binary Search&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Longest Palindromic Substring
-    &lt;ul&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-      &lt;li&gt;Java vs Python&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Regular Expression Matching
-    &lt;ul&gt;
-      &lt;li&gt;Recursion&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Container With Most Water
-    &lt;ul&gt;
-      &lt;li&gt;Two pointers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;3 Sum
-    &lt;ul&gt;
-      &lt;li&gt;2 sum&lt;/li&gt;
-      &lt;li&gt;Hashmap&lt;/li&gt;
-      &lt;li&gt;sort&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Letter Combinations of a Phone Number
-    &lt;ul&gt;
-      &lt;li&gt;Hashmap&lt;/li&gt;
-      &lt;li&gt;Recursion&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Remove Nth Node From End of List
-    &lt;ul&gt;
-      &lt;li&gt;Symmetric&lt;/li&gt;
-      &lt;li&gt;Two pointers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Valid Parentheses
-    &lt;ul&gt;
-      &lt;li&gt;Stack&lt;/li&gt;
-      &lt;li&gt;Hashmap for pair&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generate Parentheses
-    &lt;ul&gt;
-      &lt;li&gt;DFS&lt;/li&gt;
-      &lt;li&gt;Stack&lt;/li&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Merge k Sorted Lists
-    &lt;ul&gt;
-      &lt;li&gt;Priority Queue
-        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Queue&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PriorityQueue&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Python &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted(list)&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reverse Nodes in k-Group
-    &lt;ul&gt;
-      &lt;li&gt;Reverse list&lt;/li&gt;
-      &lt;li&gt;6 pointers: dummy, jump, l, r, prev, cur&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Next Permutation
-    &lt;ul&gt;
-      &lt;li&gt;Find Pattern: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums[i-1] &amp;lt; nums[i]&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Decreasing List&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Longest Valid Parentheses
-    &lt;ul&gt;
-      &lt;li&gt;Find Pattern: If ‘)’ more than ‘(‘, reset&lt;/li&gt;
-      &lt;li&gt;Stack&lt;/li&gt;
-      &lt;li&gt;Two traverse&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Search in Rotated Sorted Array
-    &lt;ul&gt;
-      &lt;li&gt;Binary Search&lt;/li&gt;
-      &lt;li&gt;Mind &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left &amp;lt;= mid&lt;/code&gt; since &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mid = (left + right)//2&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Find First and Last Position of Element in Sorted Array
-    &lt;ul&gt;
-      &lt;li&gt;Binary Search&lt;/li&gt;
-      &lt;li&gt;Find left most: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left = mid + 1, right = mid&lt;/code&gt;
-  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python = 
-  while left &amp;lt; right:
-      mid = (left + right) // 2
-      if nums[mid] &amp;lt; target:
-          left = mid + 1
-      else:
-          right = mid
- &lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Find right most: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left = mid, right = mid - 1&lt;/code&gt;
-  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python = 
-  while left &amp;lt; right:
-      mid = (left + right + 1) // 2
-      if nums[mid] &amp;gt; target:
-          right = mid - 1
-      else:
-          left = mid
- &lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Search Insert Position
-    &lt;ul&gt;
-      &lt;li&gt;Binary Search&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Combination Sum
-    &lt;ul&gt;
-      &lt;li&gt;Backtracking/DFS
-        &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-              &lt;span class=&quot;n&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;First Missing Positive
-    &lt;ul&gt;
-      &lt;li&gt;Find Pattern: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1,2,...,n+1]&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Hash &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nums[nums[i]%n] += n&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Trapping Rain Water
-    &lt;ul&gt;
-      &lt;li&gt;DP: store leftMax and rightMax&lt;/li&gt;
-      &lt;li&gt;Two pointers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jump Game II
-    &lt;ul&gt;
-      &lt;li&gt;Two pointers: left for n steps, right for n+1 steps&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Permutations
-    &lt;ul&gt;
-      &lt;li&gt;DFS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rotate Image
-    &lt;ul&gt;
-      &lt;li&gt;List transportation with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zip()&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rotate = flip + trans&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Group Anagrams
-    &lt;ul&gt;
-      &lt;li&gt;permutations have the same characters: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sorted()&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dict&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Maximum Subarray
-    &lt;ul&gt;
-      &lt;li&gt;Divide and Conquer&lt;/li&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Jump Game
-    &lt;ul&gt;
-      &lt;li&gt;two pointers&lt;/li&gt;
-      &lt;li&gt;from end to start: where is the last reachable point&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Merge Intervals
-    &lt;ul&gt;
-      &lt;li&gt;Graph&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sort()&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;max()&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unique Paths
-    &lt;ul&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-      &lt;li&gt;Math $C_m^n$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Minimum Path Sum
-    &lt;ul&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Climbing Stairs
-    &lt;ul&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Edit Distance
-    &lt;ul&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Search a 2D Matrix
-    &lt;ul&gt;
-      &lt;li&gt;Binary Search: $m \times n$ sorted array&lt;/li&gt;
-      &lt;li&gt;if element not in list, find the left boundary: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mid = (left + right)//2&lt;/code&gt;,  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right -= 1&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sort Colors
-    &lt;ul&gt;
-      &lt;li&gt;count sort&lt;/li&gt;
-      &lt;li&gt;*Dutch National Flag Problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Minimum Window Substring
-    &lt;ul&gt;
-      &lt;li&gt;Sliding window, two pointers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Subsets
-    &lt;ul&gt;
-      &lt;li&gt;Backtracking&lt;/li&gt;
-      &lt;li&gt;Bitmask&lt;/li&gt;
-      &lt;li&gt;DP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Word Search
-    &lt;ul&gt;
-      &lt;li&gt;Backtracking / DFS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;oa&quot;&gt;OA&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Merge Sort: Counting Inversions&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;#!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-#
-# Complete the &apos;countInversions&apos; function below.
-#
-# The function is expected to return a LONG_INTEGER.
-# The function accepts INTEGER_ARRAY arr as parameter.
-#
-
-def countInversions(arr):
-    # Write your code here
-    temp_arr = [0]*len(arr)
-    return mergeSort(arr, temp_arr, 0, len(arr) - 1)
-
-def mergeSort(arr, temp_arr, left, right):
-    inv_cnt = 0
-    if left &amp;lt; right:
-        mid = (left + right) // 2
-        inv_cnt += mergeSort(arr, temp_arr, left, mid)
-        inv_cnt += mergeSort(arr, temp_arr, mid + 1, right)
-        inv_cnt += merge(arr, temp_arr, left, mid, right)
-    return inv_cnt
-
-def merge(arr, temp_arr, left, mid, right):
-    i, j, k = left, mid+1, left
-    inv_cnt = 0
-    while i &amp;lt;= mid and j &amp;lt;= right:
-        if arr[i] &amp;gt; arr[j]:
-            inv_cnt += mid - i + 1
-            temp_arr[k] = arr[j]
-            j += 1
-
-        else:
-            temp_arr[k] = arr[i]
-            i += 1
-        k += 1
-    
-    while i &amp;lt;= mid:
-        temp_arr[k] = arr[i]
-        i += 1
-        k += 1
-    while j &amp;lt;= right:
-        temp_arr[k] = arr[j]
-        j += 1
-        k += 1
-    
-    for x in range(left, right + 1):
-        arr[x] = temp_arr[x]
-    
-    return inv_cnt
-    
-
-if __name__ == &apos;__main__&apos;:
-    fptr = open(os.environ[&apos;OUTPUT_PATH&apos;], &apos;w&apos;)
-
-    t = int(input().strip())
-
-    for t_itr in range(t):
-        n = int(input().strip())
-
-        arr = list(map(int, input().rstrip().split()))
-
-        result = countInversions(arr)
-
-        fptr.write(str(result) + &apos;\n&apos;)
-
-    fptr.close()
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Stars and Bars:
-```python=
-def stars_and_bars(s, startIndex, endIndex):
- bars = {}&lt;/p&gt;
-
-    &lt;p&gt;cnt = 0
- for i in range(len(s)):
-     if s[i] == “|”:
-         bars[i] = cnt
-         cnt += 1
- lst = list(bars)
- startIndex, endIndex = [x-1 for x in startIndex], &lt;br /&gt;
-                        [x-1 for x in endIndex]
- start_bar, end_bar = [], []&lt;/p&gt;
-
-    &lt;p&gt;for i in range(len(startIndex)):
-     start_bar.append(binary_start(lst, startIndex[i]))
- for i in range(len(endIndex)):
-     end_bar.append(binary_end(lst, endIndex[i]))&lt;/p&gt;
-
-    &lt;p&gt;print(bars)
- print(start_bar, end_bar)&lt;/p&gt;
-
-    &lt;p&gt;res = 0
- for i in range(len(start_bar)):&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; res += max(0, (end_bar[i] - start_bar[i] - 1) - \
-            (bars[end_bar[i]] - bars[start_bar[i]] - 1))
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;return res&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;def binary_start(nums, target):
-    left, right = 0, len(nums) -1&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while left &amp;lt; right:
-    mid = (left+right)//2
-    if nums[mid] == target:
-        return nums[mid]
-    elif nums[mid] &amp;gt; target:
-        right = mid
-    else:
-        left = mid + 1
-return nums[right]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;def binary_end(nums, target):
-    left, right = 0, len(nums) -1&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while left &amp;lt; right:
-    mid = (left+right+1)//2
-    if nums[mid] == target:
-        return nums[mid]
-    elif nums[mid] &amp;gt; target:
-        right = mid - 1
-    else:
-        left = mid  
-return nums[left] ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="coding-interview" /><summary type="html">Two sum</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
 
 &lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
 &lt;ul&gt;

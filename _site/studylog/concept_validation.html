@@ -18,22 +18,22 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Transformer | Jiawei Lu</title>
+<title>[ZK Lab] #4: Concept - Validation | Jiawei Lu</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Transformer" />
+<meta property="og:title" content="[ZK Lab] #4: Concept - Validation" />
 <meta name="author" content="Jiawei Lu" />
 <meta property="og:locale" content="zh, en" />
-<meta name="description" content="Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning." />
-<meta property="og:description" content="Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning." />
-<link rel="canonical" href="http://localhost:4000/studylog/Transformer.html" />
-<meta property="og:url" content="http://localhost:4000/studylog/Transformer.html" />
+<meta name="description" content="Validation Dataset" />
+<meta property="og:description" content="Validation Dataset" />
+<link rel="canonical" href="http://localhost:4000/studylog/concept_validation.html" />
+<meta property="og:url" content="http://localhost:4000/studylog/concept_validation.html" />
 <meta property="og:site_name" content="Jiawei Lu" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-04-14T00:00:00-04:00" />
+<meta property="article:published_time" content="2022-05-21T00:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Transformer" />
+<meta property="twitter:title" content="[ZK Lab] #4: Concept - Validation" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"BlogPosting","url":"http://localhost:4000/studylog/Transformer.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Hello World! I’m Jiawei Lu, a Master Student at Columbia University. My research interest is Computer Vision, Deep Learning and Reinforcement Learning.","headline":"Transformer","dateModified":"2022-04-14T00:00:00-04:00","datePublished":"2022-04-14T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/Transformer.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Jiawei Lu"},"@type":"BlogPosting","url":"http://localhost:4000/studylog/concept_validation.html","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/jiawei.jpg"},"name":"Jiawei Lu"},"description":"Validation Dataset","headline":"[ZK Lab] #4: Concept - Validation","dateModified":"2022-05-21T00:00:00-04:00","datePublished":"2022-05-21T00:00:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/studylog/concept_validation.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -64,7 +64,7 @@
 
 
 
-<link rel="alternate" href="http://localhost:4000/studylog/Transformer.html" hreflang="zh, en">
+<link rel="alternate" href="http://localhost:4000/studylog/concept_validation.html" hreflang="zh, en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jiawei Lu" />
 
@@ -209,7 +209,7 @@
       <li>
         
           <span>/</span>
-          <span>Transformer.html</span>
+          <span>concept_validation.html</span>
         
       </li>
     
@@ -227,18 +227,18 @@
 
 
 
-<article id="post-studylog-Transformer" class="page post mb6" role="article">
+<article id="post-studylog-concept_validation" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
       
-        Transformer
+        [ZK Lab] #4: Concept - Validation
       
     </h1>
 
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2022-04-14T00:00:00-04:00">14 Apr 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-dl/" class="flip-title">Deep Learning</a>
+        <time datetime="2022-05-21T00:00:00-04:00">21 May 2022</time> in <a href="/studylog/" class="flip-title">Study Blog</a> on <a href="/tag-zklab/" class="flip-title">Zoran Kostic Lab</a>
       </span>
       
         
@@ -258,66 +258,58 @@
   </header>
 
   
-    <p><img src="/assets/img/blog/2022-04-14/1.png" alt="transformer struct" /></p>
+    <h2 id="validation-dataset">Validation Dataset</h2>
 
-<p class="figcaption">The full model architecture of the transformer.[3]</p>
+<p>A validation data set is a data-set of examples used to tune the hyperparameters (i.e. the architecture) of a classifier. It is sometimes also called the development set or the “dev set”. An example of a hyperparameter for artificial neural networks includes the number of hidden units in each layer. It, as well as the testing set (as mentioned below), should follow the same probability distribution as the training data set.</p>
 
-<p>“<a href="https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention is All you Need</a>” (Vaswani, et al., 2017), without a doubt, is one of the most impactful and interesting paper in 2017. It presented a lot of improvements to the soft attention and make it possible to do seq2seq modeling without recurrent network units. The proposed “transformer” model is entirely built on the self-attention mechanisms without using sequence-aligned recurrent architecture.</p>
+<p>In order to avoid overfitting, when any classification parameter needs to be adjusted, it is necessary to have a validation data set in addition to the training and test datasets. For example, if the most suitable classifier for the problem is sought, the training data set is used to train the different candidate classifiers, the validation data set is used to compare their performances and decide which one to take and, finally, the test data set is used to obtain the performance characteristics such as accuracy, sensitivity, specificity, F-measure, and so on. The validation data set functions as a hybrid: it is training data used for testing, but neither as part of the low-level training nor as part of the final testing.</p>
 
-<p>The secret recipe is carried in its model architecture.</p>
+<p>The basic process of using a validation data set for model selection (as part of training data set, validation data set, and test data set) is:</p>
 
-<h2 id="key-value-and-query">Key, Value and Query</h2>
-<p>The major component in the transformer is the unit of multi-head self-attention mechanism. The transformer views the encoded representation of the input as a set of <strong>key-value</strong> pairs, \((\mathbf{K}, \mathbf{V})\), both of dimension \(n\) (input sequence length); in the context of NMT, both the keys and values are the encoder hidden states. In the decoder, the previous output is compressed into a <strong>query</strong> (\(\mathbf{Q}\) of dimension \(m\)) and the next output is produced by mapping this query and the set of keys and values.</p>
+<blockquote>
+  <p>Since our goal is to find the network having the best performance on new data, the simplest approach to the comparison of different networks is to evaluate the error function using data which is independent of that used for training. Various networks are trained by minimization of an appropriate error function defined with respect to a training data set. The performance of the networks is then compared by evaluating the error function using an independent validation set, and the network having the smallest error with respect to the validation set is selected. This approach is called the hold out method. Since this procedure can itself lead to some overfitting to the validation set, the performance of the selected network should be confirmed by measuring its performance on a third independent set of data called a test set.</p>
+</blockquote>
 
-<p>The transformer adopts the scaled dot-product attention: the output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys:</p>
+<p>An application of this process is in early stopping, where the candidate models are successive iterations of the same network, and training stops when the error on the validation set grows, choosing the previous model (the one with minimum error).</p>
 
-\[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left( \frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{n}}\right) \mathbf{V}\]
+<h2 id="cross-validation">Cross-validation</h2>
+<p>In order to get more stable results and use all valuable data for training, a data set can be repeatedly split into several training and a validation datasets. This is known as cross-validation. To validate the model performance, an additional test data set held out from cross-validation is normally used.</p>
 
-<h2 id="multi-head-self-attention">Multi-Head Self-Attention</h2>
-<p>Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, “multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.”</p>
+<h3 id="k-fold-cross-validation">k-Fold Cross-Validation</h3>
+<p>Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.</p>
 
-\[\begin{align}
-\text{MultiHead}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) &amp; = [\text{head}_1; ...; \text{head}_h]\mathbf{W}^O \\
-\text{where head_i} &amp; = \text{Attention}(\mathbf{QW}_i^Q, \mathbf{KW}_i^K, \mathbf{VW}_i^V)
-\end{align}\]
+<p>The procedure has a single parameter called \(k\) that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called \(k\)-fold cross-validation. When a specific value for \(k\) is chosen, it may be used in place of \(k\) in the reference to the model, such as \(k=10\) becoming 10-fold cross-validation.</p>
 
-<p>where \(\mathbf{W}_i^Q\), \(\mathbf{W}_i^K\), \(\mathbf{W}_i^V\) and \(\mathbf{W}_i^O\) are parameter matrices to be learned.</p>
+<p>Cross-validation is primarily used in applied machine learning to estimate the skill of a machine learning model on unseen data. That is, to use a limited sample in order to estimate how the model is expected to perform in general when used to make predictions on data not used during the training of the model.</p>
 
-<h2 id="encoder">Encoder</h2>
-<p>The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.</p>
+<p>It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate of the model skill than other methods, such as a simple train/test split.</p>
 
-<ul>
-  <li>A stack of \(N=6\) identical layers.</li>
-  <li>Each layer has a <strong>multi-head self-attention layer</strong> and a simple position-wise <strong>fully connected feed-forward network</strong>.</li>
-  <li>Each sub-layer adopts a <strong>residual</strong> connection and a layer <strong>normalization</strong>. All the sub-layers output data of the same dimension \(d_\text{model} = 512\).</li>
-</ul>
-
-<h2 id="decoder">Decoder</h2>
-<p>The decoder is able to retrieval from the encoded representation.</p>
+<p>The general procedure is as follows:</p>
 
 <ul>
-  <li>A stack of N = 6 identical layers</li>
-  <li>Each layer has two sub-layers of multi-head attention mechanisms and one sub-layer of fully-connected feed-forward network.</li>
-  <li>Similar to the encoder, each sub-layer adopts a residual connection and a layer normalization.</li>
-  <li>The first multi-head attention sub-layer is modified to prevent positions from attending to subsequent positions, as we don’t want to look into the future of the target sequence when predicting the current position.</li>
+  <li>Shuffle the dataset randomly.</li>
+  <li>Split the dataset into \(k\) groups</li>
+  <li>For each unique group:
+    <ul>
+      <li>Take the group as a hold out or test data set</li>
+      <li>Take the remaining groups as a training data set</li>
+      <li>Fit a model on the training set and evaluate it on the test set</li>
+      <li>Retain the evaluation score and discard the model</li>
+    </ul>
+  </li>
+  <li>Summarize the skill of the model using the sample of model evaluation scores</li>
 </ul>
 
-<h2 id="full-architecture">Full Architecture</h2>
-<p>Finally here is the complete view of the transformer’s architecture:</p>
+<p>Importantly, each observation in the data sample is assigned to an individual group and stays in that group for the duration of the procedure. This means that each sample is given the opportunity to be used in the hold out set 1 time and used to train the model \(k-1\) times.</p>
 
-<ul>
-  <li>Both the source and target sequences first go through embedding layers to produce data of the same dimension \(d_\text{model} = 512\).</li>
-  <li>To preserve the position information, a sinusoid-wave-based positional encoding is applied and summed with the embedding output.</li>
-  <li>A softmax and linear layer are added to the final decoder output.</li>
-</ul>
+<p>It is also important that any preparation of the data prior to fitting the model occur on the CV-assigned training dataset within the loop rather than on the broader data set. This also applies to any tuning of hyperparameters. A failure to perform these operations within the loop may result in data leakage and an optimistic estimate of the model skill.</p>
+
+<p>The results of a k-fold cross-validation run are often summarized with the mean of the model skill scores. It is also good practice to include a measure of the variance of the skill scores, such as the standard deviation or standard error.</p>
 
 <h2 id="reference">Reference</h2>
+<p>[1] <a href="https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets">Wikipedia: Training, validation, and test data sets</a></p>
 
-<p>[1] <a href="https://lilianweng.github.io/posts/2018-06-24-attention/">Lil’Log: Attention? Attention!</a></p>
-
-<p>[2] <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></p>
-
-<p>[3] <a href="https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf">Attention Is All You Need</a></p>
+<p>[2] <a href="https://machinelearningmastery.com/k-fold-cross-validation/">A Gentle Introduction to k-fold Cross-Validation</a></p>
 
   
 </article>
@@ -326,7 +318,7 @@
 
 <applause-button class="mb6"
     color=rgb(79,177,186)
-    url=http://localhost:4000/studylog/Transformer.html >
+    url=http://localhost:4000/studylog/concept_validation.html >
   </applause-button>
 
 
