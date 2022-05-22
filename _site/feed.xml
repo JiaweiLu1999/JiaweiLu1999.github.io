@@ -1,5 +1,347 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-21T11:35:18-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #4: Concept - Validation</title><link href="http://localhost:4000/studylog/concept_validation.html" rel="alternate" type="text/html" title="[ZK Lab] #4: Concept - Validation" /><published>2022-05-21T00:00:00-04:00</published><updated>2022-05-21T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_validation</id><content type="html" xml:base="http://localhost:4000/studylog/concept_validation.html">&lt;h2 id=&quot;validation-dataset&quot;&gt;Validation Dataset&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-22T18:26:36-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #5: Tool - Prior Projects</title><link href="http://localhost:4000/studylog/tool_prior_work.html" rel="alternate" type="text/html" title="[ZK Lab] #5: Tool - Prior Projects" /><published>2022-05-22T00:00:00-04:00</published><updated>2022-05-22T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_prior_work</id><content type="html" xml:base="http://localhost:4000/studylog/tool_prior_work.html">&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#2022-spring&quot;&gt;2022 Spring&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#re-identification-based-on-direct-linear-transform&quot;&gt;Re-identification Based on Direct Linear Transform&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unsupervised-re-identification-in-intersections&quot;&gt;Unsupervised re-identification in intersections&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2021-fall&quot;&gt;2021 Fall&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#face-and-license-plate-blurring-in-street-level-intersection-videos&quot;&gt;Face and License Plate Blurring in Street Level Intersection Videos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#data-augmentation-with-causal-inference-to-improve-small-object-detection&quot;&gt;Data Augmentation with Causal Inference to Improve Small Object Detection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2-stage-2d-and-3d-approach-for-small-pedestrian-detection&quot;&gt;2-Stage (2D and 3D) Approach for Small Pedestrian Detection&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2021-summer&quot;&gt;2021 Summer&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#using-data-augmentation-to-improve-pedestrian-detection&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#efficient-det-comparative-study&quot;&gt;Efficient Det: Comparative Study&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#software-engineering-support-for-rtsp-streaming-deepstream-pipeline&quot;&gt;Software engineering support for RTSP streaming Deepstream pipeline&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cosmos-vehicle-counting-stage-report&quot;&gt;COSMOS Vehicle Counting Stage Report&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2021-spring&quot;&gt;2021 Spring&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#using-data-augmentation-to-improve-pedestrian-detection-1&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#face-and-license-plate-blurring-for-cosmos-traffic-intersection&quot;&gt;Face and License Plate Blurring for COSMOS Traffic Intersection&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2020-fall&quot;&gt;2020 Fall&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#multi-resolution-and-density-study-for-object-detection-using-yolov4&quot;&gt;Multi-Resolution and Density Study for Object Detection using YOLOv4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#injection-of-efficientdet-model-into-object-detection-pipeline-and-setting-vpn-to-connect-any-device-to-the-cosmos-server&quot;&gt;Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#research-about-ssd-832-adjustment-non-maximum-suppression-and-tensorrt-conversion&quot;&gt;Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#research-about-bounding-box-transformation-832-for-multi-camera-fusion--resolution-study-and-density-study&quot;&gt;Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2020-summer&quot;&gt;2020 Summer&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#profiling-and-deploying-mask-r-cnn-with-tensorrt-and-deepstream&quot;&gt;Profiling and Deploying Mask R-CNN with TensorRT and Deepstream&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#research-about-bounding-box-transformation-for-multiple-cameras-fusion-robust-pca-implementation-and-cropping-images-for-yolov4&quot;&gt;Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#object-detection-with-temporal-information&quot;&gt;Object Detection with Temporal Information&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2020-summer-report-tracking&quot;&gt;2020 Summer Report: Tracking&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#data-management-using-dvc-data-version-control&quot;&gt;Data Management using DVC (Data Version Control)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#2020-summer-report-tracking-with-fairmot&quot;&gt;2020 Summer Report: Tracking with FairMOT&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#deepstream-deployment-and-custom-ssd-object-detection-model&quot;&gt;DeepStream Deployment and Custom SSD Object Detection Model&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#research-report-on-data-management-using-dvc-data-version-control&quot;&gt;Research Report on Data Management Using DVC (Data Version Control)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#single-shot-multibox-detector-ssd-implementation-for-traffic-intersection&quot;&gt;Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#summer-2020-report-measurements-for-object-detection-and-tracking-for-cosmos-smart-intersections&quot;&gt;Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cosmos-traffic-intersection-research-final-report&quot;&gt;COSMOS Traffic Intersection Research Final report&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2022-spring&quot;&gt;2022 Spring&lt;/h2&gt;
+
+&lt;h3 id=&quot;re-identification-based-on-direct-linear-transform&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1D8OzTOfXJi62jOoa7rm4GZXMlpZbsgyxPaNRN2eSjFA&quot;&gt;Re-identification Based on Direct Linear Transform&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Chenbo Zang&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;The project proposed and experimented reidentification between first and second floor cameras by performing 3D coordinate reconstruction using direct linear transform (DLT). Camera calibration, Yolov4 detection and deepsort tracking models are adopted from previous work. The feasibility of the proposed method was validated in small scale experiments, and generalizability was tested on self-constructed dataset with unsatisfactory outcome due to poor calibration, naive distance metrics and susceptible assignment algorithm. New methodologies are required for future work.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;re-identification, DLT, Yolov4, deepsort&lt;/p&gt;
+
+&lt;h3 id=&quot;unsupervised-re-identification-in-intersections&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/16sdFSG-x9RjIrUeexb57Dh0AVXAMqG1_z-sIhj8dvio&quot;&gt;Unsupervised re-identification in intersections&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Mingzhe Hu&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-1&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;We built an unsupervised re-identification model for first and second camera intersection re-identification of pedestrians and vehicles. We used DukeMTMC and Veri-776 as training sets and constructed a customized test set from synchronized video recordings. We leveraged both CNN and transformer as Reid’s backbone and inference tricks to enhance performance. We achieved mAP of 73.3% in vehicle Reid and 89.2% in person Reid, with an inference speed of 25.26 images/sec for vehicle Reid and 31.18 images/sec for person Reid. Code can be accessed on GitHub.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-1&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;unsupervised learning, re-identification&lt;/p&gt;
+
+&lt;h2 id=&quot;2021-fall&quot;&gt;2021 Fall&lt;/h2&gt;
+
+&lt;h3 id=&quot;face-and-license-plate-blurring-in-street-level-intersection-videos&quot;&gt;&lt;a href=&quot;https://drive.google.com/file/d/1rxqgTZA0x-dmiXHPGvFCgDXIK6OPTqMS&quot;&gt;Face and License Plate Blurring in Street Level Intersection Videos&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Alex Angus, Zhuoxu Duan, Adit Deshmukh&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-2&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Project COSMOS relies heavily on large image datasets that are gathered from street-level cameras. In the process of collecting real-time images and videos of public spaces, cameras also inadvertently capture sensitive information such as faces and license plates. To avoid the compromise of large amounts of private information in the followup research involving our image datasets, we generate a pipeline to systematically blur the faces of pedestrians and the license plates of vehicles in street level intersection videos. We train various YOLOv4 object detection models, using the Darknet framework, for the detection of pedestrians and vehicles as well as for the detection of faces and license plates. We train the models with our own custom intersection video dataset annotated Summer 2021. Additionally, we implement two models, MobileNetV3 and WPOD-net, for the detection of faces and license plates, respectively. The face detection model performs well with a mean IoU above 70% on our COSMOS dataset while the license plate model still has some problems since the confidence loss in training tends to be stuck at 36.048. Ultimately, we are able to automatically blur 99% of visible faces and license plates in any given 1st floor intersection video.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-2&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;face blurring, license plate blurring, object detection&lt;/p&gt;
+
+&lt;h3 id=&quot;data-augmentation-with-causal-inference-to-improve-small-object-detection&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1WtgWKL8gWHjtdCmXvNerKf9fNt9bwhXlrnjiu8yLqZQ&quot;&gt;Data Augmentation with Causal Inference to Improve Small Object Detection&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Lingxiao Li&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-3&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Causal inference is a critical research topic across many domains for decades. Nowadays, estimating causal effects from observational data has become an appealing research direction owing to the large amount of available data and low budget requirement, compared with randomized controlled trials. At the same time, small object detection remains a challenging task in deep learning. In this project, we aim to study the causal effect from observational data to the performance of the YOLOv4 model on small object(pedestrian) detection and use data augmentation to improve the accuracy of pedestrian detection using causal inference methods. Our evaluation results show that the average precision for pedestrians of the model trained by the augmented data and unaugmented data improves 67.89%  compared to the average precision of the model only trained by the unaugmented data, which indicates that our approach successfully improved the accuracy of small object detection of the YOLOv4 model by decorrelate co-founders in training dataset.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-3&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;causal inference, data augmentation, small object detection&lt;/p&gt;
+
+&lt;h3 id=&quot;2-stage-2d-and-3d-approach-for-small-pedestrian-detection&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1Tp3CQ2Dl8hqGf-9WBlW5wnt5Cg55aAKxnZlVxWqSnl8&quot;&gt;2-Stage (2D and 3D) Approach for Small Pedestrian Detection&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Sung Jun Won&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-4&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Small object detection remains a challenging task in deep learning. In this project, we primarily attempted to replicate the work done in Dogfight: Detecting Drones from Drones Videos. We experimented with both the spatial model and the spatio-temporal model using the 12th floor videos dataset. For the spatial model, we divided each frame into 9 overlapping regions to account for the small size of pedestrians compared to the whole image. PSPNet is then trained on the cropped images and the ground truth images. For the spatio-temporal model, in order to discover pedestrian locations, we generated motion boundaries images and tracked candidate pedestrian locations for a few frames using cuboids. Then, the Inflated 3D model is used to extract the 3D convolution feature maps for the model to train on. We ended up not producing meaningful results for the experiments due to many technical challenges regarding the model overfitting and interpreting the model architecture.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-4&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;PSPNet, Overlapping regions, Conditional Random Fields, Convolution features, Inflated 3D&lt;/p&gt;
+
+&lt;h2 id=&quot;2021-summer&quot;&gt;2021 Summer&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-data-augmentation-to-improve-pedestrian-detection&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1MN5BJrRNADjJCHNc5TMKTbK1df6bJx6-y60whkBzmAw&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Sung Jun Won, Shambhavi Roy&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-5&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;You Only Look Once (YOLO) is deemed a state-of-the-art model for object detection today. In this project, images taken from the 12th floor of the Mudd building are used, and detecting pedestrians is the primary challenge. A scarce number of pedestrians in each frame causes class imbalance as the vehicles outnumber pedestrians in many frames. Also, pedestrians are very small in size compared to the size of each frame. To resolve these problems and perform pedestrian detection successfully, we have experimented with data augmentation and finally achieved realistic data augmentation by rescaling. The main goal of our project is to evaluate this augmentation technique in 832 x 832 images using the YOLOv4 model for any improvement in performance. The current results indicate that there’s an error in training, demonstrated by the unrealistically high AP results - 100% for vehicles and nearly 100% for pedestrians when trained with an unaugmented dataset .&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-5&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Data augmentation, Small object detection, Pedestrian detection, Darknet, YOLOv4&lt;/p&gt;
+
+&lt;h3 id=&quot;efficient-det-comparative-study&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/13x432QAHevbpWDZiR8qLdnDVngrmJ_-b&quot;&gt;Efficient Det: Comparative Study&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Adit Deshmukh, Tushar Gupta&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-6&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;EfficientDet is a novel deep-learning framework that aims at developing a formal approach towards scaling object detection networks in terms of parameters and speed. Our work explores the network’s performance on the 12th floor and Visdrone 2019 dataset. We aim to develop an accurate and efficient object detection pipeline using the work done on EfficientNet as the backbone. We obtained the highest MAP of 0.7 with the 12th-floor dataset.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-6&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;scaling coefficient, object-detection, Bi-directional Feature pyramid network, Efficient Net&lt;/p&gt;
+
+&lt;h3 id=&quot;software-engineering-support-for-rtsp-streaming-deepstream-pipeline&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1W7MQMVM0I9u47I-ctbmNgT-Fr-fucKas&quot;&gt;Software engineering support for RTSP streaming Deepstream pipeline&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Tushar Gupta&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-7&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;The project involved working on various components of an RTSP streaming pipeline that enables distributed interference in support of video-based object detection and tracking. Tasks included software engineering in support of networked streaming to enable frame synchronization, latency measurements, and video segmentation.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-7&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Deepstream, GStreamer, Video streaming, FFmpeg&lt;/p&gt;
+
+&lt;h3 id=&quot;cosmos-vehicle-counting-stage-report&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1OWbmhPi6h6ceY16eAK_PBIcGwjFxQlR0o-mqueWdQpU&quot;&gt;COSMOS Vehicle Counting Stage Report&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Lingxiao Li, Xingxing Geng&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-8&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;One of the important goals for the COSMOS (Cloud Enhanced Open Software-Defined Mobile Wireless Testbed) project is analyzing traffic flow in real time. To achieve this goal, we need to count and classify vehicles and pedestrians crossing the traffic intersection. This report summarizes the work we have done for the 2021 summer. We applied YOLOv4 which was implemented in PyTorch with pre-trained Darknet YOLOv4 models to detect objects in 832x832 cropped videos. We utilize the DeepSORT algorithm to track objects. We designed a simple but efficient algorithm to classify vehicles by their directions and turning movements. We evaluated the performance of our model on 12th floor videos using MOT metrics. We designed a piece of software which can be used on 12th floor cameras. The average accuracy for 12 test videos is 95% which satisfies the requirement for this project.  The limiting factors are the small object detection.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-8&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Object Detection, Object Tracking, Object Counting, Yolov4&lt;/p&gt;
+
+&lt;h2 id=&quot;2021-spring&quot;&gt;2021 Spring&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-data-augmentation-to-improve-pedestrian-detection-1&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1mNmre_IdVJ7WUGaeYMASNb8_d3qMfCazQR09iGyvB4c&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Kevin Murning&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-9&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Robust detection of small objects in large videos and images remains a significant challenge in the field of object detection. In the case of the Cosmos traffic intersection research, this challenge is present in the task of robust detection of pedestrians. The reasons for this are two-fold. First, the pedestrians present in the 1080p images only occupy a very small pixel range. Second, there is a significant class imbalance present in the data. The number of pedestrians present is far less than the number of vehicles. The objective of this study is to evaluate the efficacy of  a data augmentation technique in improving the detection of pedestrians. Software was written to artificially augment the number of pedestrians present in the data. This dataset was then used to train YOLOv4. It was found that using a combination of augmented and unaugmentated data in training YoloV4 improved the average precision of detecting pedestrians by 8.61% in comparison to a model trained only on the unaugmented data.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-9&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Small Object Detection, Data Augmentation, YOLOv4&lt;/p&gt;
+
+&lt;h3 id=&quot;face-and-license-plate-blurring-for-cosmos-traffic-intersection&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1UvYZEFo7y8Dh5z2uuK8r7NtkgyXUUNJ-sTXi5a8fP5w&quot;&gt;Face and License Plate Blurring for COSMOS Traffic Intersection&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author:  Zhuoxu Duan, Jingyuan Liu, Wenjun Chen, Joseph Yang, Zoran Kostic&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-10&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Project COSMOS relies heavily on the large image datasets that are gathered from street-level cameras. In the process of collecting the real-time images/videos of public spaces, the cameras also inevitably captured information like licence plates, faces, and many other information that would be considered sensitive from a privacy perspective. To avoid compromise of massive personal information in the follow-up research that works with our image dataset, we need to blur the images on pedestrian faces and license plates. In this project, we present a system that combines object detectors like Yolov4 and Mask RCNN with manually trained CNN to blur the sensitive areas of an image/video. We also carefully designed a series of annotation rules on first-floor camera videos and created an annotated first-floor camera image dataset with the annotation rules.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-10&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;face blurring, license plate blurring, image annotation, object detection&lt;/p&gt;
+
+&lt;h2 id=&quot;2020-fall&quot;&gt;2020 Fall&lt;/h2&gt;
+
+&lt;h3 id=&quot;multi-resolution-and-density-study-for-object-detection-using-yolov4&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wAtXJjL9FVSu-Itc1hiAFp_82SgNzFN88jX8w5Kbtts&quot;&gt;Multi-Resolution and Density Study for Object Detection using YOLOv4&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Richard Samoilenko, Dwiref Oza, Ashvin Jagadeesan&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-11&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Deploying deep learning inference for object detection with video streaming presents significant challenges involving efficiency. For the task of traffic intersection monitoring, a high throughput, low latency pipeline is essential for accurate real time detection. Our tasks were to determine object detection performance with YOLOv4 trends with different video resolutions, square vs. 16:9 aspect ratios; and finally object densities on a per-frame basis. Our results indicate clear trends in how each input resolution and aspect ratio affect inference. All results are supported with CUDA profiling, through which we also found that the lab’s Hikvision cameras give better results than GoPro videos. We also report some linear trends in how object density may affect inference times.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-11&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;traffic intersection, object detection, YOLOv4, CUDA, profiling, resolution, object density&lt;/p&gt;
+
+&lt;h3 id=&quot;injection-of-efficientdet-model-into-object-detection-pipeline-and-setting-vpn-to-connect-any-device-to-the-cosmos-server&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1vIgWTE-n0fGd6TABP6hEJL7-0V0z18Zo5oRCpL4E4wI&quot;&gt;Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Vedant Dave&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-12&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This report aims to highlight the work that has been done throughout the Fall semester. The work has mainly been divided into two parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Coming up with a way to connect linux based edge devices to the COSMOS server in order to send and receive data.&lt;/li&gt;
+  &lt;li&gt;Injecting EfficientDet object detection model into the object detection pipeline in order to analyze the performance of the model on the custom traffic intersection dataset.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;research-about-ssd-832-adjustment-non-maximum-suppression-and-tensorrt-conversion&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1rmjpAsZ_oj6XKx02YJ74l-uvtG8KKt7Isz0ULwM3Mzk&quot;&gt;Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Zhuoxu Duan, Zoran Kostic&lt;/p&gt;
+
+&lt;h4 id=&quot;abstract-13&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;As part of the smart city, the traffic intersection program is aiming at detecting pedestrians and vehicles on the street to provide further information about crowd density and traffic busyness. The SSD model is chosen to perform this object detection task as well as building up a pipeline with TensorRT and DeepStream for higher inference speed. In this report, we managed to adjust the SSD model to fit our application and conducted model conversions to take advantage of TensorRT. Corresponding profiling results and problems remaining are also discussed.&lt;/p&gt;
+
+&lt;h4 id=&quot;keywords-12&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Object Detection, Single Shot Multibox Detector (SSD), TensorRT, DeepStream, Smart City&lt;/p&gt;
+
+&lt;h3 id=&quot;research-about-bounding-box-transformation-832-for-multi-camera-fusion--resolution-study-and-density-study&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1jSOkrcT1Ku8p_QkphiHisBF-4KxgRb9aOBS7iVK6Gnc&quot;&gt;Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Zihao Xiong, Hongzhe Ye&lt;/p&gt;
+&lt;h4 id=&quot;abstract-14&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Smart-city intersections will play an important role in automated traffic management, help protect pedestrians, and decrease the possibility of accidents. Multiple cameras might be useful to either get more information of the position we are looking for or help to improve the accuracy of detection. In this report, the work in the COSMOS project that we have finished in 2020 Fall will be shown. Bounding box transformation for 832 is evaluated. Also, study about performance of YoloV4 in different model settings, input size and density is presented.&lt;/p&gt;
+
+&lt;h2 id=&quot;2020-summer&quot;&gt;2020 Summer&lt;/h2&gt;
+
+&lt;h3 id=&quot;profiling-and-deploying-mask-r-cnn-with-tensorrt-and-deepstream&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1bF9VKhOJuCHwq7WlV2c_QNsT1RHJWf73MY5ASDPIU3I&quot;&gt;Profiling and Deploying Mask R-CNN with TensorRT and Deepstream&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Ananye Pandey&lt;/p&gt;
+&lt;h4 id=&quot;abstract-15&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Deploying deep learning inference for object detec tion with video streaming presents significant challenges involving efficiency. For the task of traffic intersection monitoring, a high throughput, low latency pipeline is essential for accurate real time detection. Our task was to learn and demonstrate how to convert a trained Mask R-CNN model into a serialized TensorRT .engine, profile inference on a CUDA dGPU, optimize the engine where needed, and then deploy the engine within the Nvidia Deepstream SDK pipeline, a streaming analytics toolkit. In this report, we outline the key elements of our work, namely the Mask R-CNN network, CUDA profiling, setting up the right working environment, some pitfalls to be avoided with regards to package versioning, TensorRT and UFF engine conversion, and deploying the model with Deepstream. This work was done during the Summer of 2020, for the Traffic Intersection research project under COSMOS.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-13&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Mask R-CNN, CUDA, TensorRT, nvprof, profil ing, Deepstream, Tensorflow, docker&lt;/p&gt;
+
+&lt;h3 id=&quot;research-about-bounding-box-transformation-for-multiple-cameras-fusion-robust-pca-implementation-and-cropping-images-for-yolov4&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1bF9VKhOJuCHwq7WlV2c_QNsT1RHJWf73MY5ASDPIU3I&quot;&gt;Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Hongzhe Ye&lt;/p&gt;
+&lt;h4 id=&quot;abstract-16&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Smart-city intersections will play an important role in automated traffic management, help protect pedestrians, and decrease the possibility of accidents. Multiple cameras might be useful to either get more information of the position we are looking for or help to improve the accuracy of detection. In this report, the work in the COSMOS project that I have finished in 2020 Summer will be shown. Based on new calibration, Bounding box transformation can help combine information from two cameras. Also, experiment of Robust PCA background subtraction and cropping images for YOLOv4 is represented.&lt;/p&gt;
+
+&lt;h3 id=&quot;object-detection-with-temporal-information&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1oTVBDE3s-sbcprsyv8LcSHr50SoQRH0_o7g4zFR3vIU&quot;&gt;Object Detection with Temporal Information&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Jeswanth Yadagani&lt;/p&gt;
+&lt;h4 id=&quot;abstract-17&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This report includes information about various Temporal Yolo models that we have tried during summer 2020. Improving the detection accuracy of pedestrians is our main objective. By leveraging temporal information, there is a high chance of improvement in terms of object detection when we have a static background. Certain models in this fashion are explored in this report and the directions in which this study can be taken forward are explained at the end. Also, a structured environment has been created for coming up with new architectures and evaluating performance of each model.&lt;/p&gt;
+
+&lt;h3 id=&quot;2020-summer-report-tracking&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1e0wGHWpvy1OgaXrqtF8SeLaEU42ak_OjpgB8rr1E7l0&quot;&gt;2020 Summer Report: Tracking&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Mingfei Sun&lt;/p&gt;
+&lt;h4 id=&quot;abstract-18&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;In this report, I will discuss work accomplished during the 2020 Summer on the Traffic Intersection research project, under COSMOS. Mainly three things, discriminative correlation filter-based (DCF) tracker, FairMOT tracker, and some other useful experiments.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-14&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Tracking, DCF tracker, FairMOT, DeepStream&lt;/p&gt;
+
+&lt;h3 id=&quot;data-management-using-dvc-data-version-control&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1-lh9PRnH3KRC6nYyMNROdoCXP21I4kU2&quot;&gt;Data Management using DVC (Data Version Control)&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Tian Yang&lt;/p&gt;
+&lt;h4 id=&quot;abstract-19&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;In this report, we will discuss the data management work of machine learning models using DVC (Data Version Control). We first introduce the background, explain why this tool is needed and helpful to be applied on ML projects, then introduce the basic working principles of DVC and part of the workflow of the neural network, YOLO darknet, that will be involved in our experiment. Next we detail the steps of generating stages, connecting them as pipeline, tagging experiments and comparisons of metrics. We end this report by outlining recommended next steps for future work.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-15&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;Data Management, Data Versioning Tool, DVC&lt;/p&gt;
+
+&lt;h3 id=&quot;2020-summer-report-tracking-with-fairmot&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1fkSgKhrnxFJmCinJpXydUrUMzUTrGUIzVbCfOwkBFKY&quot;&gt;2020 Summer Report: Tracking with FairMOT&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Yi Chen&lt;/p&gt;
+&lt;h4 id=&quot;abstract-20&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This report summarizes the accomplishments in 2020 Summer for tracking in the COSMOS Traffic Intersection research project. FairMOT is  a new open source tracking algorithm proposed by the paper ’A Simple Baseline for Multi-Object Tracking’ in 2020. The main tasks of my work is to implement FairMOT to achieve better vehicles and pedestrians tracking performance in our Traffic Intersection project.&lt;/p&gt;
+
+&lt;h3 id=&quot;deepstream-deployment-and-custom-ssd-object-detection-model&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/11FtuNB_kXLcVfLeItCQs7VaAUUOCAMvFoK-u5oJUU4g&quot;&gt;DeepStream Deployment and Custom SSD Object Detection Model&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Yiping Pan&lt;/p&gt;
+&lt;h4 id=&quot;abstract-21&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Traffic Intersection project’s goal is to implement fast object detection and tracking of vehicles and pedestrians on videos collected from real  traffic intersections. In the object detection part, one of the most popular algorithms SSD hasn’t been implemented by our lab researchers. We at the first time built the SSD model on our own so that it provides a good base for researchers to do further improvement, training and testing for SSD-based algorithms. Our trained fine-tuned VGG-SSD model is able to detect the object with an acceptable average precision and it is promising to obtain better results when investing more research on that. On the other hand, we also provide analysis and test on Nvidia DeepStream SDK where we could implement custom YoloV3 and build accelerated video processing pipelines. A well-organized summary of DeepStream configuration concepts and methods is also created.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-16&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;SSD, YoloV3, DeepStream5.0, Object Detection&lt;/p&gt;
+
+&lt;h3 id=&quot;research-report-on-data-management-using-dvc-data-version-control&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1DU236v_eak9dC1K8wVv4Vl4axlK3zgAJ24q4p2nAu_E&quot;&gt;Research Report on Data Management Using DVC (Data Version Control)&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Yanqi Zheng&lt;/p&gt;
+&lt;h4 id=&quot;abstract-22&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;DVC can bring agility, reproducibility, and collaboration into the existing data flow. To ease data management, we implement DVC features like storage agnostic, reproducible, and metric tracking.&lt;/p&gt;
+
+&lt;p&gt;According to our study, there are mainly two problems we can fix if implementing DVC in the current YOLO model. One is data versioning, solved by using DVC to keep track of different versions of data. Another is data lineage, solved by constructing deep learning pipelines with DVC.&lt;/p&gt;
+
+&lt;p&gt;DVC improves collaboration among deep learning developers. It helps them to keep a well-organized collection of data sets and allows them to share data versions with each other. It also provides an efficient way to reproduce experiments and show a comparison between different models.&lt;/p&gt;
+
+&lt;h3 id=&quot;single-shot-multibox-detector-ssd-implementation-for-traffic-intersection&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1tDipRQKaZ9v3pLIQcHNasX_9AjwFW_k6tcMUSkrS02A&quot;&gt;Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Zhuoxu Duan&lt;/p&gt;
+&lt;h4 id=&quot;abstract-23&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This report first makes a description of the current stage of the traffic intersection program. Expectations for the SSD group are clarified. For the DeepStream model conversion task, the report introduced the motivation, possible procedures and challenges of various ways to move SSD models to DeepStream. Finally succeeded in converting PyTorch models to DeepStream plugins. For the custom &amp;amp; training task, SSD model structure, data flow details and prediction principles are illustrated. Implemented SSD300 models with both VGG16 and ResNet50 backbones on PyTorch. Data preparation and feature mining was done for our traffic dataset with the following training processes. Large parts of vehicles can be detected while few pedestrians are recognized. Example results and reasoning for the failure are presented.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-17&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;object detection, Single Shot Multibox Detector (SSD), DeepStream&lt;/p&gt;
+
+&lt;h3 id=&quot;summer-2020-report-measurements-for-object-detection-and-tracking-for-cosmos-smart-intersections&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1kQxKhYx2DeSAZT6LpTT87QXxGOltnPinwvH_44qE9KA&quot;&gt;Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Zihao Xiong&lt;/p&gt;
+&lt;h4 id=&quot;abstract-24&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;In this report, we will discuss work accomplished from May - August 2020 on the lab’s custom measurement code supporting both object detection and tracking models. We first detail the performance improvements made for both detection measurement and multiple object tracking measurement, each of which now runs approximately 80-90% faster. We next describe the diagnosis and fix of a critical error found in the original detection measurement code. This work also yielded full coverage unit testing for the detection measurement code and additional visualization tooling in support of understanding detection measurement metrics. However, there remain important open questions and therefore there is still work to be done. We end this report by outlining recommended next steps for work on the lab’s native measurement code.&lt;/p&gt;
+
+&lt;h3 id=&quot;cosmos-traffic-intersection-research-final-report&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1GYK7ALfPJ3hdZoWXaljmG52uqOjUwkGP3SP7jm-ulbg&quot;&gt;COSMOS Traffic Intersection Research Final report&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;@author: Zhengye Yang&lt;/p&gt;
+&lt;h4 id=&quot;abstract-25&quot;&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;This report summarizes the work done during 2020 summer term. In this report, the following fields will be described:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;(i) The summary of COSMOS traffic intersection current process.&lt;/li&gt;
+  &lt;li&gt;(ii) Social distancing analysis system (SDAS).&lt;/li&gt;
+  &lt;li&gt;(iii) Current status towards real-time detection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This report can be seen as a summary of the current status of COSMOS smart intersection research.&lt;/p&gt;
+&lt;h4 id=&quot;keywords-18&quot;&gt;Keywords&lt;/h4&gt;
+&lt;p&gt;COSMOS traffic intersection, object detection, social distancing ,  real-time implementation.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a href=&quot;https://docs.google.com/document/d/1D8OzTOfXJi62jOoa7rm4GZXMlpZbsgyxPaNRN2eSjFA&quot;&gt;Re-identification Based on Direct Linear Transform&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] &lt;a href=&quot;https://docs.google.com/document/d/16sdFSG-x9RjIrUeexb57Dh0AVXAMqG1_z-sIhj8dvio&quot;&gt;Unsupervised re-identification in intersections&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] &lt;a href=&quot;https://drive.google.com/file/d/1rxqgTZA0x-dmiXHPGvFCgDXIK6OPTqMS&quot;&gt;Face and License Plate Blurring in Street Level Intersection Videos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4] &lt;a href=&quot;https://docs.google.com/document/d/1WtgWKL8gWHjtdCmXvNerKf9fNt9bwhXlrnjiu8yLqZQ&quot;&gt;Data Augmentation with Causal Inference to Improve Small Object Detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5] &lt;a href=&quot;https://docs.google.com/document/d/1Tp3CQ2Dl8hqGf-9WBlW5wnt5Cg55aAKxnZlVxWqSnl8&quot;&gt;2-Stage (2D and 3D) Approach for Small Pedestrian Detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] &lt;a href=&quot;https://docs.google.com/document/d/1MN5BJrRNADjJCHNc5TMKTbK1df6bJx6-y60whkBzmAw&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[7] &lt;a href=&quot;https://docs.google.com/document/d/13x432QAHevbpWDZiR8qLdnDVngrmJ_-b&quot;&gt;Efficient Det: Comparative Study&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[8] &lt;a href=&quot;https://docs.google.com/document/d/1W7MQMVM0I9u47I-ctbmNgT-Fr-fucKas&quot;&gt;Software engineering support for RTSP streaming Deepstream pipeline&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[9] &lt;a href=&quot;https://docs.google.com/document/d/1OWbmhPi6h6ceY16eAK_PBIcGwjFxQlR0o-mqueWdQpU&quot;&gt;COSMOS Vehicle Counting Stage Report&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[10] &lt;a href=&quot;https://docs.google.com/document/d/1mNmre_IdVJ7WUGaeYMASNb8_d3qMfCazQR09iGyvB4c&quot;&gt;Using Data Augmentation to Improve Pedestrian Detection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[11] &lt;a href=&quot;https://docs.google.com/document/d/1UvYZEFo7y8Dh5z2uuK8r7NtkgyXUUNJ-sTXi5a8fP5w&quot;&gt;Face and License Plate Blurring for COSMOS Traffic Intersection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[12] &lt;a href=&quot;https://docs.google.com/document/d/1wAtXJjL9FVSu-Itc1hiAFp_82SgNzFN88jX8w5Kbtts&quot;&gt;Multi-Resolution and Density Study for Object Detection using YOLOv4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[13] &lt;a href=&quot;https://docs.google.com/document/d/1vIgWTE-n0fGd6TABP6hEJL7-0V0z18Zo5oRCpL4E4wI&quot;&gt;Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[14] &lt;a href=&quot;https://docs.google.com/document/d/1rmjpAsZ_oj6XKx02YJ74l-uvtG8KKt7Isz0ULwM3Mzk&quot;&gt;Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[15] &lt;a href=&quot;https://docs.google.com/document/d/1jSOkrcT1Ku8p_QkphiHisBF-4KxgRb9aOBS7iVK6Gnc&quot;&gt;Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[16] &lt;a href=&quot;https://docs.google.com/document/d/1bF9VKhOJuCHwq7WlV2c_QNsT1RHJWf73MY5ASDPIU3I&quot;&gt;Profiling and Deploying Mask R-CNN with TensorRT and Deepstream&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[17] &lt;a href=&quot;https://docs.google.com/document/d/1bF9VKhOJuCHwq7WlV2c_QNsT1RHJWf73MY5ASDPIU3I&quot;&gt;Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[18] &lt;a href=&quot;https://docs.google.com/document/d/1oTVBDE3s-sbcprsyv8LcSHr50SoQRH0_o7g4zFR3vIU&quot;&gt;Object Detection with Temporal Information&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[19] &lt;a href=&quot;https://docs.google.com/document/d/1e0wGHWpvy1OgaXrqtF8SeLaEU42ak_OjpgB8rr1E7l0&quot;&gt;2020 Summer Report: Tracking&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[20] &lt;a href=&quot;https://docs.google.com/document/d/1-lh9PRnH3KRC6nYyMNROdoCXP21I4kU2&quot;&gt;Data Management using DVC (Data Version Control)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[21] &lt;a href=&quot;https://docs.google.com/document/d/1fkSgKhrnxFJmCinJpXydUrUMzUTrGUIzVbCfOwkBFKY&quot;&gt;2020 Summer Report: Tracking with FairMOT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[22] &lt;a href=&quot;https://docs.google.com/document/d/11FtuNB_kXLcVfLeItCQs7VaAUUOCAMvFoK-u5oJUU4g&quot;&gt;DeepStream Deployment and Custom SSD Object Detection Model&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[23] &lt;a href=&quot;https://docs.google.com/document/d/1DU236v_eak9dC1K8wVv4Vl4axlK3zgAJ24q4p2nAu_E&quot;&gt;Research Report on Data Management Using DVC (Data Version Control)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[24] &lt;a href=&quot;https://docs.google.com/document/d/1tDipRQKaZ9v3pLIQcHNasX_9AjwFW_k6tcMUSkrS02A&quot;&gt;Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[25] &lt;a href=&quot;https://docs.google.com/document/d/1kQxKhYx2DeSAZT6LpTT87QXxGOltnPinwvH_44qE9KA&quot;&gt;Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[26] &lt;a href=&quot;https://docs.google.com/document/d/1GYK7ALfPJ3hdZoWXaljmG52uqOjUwkGP3SP7jm-ulbg&quot;&gt;COSMOS Traffic Intersection Research Final report&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Outline 2022 Spring Re-identification Based on Direct Linear Transform Unsupervised re-identification in intersections 2021 Fall Face and License Plate Blurring in Street Level Intersection Videos Data Augmentation with Causal Inference to Improve Small Object Detection 2-Stage (2D and 3D) Approach for Small Pedestrian Detection 2021 Summer Using Data Augmentation to Improve Pedestrian Detection Efficient Det: Comparative Study Software engineering support for RTSP streaming Deepstream pipeline COSMOS Vehicle Counting Stage Report 2021 Spring Using Data Augmentation to Improve Pedestrian Detection Face and License Plate Blurring for COSMOS Traffic Intersection 2020 Fall Multi-Resolution and Density Study for Object Detection using YOLOv4 Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study 2020 Summer Profiling and Deploying Mask R-CNN with TensorRT and Deepstream Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4 Object Detection with Temporal Information 2020 Summer Report: Tracking Data Management using DVC (Data Version Control) 2020 Summer Report: Tracking with FairMOT DeepStream Deployment and Custom SSD Object Detection Model Research Report on Data Management Using DVC (Data Version Control) Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections COSMOS Traffic Intersection Research Final report</summary></entry><entry><title type="html">[ZK Lab] #4: Concept - Validation</title><link href="http://localhost:4000/studylog/concept_validation.html" rel="alternate" type="text/html" title="[ZK Lab] #4: Concept - Validation" /><published>2022-05-21T00:00:00-04:00</published><updated>2022-05-21T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_validation</id><content type="html" xml:base="http://localhost:4000/studylog/concept_validation.html">&lt;h2 id=&quot;validation-dataset&quot;&gt;Validation Dataset&lt;/h2&gt;
 
 &lt;p&gt;A validation data set is a data-set of examples used to tune the hyperparameters (i.e. the architecture) of a classifier. It is sometimes also called the development set or the “dev set”. An example of a hyperparameter for artificial neural networks includes the number of hidden units in each layer. It, as well as the testing set (as mentioned below), should follow the same probability distribution as the training data set.&lt;/p&gt;
 
@@ -775,188 +1117,4 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
   &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
   &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry><entry><title type="html">NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging</title><link href="http://localhost:4000/studylog/NLP_lecture04.html" rel="alternate" type="text/html" title="NLP Lecture 04: Sequence Labeling with HMMs, P.O.S Tagging" /><published>2022-02-02T00:00:00-05:00</published><updated>2022-02-02T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture04</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture04.html">&lt;p&gt;Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.&lt;/p&gt;
-
-&lt;h2 id=&quot;garden-path-sentences&quot;&gt;Garden-Path Sentences&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;The horse raced past the barn.&lt;/li&gt;
-  &lt;li&gt;The horse raced past the barn fell.&lt;/li&gt;
-  &lt;li&gt;The old dog the footsteps of the young.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech&quot;&gt;Parts-of-Speech&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Classes of words that behave alike:
-    &lt;ul&gt;
-      &lt;li&gt;Appear in similar contexts.&lt;/li&gt;
-      &lt;li&gt;Perform a similar grammatical function in the sentence.&lt;/li&gt;
-      &lt;li&gt;Undergo similar morphological transformations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;~9 traditional parts-of-speech:
-    &lt;ul&gt;
-      &lt;li&gt;noun, pronoun, determiner, adjective, verb, adverb, preposition, conjunction, interjection&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;parts-of-speech-tagging&quot;&gt;Parts-of-Speech Tagging&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Translate from a sequence of words \((w_1, w_2, ..., w_n) \in V^*\), to a sequence of tags \((t_1, t_2, ..., t_n ) \in T^*\).&lt;/li&gt;
-  &lt;li&gt;NLP is full of translation problems from one structure to another. Basic solution:
-    &lt;ol&gt;
-      &lt;li&gt;Construct search space of possible translations.&lt;/li&gt;
-      &lt;li&gt;Find best paths through this space (decoding) according to some performance measure.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bayesian-inference-for-sequence-labeling&quot;&gt;Bayesian Inference for Sequence Labeling&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Assume each word wi in the observed sequence \((w_1, w_2, ..., w_n) \in V^*\) was generated by some hidden variable \(t_i\).&lt;/li&gt;
-  &lt;li&gt;Infer the most likely sequence of hidden variables given the sequence of observed words.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;markov-chains&quot;&gt;Markov Chains&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A Markov chain is a sequence of random variables \(X_1, X_2, ...\)&lt;/li&gt;
-  &lt;li&gt;The domain of these variables is a set of states.&lt;/li&gt;
-  &lt;li&gt;Markov assumption: Next state depends only on current state.
-\(P(X_{n+1}|X_1, X_2, ..., X_n) = P(X_{n+1}|X_n)\)&lt;/li&gt;
-  &lt;li&gt;This is a special case of a weighted finite state automaton (WFSA).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hidden-markov-models-hmms&quot;&gt;Hidden Markov Models (HMMs)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Generative (Bayesian) probability model.
-  Observations: sequences of words.
-  Hidden states: sequence of part-of-speech labels.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hidden sequence is generated by an n-gram language model (typically a bi-gram model).
-    &lt;ul&gt;
-      &lt;li&gt;
-\[t_0 = START\]
-      &lt;/li&gt;
-      &lt;li&gt;
-\[P(t_1, t_2, ..., t_n) = \prod_{i=1}^nP(t_i|t_{i-1})\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There are two types of probabilities:
-  Transition Probabilities and Emission Probabilities.
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = P(t_1|start)P(w_1|t_1)P(t_2|t_1)P(w_2|t_2) \cdots P(t_n|t_{n-1})P(w_n|t_n)
-  \end{equation}
-  \begin{equation}
-  P(t_1,t_2, …, t_n, w_1,w_2,…,w_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;important-tasks-on-hmms&quot;&gt;Important Tasks on HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Decoding: 
-  Given a sequence of words, find the most likely probability sequence. (Bayesian inference using Viterbi algorithm).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Evaluation: 
-  Given a sequence of words, find the total probability for this word sequence given an HMM. Note that we can view the HMM as another type of language model. (Forward algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Training: 
-  Estimate emission and transition probabilities from training data. (MLE, Forward-Backward a.k.a Baum-Welch algorithm)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;decoding-hmms&quot;&gt;Decoding HMMs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Goal: Find the path with the highest total probability (given the words)
-  \begin{equation}
-  \arg \max_{t_1, …, t_n} \prod_{i=1}^n P(t_i|t_{i-1}) P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;viterbi-algorithm&quot;&gt;Viterbi Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \max_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\max_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;trigram-language-model&quot;&gt;Trigram Language Model&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Instead of using a unigram context, use a bigram context.
-    &lt;ul&gt;
-      &lt;li&gt;Think of this as having states that represent pairs of tags.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;So the HMM probability for a given tag and word sequence is:
-  \begin{equation}
-  \prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Need to handle data sparseness when estimating transition probabilities (for example using backoff or linear interpolation)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;more-pos-tagging-tricks&quot;&gt;More POS tagging tricks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;It is also often useful in practice to add an end-of-sentence marker (just like we did for n-gram language models).
-  \begin{equation}
-  P(t_1,…,t_n,w_1,…,w_n) = [\prod_{i=1}^nP(t_i|t_{i-2}t_{i-1})P(w_i|t_i)]P(t_{n+1}|t_n)
-  \end{equation}
-  where \({t_{-1} = t_{0} = START}\) and \(t_{n+1} = STOP\).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Another useful trick is to replace words with “pseudo words” representing an entire class.&lt;/li&gt;
-  &lt;li&gt;Using a smoothed trigram HMM model with these tricks, we can build a tagger that is close to the state-of-the art (~97% accuracy on the Penn Treebank).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hmms-as-language-models&quot;&gt;HMMs as Language Models&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;We can also use an HMM as language models (language generation, MT, …), i.e. evaluate \(P(w_1,...,w_n)\) for a given sentence. What is the advantage over a plain word n-gram model?&lt;/li&gt;
-  &lt;li&gt;Problem: There are many tag-sequences that could have generated \(w_1, ..., w_n\). 
-  \begin{equation}
-  P(w_1,…,w_n,t_1,…,t_n) = \prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)
-  \end{equation}&lt;/li&gt;
-  &lt;li&gt;This is an example of spurious ambiguity.&lt;/li&gt;
-  &lt;li&gt;Need to compute: 
-  \begin{equation}
-  P(w_1,…,w_n) = \sum_{t_1,…,t_n}P(w_1,…,w_n,t_1,…,t_n) = \sum_{t_1,…,t_n} [\prod_{i=1}^nP(t_i|t_{i-1})P(w_i|t_i)]
-  \end{equation}&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;forward-algorithm&quot;&gt;Forward Algorithm&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: Sequence of observed words \(w_1,..., w_n\).&lt;/li&gt;
-  &lt;li&gt;Create a table \(\pi\), such that each entry \(\pi[k,t]\) contains the score of the highest-probability sequence ending in tag \(t\) at time \(k\).&lt;/li&gt;
-  &lt;li&gt;initialize \(\pi[0,start]=1.0\) and \(\pi[0,t]=0.0\) for all tags \(t \in T\).&lt;/li&gt;
-  &lt;li&gt;for \(k=1\) to \(n\):
-    &lt;ul&gt;
-      &lt;li&gt;for \(t \in T\):
-        &lt;ul&gt;
-          &lt;li&gt;
-\[\pi[k,t] \leftarrow \sum_s \pi[k-1, s]\cdot P(t|s) \cdot P(w_k|t)\]
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;return \(\sum_s \pi[n,s]\).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Sequence Labeling with Hidden Markov Models, Part-of-Speech Tagging.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry></feed>
