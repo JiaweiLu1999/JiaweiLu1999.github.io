@@ -1,5 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-22T18:26:36-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #5: Tool - Prior Projects</title><link href="http://localhost:4000/studylog/tool_prior_work.html" rel="alternate" type="text/html" title="[ZK Lab] #5: Tool - Prior Projects" /><published>2022-05-22T00:00:00-04:00</published><updated>2022-05-22T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_prior_work</id><content type="html" xml:base="http://localhost:4000/studylog/tool_prior_work.html">&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-25T23:21:51-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #6: Concept - Re-identification</title><link href="http://localhost:4000/studylog/concept_reid.html" rel="alternate" type="text/html" title="[ZK Lab] #6: Concept - Re-identification" /><published>2022-05-25T00:00:00-04:00</published><updated>2022-05-25T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_reid</id><content type="html" xml:base="http://localhost:4000/studylog/concept_reid.html">&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+&lt;p&gt;Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.&lt;/p&gt;
+
+&lt;h2 id=&quot;previous-work&quot;&gt;Previous Work&lt;/h2&gt;
+&lt;h3 id=&quot;re-identification-based-on-direct-linear-transform&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1D8OzTOfXJi62jOoa7rm4GZXMlpZbsgyxPaNRN2eSjFA&quot;&gt;Re-identification Based on Direct Linear Transform&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Chenbo Zang&lt;/p&gt;
+
+&lt;p&gt;Intro: The project proposed and experimented reidentification between first and second floor cameras by performing 3D coordinate reconstruction using direct linear transform (DLT). Camera calibration, Yolov4 detection and deepsort tracking models are adopted from previous work. The feasibility of the proposed method was validated in small scale experiments, and generalizability was tested on self-constructed dataset with unsatisfactory outcome due to poor calibration, naive distance metrics and susceptible assignment algorithm. New methodologies are required for future work.&lt;/p&gt;
+
+&lt;h3 id=&quot;unsupervised-re-identification-in-intersections&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/16sdFSG-x9RjIrUeexb57Dh0AVXAMqG1_z-sIhj8dvio&quot;&gt;Unsupervised re-identification in intersections&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@author: Mingzhe Hu&lt;/p&gt;
+
+&lt;p&gt;Intro: We built an unsupervised re-identification model for first and second camera intersection re-identification of pedestrians and vehicles. We used DukeMTMC and Veri-776 as training sets and constructed a customized test set from synchronized video recordings. We leveraged both CNN and transformer as Reid’s backbone and inference tricks to enhance performance. We achieved mAP of 73.3% in vehicle Reid and 89.2% in person Reid, with an inference speed of 25.26 images/sec for vehicle Reid and 31.18 images/sec for person Reid. Code can be accessed on GitHub.&lt;/p&gt;
+
+&lt;h2 id=&quot;ucf-related-work&quot;&gt;UCF Related Work&lt;/h2&gt;
+
+&lt;p&gt;UCF (University of Central Florida) Centerfor Research in Computer Vision has a project named &lt;a href=&quot;https://www.crcv.ucf.edu/projects/multi-camera.php&quot;&gt;Multi-Camera Video Analysis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;aifi-paper&quot;&gt;AiFi Paper&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://openaccess.thecvf.com/content_CVPR_2020/papers/Chen_Cross-View_Tracking_for_Multi-Human_3D_Pose_Estimation_at_Over_100_CVPR_2020_paper.pdf&quot;&gt;Cross-View Tracking for Multi-Human 3D Pose Estimation at over 100 FPS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;abstract&quot;&gt;Abstract&lt;/h3&gt;
+&lt;p&gt;Estimating 3D poses of multiple humans in real-time is a classic but still challenging task in computer vision. Its major difficulty lies in the ambiguity in cross-view association of 2D poses and the huge state space when there are multiple people in multiple views. In this paper, we present a novel solution for multi-human 3D pose estimation from multiple calibrated camera views. It takes 2D poses in different camera coordinates as inputs and aims for the accurate 3D poses in the global coordinate. Unlike previous methods that associate 2D poses among all pairs of views from scratch at every frame, we exploit the temporal consistency in videos to match the 2D inputs with 3D poses directly in 3-space. More specifically, we propose to retain the 3D pose for each person and update them iteratively via the cross-view multi-human tracking. This novel formulation improves both accuracy and efficiency, as we demonstrated on widely-used public datasets. To further verify the scalability of our method, we propose a new large-scale multihuman dataset with 12 to 28 camera views. Without bells and whistles, our solution achieves 154 FPS on 12 cameras and 34 FPS on 28 cameras, indicating its ability to handle large-scale real-world applications. The proposed dataset will be released at &lt;a href=&quot;https://github.com/longcw/crossview_3d_pose_tracking&quot;&gt;https://github.com/longcw/crossview_3d_pose_tracking&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;cps-iot-week-competition&quot;&gt;CPS-IoT Week Competition&lt;/h2&gt;
+&lt;p&gt;Github &lt;a href=&quot;https://github.com/JoaoDiogoFalcao/AutoCheckout&quot;&gt;[Link]&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;This repository will help you get started with examples on how to use the Public Datasets available at http://aifi.io/research under Sample Data.&lt;/li&gt;
+  &lt;li&gt;To start please download the data labelled as: “Simple Example” without depth (For your first example).&lt;/li&gt;
+  &lt;li&gt;During the competition you will need a competitor token that will distinguish your submission from all other competitors. However you do
+not need this token for your local testing environment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;attention--vision-transformer&quot;&gt;Attention &amp;amp; Vision Transformer&lt;/h2&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/YAgjfMR9R_M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Definition Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.</summary></entry><entry><title type="html">[ZK Lab] #5: Tool - Prior Projects</title><link href="http://localhost:4000/studylog/tool_prior_work.html" rel="alternate" type="text/html" title="[ZK Lab] #5: Tool - Prior Projects" /><published>2022-05-22T00:00:00-04:00</published><updated>2022-05-22T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_prior_work</id><content type="html" xml:base="http://localhost:4000/studylog/tool_prior_work.html">&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#2022-spring&quot;&gt;2022 Spring&lt;/a&gt;
     &lt;ul&gt;
@@ -392,7 +430,67 @@
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;[1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets&quot;&gt;Wikipedia: Training, validation, and test data sets&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[2] &lt;a href=&quot;https://machinelearningmastery.com/k-fold-cross-validation/&quot;&gt;A Gentle Introduction to k-fold Cross-Validation&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Validation Dataset</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href=&quot;https://machinelearningmastery.com/k-fold-cross-validation/&quot;&gt;A Gentle Introduction to k-fold Cross-Validation&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Validation Dataset</summary></entry><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+
+&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
+&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+
+&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;models&lt;/li&gt;
+  &lt;li&gt;datasets&lt;/li&gt;
+  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versioning&lt;/li&gt;
+  &lt;li&gt;commit history and diffs&lt;/li&gt;
+  &lt;li&gt;branches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
+  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
+  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
+  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
+&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
+&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+
+&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
 
 &lt;p&gt;Use W&amp;amp;B’s lightweight, interoperable tools to&lt;/p&gt;
 &lt;ul&gt;
@@ -488,67 +586,7 @@
   &lt;li&gt;Model Lineage Tracking &amp;amp; Reproducibility: Track the exact code, hyperparameters, &amp;amp; training dataset used to produce the model.&lt;/li&gt;
   &lt;li&gt;Model Lifecycle: Promote promising models to positions like “staging” or “production” - allowing downstream users to fetch the best model automatically.
 Model Reporting: Create a Report dashboard to summarize model progression and performance over time&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
-&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
-
-&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
-&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
-
-&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;models&lt;/li&gt;
-  &lt;li&gt;datasets&lt;/li&gt;
-  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;versioning&lt;/li&gt;
-  &lt;li&gt;commit history and diffs&lt;/li&gt;
-  &lt;li&gt;branches&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
-  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
-  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
-  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
-&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
-
-&lt;p&gt;Some examples:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
-&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
-
-&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
-
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
-
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 &lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
@@ -761,7 +799,7 @@ Model Reporting: Create a Report dashboard to summarize model progression and pe
 \[\begin{align}
     \mathbf{c}_t &amp;amp; = \sum_{i=1}^n \alpha_{t,i} \mathbf{h_i} \\
     \alpha_{t,i} &amp;amp; = \text{align}(y_t, x_i) \\
-    &amp;amp; = \frac{\exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_i))}{\sum_{i&apos; = 1}^n \exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_{i&apos;}))}
+    &amp;amp; = \frac{\exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_i))}{\sum_{i' = 1}^n \exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_{i'}))}
 \end{align}\]
 
 &lt;p&gt;The alignment model assigns a score \(\alpha_{t, i}\) to the pair of input at position \(i\) and output at position \(t\), \((y_t, x_i)\),  based on how well they match. The set of \(\{\alpha_{t, i\}\) are weights defining how much of each source hidden state should be considered for each output. In Bahdanau’s paper, the alignment score \(\alpha\) is parametrized by a &lt;strong&gt;feed-forward network&lt;/strong&gt; with a single hidden layer and this network is jointly trained with other parts of the model. The score function is therefore in the following form, given that tanh is used as the non-linear activation function:&lt;/p&gt;
@@ -919,8 +957,8 @@ The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/ob
         &lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;import numpy as np
 import scipy.signal as sig
 data = np.array([[0, 105, 0], [40, 255, 90], [0, 55, 0]])
-G_x = sig.convolve2d(data, np.array([[-1, 0, 1]]), mode=&apos;valid&apos;)
-G_y = sig.convolve2d(data, np.array([[-1], [0], [1]]), mode=&apos;valid&apos;)
+G_x = sig.convolve2d(data, np.array([[-1, 0, 1]]), mode='valid')
+G_y = sig.convolve2d(data, np.array([[-1], [0], [1]]), mode='valid')
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -952,7 +990,7 @@ f(x) = x^{\gamma}
 &lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# Gamma Correction
 import cv2
 import numpy as np
-img = cv2.imread(&apos;gamma.jpg&apos;, 0)
+img = cv2.imread('gamma.jpg', 0)
 img2 = np.power(img/float(np.max(img)), 1.5)
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -969,7 +1007,7 @@ g = \sqrt{g_x^2+g_y^2} \
 import numpy as np
 
 # Read image
-img = cv2.imread(&apos;runner.jpg&apos;)
+img = cv2.imread('runner.jpg')
 img = np.float32(img) / 255.0  # 归一化
 
 # x,y gradient
@@ -992,16 +1030,16 @@ mag, angle = cv2.cartToPolar(gx, gy, angleInDegrees=True)
 &lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# HOG
 from skimage import feature, exposure
 import cv2
-image = cv2.imread(&apos;/home/zxd/Pictures/Selection_018.jpg&apos;)
+image = cv2.imread('/home/zxd/Pictures/Selection_018.jpg')
 fd, hog_image = feature.hog(image, orientations=9, pixels_per_cell=(16, 16),
                     cells_per_block=(2, 2), visualize=True)
 
 # Rescale histogram for better display
 hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
 
-cv2.imshow(&apos;img&apos;, image)
-cv2.imshow(&apos;hog&apos;, hog_image_rescaled)
-cv2.waitKey(0)==ord(&apos;q&apos;)
+cv2.imshow('img', image)
+cv2.imshow('hog', hog_image_rescaled)
+cv2.waitKey(0)==ord('q')
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;image-segmentation-felzenszwalbs-algorithm&quot;&gt;Image Segmentation (Felzenszwalb’s Algorithm)&lt;/h2&gt;
@@ -1017,104 +1055,4 @@ cv2.waitKey(0)==ord(&apos;q&apos;)
   &lt;li&gt;
     &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry><entry><title type="html">NLP Lecture 05: Introduction to Syntax and Formal Languages</title><link href="http://localhost:4000/studylog/NLP_lecture05.html" rel="alternate" type="text/html" title="NLP Lecture 05: Introduction to Syntax and Formal Languages" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/NLP_lecture05</id><content type="html" xml:base="http://localhost:4000/studylog/NLP_lecture05.html">&lt;p&gt;Keywords: Introduction to Syntax and Formal Languages.&lt;/p&gt;
-
-&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
-&lt;h3 id=&quot;syntax-as-an-interface&quot;&gt;Syntax as an Interface&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Syntax can be seen as the interface between morphology (structure of words) and semantics.&lt;/li&gt;
-  &lt;li&gt;Can judge if a sentence is grammatical or not, even if it doesn’t make sense semantically.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;key-concepts-of-syntax&quot;&gt;Key Concepts of Syntax&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Constituency and Recursion.&lt;/li&gt;
-  &lt;li&gt;Dependency.&lt;/li&gt;
-  &lt;li&gt;Grammatical Relations.&lt;/li&gt;
-  &lt;li&gt;Subcategorization.&lt;/li&gt;
-  &lt;li&gt;Long-distance dependencies&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;constituents&quot;&gt;Constituents&lt;/h2&gt;
-&lt;p&gt;A constituent is a group of words that behave as a single unit (within a hierarchical structure).&lt;/p&gt;
-
-&lt;h3 id=&quot;constituency&quot;&gt;Constituency&lt;/h3&gt;
-&lt;p&gt;There is a great number of constituency tests. They typically involve moving constituents around or replacing them.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Topicalization&lt;/li&gt;
-  &lt;li&gt;Pro-form Substitution&lt;/li&gt;
-  &lt;li&gt;Wh-question test.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;constituent-labels&quot;&gt;Constituent Labels&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Choose constituents so each one has one non-bracketed word: the head.&lt;/li&gt;
-  &lt;li&gt;Category of Constituent: XP, where X is the part-of-speech of the head: NP, VP, AdjP, AdvP, DetP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recursion-in-language&quot;&gt;Recursion in Language&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;One of the most important attributes of Natural Languages is that they are recursive.&lt;/li&gt;
-  &lt;li&gt;There are infinitely many sentences in a language, but in predictable structures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;context-free-grammars-cfg&quot;&gt;Context Free Grammars (CFG)&lt;/h2&gt;
-&lt;p&gt;A context free grammar is defined by:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow \beta\), where \(A \in N\) and \(\beta \in (\Sigma \cup N)^*\), i.e. \(\beta\) is a string of terminals and non-terminals.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;language-of-a-cfg&quot;&gt;Language of a CFG&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given a CFG \(G=(N, \Sigma,R,S)\):
-    &lt;ul&gt;
-      &lt;li&gt;Given a string \(\alpha A \gamma\), where \(A \in N\), we can derive \(\alpha \beta \gamma\) if there is a production \(A \rightarrow \beta \in R\).&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a single step.&lt;/li&gt;
-      &lt;li&gt;\(\alpha \implies \beta^*\) means that \(G\) can derive \(\beta\) from \(\alpha\) in a finite number of steps.&lt;/li&gt;
-      &lt;li&gt;The language of G is defined as the set of all terminal strings that can be derived from the start symbol.&lt;/li&gt;
-      &lt;li&gt;
-\[L(G) = \{\beta \in \Sigma ^*, s.t. S\implies ^* \beta\}\]
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;derivations-and-derived-strings&quot;&gt;Derivations and Derived Strings&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;CFG is a string rewriting formalism, so the derived objects are strings.&lt;/li&gt;
-  &lt;li&gt;A derivation is a sequence of rewriting steps.&lt;/li&gt;
-  &lt;li&gt;CFGs are context free: applicability of a rule depends only on the nonterminal symbol, not on its context.&lt;/li&gt;
-  &lt;li&gt;Therefore, the order in which multiple non-terminals in a partially derived string are replaced does not matter. We can represent identical derivations in a derivation tree.&lt;/li&gt;
-  &lt;li&gt;The derivation tree implies a parse tree.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;regular-grammars&quot;&gt;Regular Grammars&lt;/h2&gt;
-&lt;p&gt;A regular grammar is defined by:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set of &lt;strong&gt;terminal symbols&lt;/strong&gt; \(\Sigma\).&lt;/li&gt;
-  &lt;li&gt;Set of &lt;strong&gt;non-terminal symbols&lt;/strong&gt; \(N\).&lt;/li&gt;
-  &lt;li&gt;A &lt;strong&gt;start symbol&lt;/strong&gt; \(S \in N\).&lt;/li&gt;
-  &lt;li&gt;Set \(R\) of &lt;strong&gt;productions&lt;/strong&gt; of the form \(A \rightarrow aB\) or \(A \rightarrow a\), where \(A,B \in N\) and \(a \in \Sigma\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;finite-state-automata&quot;&gt;Finite State Automata&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Regular grammars can be implemented as finite state automata.&lt;/li&gt;
-  &lt;li&gt;The set of all regular languages is strictly smaller than the set of context-free languages.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;center-embeddings&quot;&gt;Center Embeddings&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Problem: Regular grammars cannot capture long-distance dependencies.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;formal-grammar-and-parsing&quot;&gt;Formal Grammar and Parsing&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Formal Grammars are used in linguistics, NLP, programming languages.&lt;/li&gt;
-  &lt;li&gt;We want to build a compact model that describes a complete language.&lt;/li&gt;
-  &lt;li&gt;Need efficient algorithms to determine if a sentence is in the language or not (recognition problem).&lt;/li&gt;
-  &lt;li&gt;We also want to recover the structure imposed by the grammar (parsing problem).&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="nlp" /><summary type="html">Keywords: Introduction to Syntax and Formal Languages.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry></feed>
