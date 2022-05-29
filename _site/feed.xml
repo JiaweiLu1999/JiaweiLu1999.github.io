@@ -1,5 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-25T23:21:51-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #6: Concept - Re-identification</title><link href="http://localhost:4000/studylog/concept_reid.html" rel="alternate" type="text/html" title="[ZK Lab] #6: Concept - Re-identification" /><published>2022-05-25T00:00:00-04:00</published><updated>2022-05-25T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_reid</id><content type="html" xml:base="http://localhost:4000/studylog/concept_reid.html">&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-28T21:49:59-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Chapter 1: Computer Networks and the Internet</title><link href="http://localhost:4000/studylog/cn_1.html" rel="alternate" type="text/html" title="Chapter 1: Computer Networks and the Internet" /><published>2022-05-28T00:00:00-04:00</published><updated>2022-05-28T00:00:00-04:00</updated><id>http://localhost:4000/studylog/cn_1</id><content type="html" xml:base="http://localhost:4000/studylog/cn_1.html">&lt;p&gt;Done:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.1 What Is the Internet?
+    &lt;ul&gt;
+      &lt;li&gt;1.1.1 A Nuts-and-Bolts Description&lt;/li&gt;
+      &lt;li&gt;1.1.2 A Services Description&lt;/li&gt;
+      &lt;li&gt;1.1.3 What Is a Protocol?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1.2 The Network Edge
+    &lt;ul&gt;
+      &lt;li&gt;1.2.1 Access Networks&lt;/li&gt;
+      &lt;li&gt;1.2.2 Physical Media&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1.3 The Network Core
+    &lt;ul&gt;
+      &lt;li&gt;1.3.1 Packet Switching&lt;/li&gt;
+      &lt;li&gt;1.3.2 Circuit Switching&lt;/li&gt;
+      &lt;li&gt;1.3.3 A Network of Networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TODO:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.4 Delay, Loss, and Throughput in Packet-Switched Networks
+    &lt;ul&gt;
+      &lt;li&gt;1.4.1 Overview of Delay in Packet-Switched Networks&lt;/li&gt;
+      &lt;li&gt;1.4.2 Queuing Delay and Packet Loss&lt;/li&gt;
+      &lt;li&gt;1.4.3 End-to-End Delay&lt;/li&gt;
+      &lt;li&gt;1.4.4 Throughput in Computer Networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1.5 Protocol Layers and Their Service Models
+    &lt;ul&gt;
+      &lt;li&gt;1.5.1 Layered Architecture&lt;/li&gt;
+      &lt;li&gt;1.5.2 Encapsulation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1.6 Networks Under Attack&lt;/li&gt;
+  &lt;li&gt;1.7 History of Computer Networking and the Internet
+    &lt;ul&gt;
+      &lt;li&gt;1.7.1 The Development of Packet Switching: 1961–1972&lt;/li&gt;
+      &lt;li&gt;1.7.2 Proprietary Networks and Internetworking: 1972–1980&lt;/li&gt;
+      &lt;li&gt;1.7.3 A Proliferation of Networks: 1980–1990&lt;/li&gt;
+      &lt;li&gt;1.7.4 The Internet Explosion: The 1990s&lt;/li&gt;
+      &lt;li&gt;1.7.5 The New Millennium&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1.8 Summary&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cn" /><summary type="html">Done: 1.1 What Is the Internet? 1.1.1 A Nuts-and-Bolts Description 1.1.2 A Services Description 1.1.3 What Is a Protocol? 1.2 The Network Edge 1.2.1 Access Networks 1.2.2 Physical Media 1.3 The Network Core 1.3.1 Packet Switching 1.3.2 Circuit Switching 1.3.3 A Network of Networks</summary></entry><entry><title type="html">[ZK Lab] #6: Concept - Re-identification</title><link href="http://localhost:4000/studylog/concept_reid.html" rel="alternate" type="text/html" title="[ZK Lab] #6: Concept - Re-identification" /><published>2022-05-25T00:00:00-04:00</published><updated>2022-05-25T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_reid</id><content type="html" xml:base="http://localhost:4000/studylog/concept_reid.html">&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
 &lt;p&gt;Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.&lt;/p&gt;
 
 &lt;h2 id=&quot;previous-work&quot;&gt;Previous Work&lt;/h2&gt;
@@ -935,124 +986,4 @@ s.t. \(\delta^i \in{0,1}^K\) and \(||\delta^i||_1 = 1 \ \forall_i\)&lt;/p&gt;
   &lt;li&gt;E Step: Fill in missing variables and estimate latent variables&lt;/li&gt;
   &lt;li&gt;M Step: Fit the model (with back-propagation in this case)&lt;/li&gt;
   &lt;li&gt;Repeat&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry><entry><title type="html">Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS</title><link href="http://localhost:4000/studylog/ODDP1.html" rel="alternate" type="text/html" title="Object Detection for Dummies Part 1: Gradient Vector, HOG, and SS" /><published>2022-02-09T00:00:00-05:00</published><updated>2022-02-09T00:00:00-05:00</updated><id>http://localhost:4000/studylog/ODDP1</id><content type="html" xml:base="http://localhost:4000/studylog/ODDP1.html">&lt;p&gt;Jan 28, 2021.
-The raw blog &lt;a href=&quot;https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html&quot;&gt;URL&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;image-gradient-vector&quot;&gt;Image Gradient Vector&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Derivative
-    &lt;ul&gt;
-      &lt;li&gt;Scalar&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Directional Derivative
-    &lt;ul&gt;
-      &lt;li&gt;Scalar&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gradient
-    &lt;ul&gt;
-      &lt;li&gt;Vector
-        &lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;import numpy as np
-import scipy.signal as sig
-data = np.array([[0, 105, 0], [40, 255, 90], [0, 55, 0]])
-G_x = sig.convolve2d(data, np.array([[-1, 0, 1]]), mode='valid')
-G_y = sig.convolve2d(data, np.array([[-1], [0], [1]]), mode='valid')
-&lt;/code&gt;&lt;/pre&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Common Image Processing Kernels(&lt;a href=&quot;https://zhuanlan.zhihu.com/p/67197912&quot;&gt;Useful URL&lt;/a&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;Prewitt operator&lt;/li&gt;
-      &lt;li&gt;Sobel operator&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;histogram-of-oriented-gradients-hog&quot;&gt;Histogram of Oriented Gradients (HOG)&lt;/h2&gt;
-&lt;p&gt;Useful &lt;a href=&quot;https://zhuanlan.zhihu.com/p/85829145&quot;&gt;URL&lt;/a&gt; in zhihu.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-hog-works&quot;&gt;How HOG works&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Preprocess the image, including resizing and color normalization.
-    &lt;ul&gt;
-      &lt;li&gt;Gamma Correction&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;\begin{equation}
-f(x) = x^{\gamma}
-\end{equation}&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# Gamma Correction
-import cv2
-import numpy as np
-img = cv2.imread('gamma.jpg', 0)
-img2 = np.power(img/float(np.max(img)), 1.5)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Compute the gradient vector of every pixel, as well as its magnitude and direction&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;\begin{equation}
-g = \sqrt{g_x^2+g_y^2} \ 
-\theta = \arctan \frac{g_y}{g_x}
-\end{equation}&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;import cv2
-import numpy as np
-
-# Read image
-img = cv2.imread('runner.jpg')
-img = np.float32(img) / 255.0  # 归一化
-
-# x,y gradient
-gx = cv2.Sobel(img, cv2.CV_32F, 1, 0, ksize=1)
-gy = cv2.Sobel(img, cv2.CV_32F, 0, 1, ksize=1)
-
-# gradient
-mag, angle = cv2.cartToPolar(gx, gy, angleInDegrees=True)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Divide the image into many 8x8 pixel cells. In each cell, the magnitude values of these 64 cells are binned and cumulatively added into 9 buckets of unsigned direction (no sign, so 0-180 degree rather than 0-360 degree; this is a practical choice based on empirical experiments).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Then we slide a 2x2 cells (thus 16x16 pixels) block across the image. In each block region, 4 histograms of 4 cells are concatenated into one-dimensional vector of 36 values and then normalized to have an unit weight. The final HOG feature vector is the concatenation of all the block vectors. It can be fed into a classifier like SVM for learning object recognition tasks.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-python=&quot;&gt;# HOG
-from skimage import feature, exposure
-import cv2
-image = cv2.imread('/home/zxd/Pictures/Selection_018.jpg')
-fd, hog_image = feature.hog(image, orientations=9, pixels_per_cell=(16, 16),
-                    cells_per_block=(2, 2), visualize=True)
-
-# Rescale histogram for better display
-hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
-
-cv2.imshow('img', image)
-cv2.imshow('hog', hog_image_rescaled)
-cv2.waitKey(0)==ord('q')
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;image-segmentation-felzenszwalbs-algorithm&quot;&gt;Image Segmentation (Felzenszwalb’s Algorithm)&lt;/h2&gt;
-
-&lt;h3 id=&quot;graph-construction&quot;&gt;Graph Construction&lt;/h3&gt;
-
-&lt;p&gt;There are two approaches to constructing a graph out of an image.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Grid Graph: Each pixel is only connected with surrounding neighbours (8 other cells in total). The edge weight is the absolute difference between the intensity values of the pixels.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nearest Neighbor Graph: Each pixel is a point in the feature space (x, y, r, g, b), in which (x, y) is the pixel location and (r, g, b) is the color values in RGB. The weight is the Euclidean distance between two pixels’ feature vectors.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Jan 28, 2021. The raw blog URL.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry></feed>
