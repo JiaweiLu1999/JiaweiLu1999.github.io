@@ -1,5 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-05-28T22:06:32-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Chapter 1: Computer Networks and the Internet</title><link href="http://localhost:4000/studylog/cn_1.html" rel="alternate" type="text/html" title="Chapter 1: Computer Networks and the Internet" /><published>2022-05-28T00:00:00-04:00</published><updated>2022-05-28T00:00:00-04:00</updated><id>http://localhost:4000/studylog/cn_1</id><content type="html" xml:base="http://localhost:4000/studylog/cn_1.html">&lt;p&gt;Done:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-06-01T23:30:11-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-04:00</published><updated>2022-06-01T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
+  &lt;li&gt;Follow the Instrctions in &lt;a href=&quot;https://docs.google.com/document/d/1EFezfWFGqiPyRJZg4xyv0d0knfPTdvLabWUzX6JuR34/edit#heading=h.9uriig7xeant&quot;&gt;this file&lt;/a&gt; to set up YOLO V4 environment and workflow on GCP.
+    &lt;ul&gt;
+      &lt;li&gt;Personal Vertex AI instance &lt;a href=&quot;https://console.cloud.google.com/vertex-ai/workbench/details/locations/us-central1/runtimes/yolov4-pytorch-jl5999?project=ecbm4040-ta&quot;&gt;[Link]&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clone the &lt;a href=&quot;https://github.com/zk2172-columbia/ProjectTrafficIntersection.COSMOS.V2.git&quot;&gt;GitHub repository&lt;/a&gt; related to this project.&lt;/li&gt;
+  &lt;li&gt;Run demo.ipynb.
+    &lt;ul&gt;
+      &lt;li&gt;Screenshots:&lt;/li&gt;
+      &lt;li&gt;&lt;img alt=&quot;Screenshots 1&quot; src=&quot;../../../assets/img/blog/2022-06-01/1.png&quot; width=&quot;400&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img alt=&quot;Screenshots 2&quot; src=&quot;../../../assets/img/blog/2022-06-01/2.png&quot; width=&quot;400&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Update W&amp;amp;B Workspace Log:
+    &lt;ul&gt;
+      &lt;li&gt;Screenshots:&lt;/li&gt;
+      &lt;li&gt;&lt;img alt=&quot;Screenshots 3&quot; src=&quot;../../../assets/img/blog/2022-06-01/3.png&quot; width=&quot;400&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;img alt=&quot;Screenshots 4&quot; src=&quot;../../../assets/img/blog/2022-06-01/4.png&quot; width=&quot;500&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Follow the Instrctions in this file to set up YOLO V4 environment and workflow on GCP. Personal Vertex AI instance [Link]. Clone the GitHub repository related to this project. Run demo.ipynb. Screenshots:</summary></entry><entry><title type="html">Chapter 1: Computer Networks and the Internet</title><link href="http://localhost:4000/studylog/cn_1.html" rel="alternate" type="text/html" title="Chapter 1: Computer Networks and the Internet" /><published>2022-05-28T00:00:00-04:00</published><updated>2022-05-28T00:00:00-04:00</updated><id>http://localhost:4000/studylog/cn_1</id><content type="html" xml:base="http://localhost:4000/studylog/cn_1.html">&lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;1.1 What Is the Internet?
     &lt;ul&gt;
@@ -929,80 +950,4 @@ where both \(\mathbf{v}_a\) and \(\mathbf{W}_a\) are weight matrices to be learn
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;[1] Lil’Log: Attention? Attention! (&lt;a href=&quot;https://lilianweng.github.io/posts/2018-06-24-attention/#definition&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;[2] Zhihu BLOG (&lt;a href=&quot;https://zhuanlan.zhihu.com/p/91839581&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Encoder-Decoder in NLP</summary></entry><entry><title type="html">CV II Lecture 06</title><link href="http://localhost:4000/studylog/CV_lecture06.html" rel="alternate" type="text/html" title="CV II Lecture 06" /><published>2022-03-04T00:00:00-05:00</published><updated>2022-03-04T00:00:00-05:00</updated><id>http://localhost:4000/studylog/CV_lecture06</id><content type="html" xml:base="http://localhost:4000/studylog/CV_lecture06.html">&lt;h2 id=&quot;behavior-continuum&quot;&gt;Behavior Continuum&lt;/h2&gt;
-
-&lt;h2 id=&quot;representing-video&quot;&gt;Representing Video&lt;/h2&gt;
-
-&lt;h2 id=&quot;3d-convolutional-networks&quot;&gt;3D convolutional Networks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;2D convolutions vs. 3D convolutions&lt;/li&gt;
-  &lt;li&gt;3D filters at the first layer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2-stream-network&quot;&gt;2-Stream Network&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spatial Stream ConvNet&lt;/li&gt;
-  &lt;li&gt;Tenporal Stream ConvNet&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recurrent-neural-network&quot;&gt;Recurrent Neural Network&lt;/h2&gt;
-
-&lt;h3 id=&quot;forward-function&quot;&gt;forward function&lt;/h3&gt;
-
-&lt;p&gt;\begin{equation}
-h_i = f(w_{hx}^T x_i + w_{hh}^Th_{i-1})
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-y_i = f(w_{yh}^T h_i)
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;vanishingexploding-gradient&quot;&gt;Vanishing/Exploding Gradient&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Forward pass:
-  \begin{equation}
-  z_i = f(w_x^T x_i + w^T z_{i-1})
-  \end{equation}&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Gradients:
-  \begin{equation}
-  \frac{dL}{dw} = \frac{dL}{dz_{i+1}} \frac{dz_{i+1}}{dz_i} \frac{z_i}{dw}
-  \end{equation}&lt;/p&gt;
-
-    &lt;p&gt;\begin{equation}
-  \frac{dL}{dw} = \frac{dL}{dz_T} (\prod_{j=i}^{T-1}\frac{dz_{j+1}}{dz_j}) \frac{dz_i}{dw}
-  \end{equation}&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;long-short-term-memory-lstm&quot;&gt;Long Short-Term Memory (LSTM)&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;colah’s blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;future-generation&quot;&gt;Future Generation&lt;/h2&gt;
-&lt;p&gt;\begin{equation}
-x_t \rightarrow f(x_t; w) \rightarrow x_{t+1}
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;minimize-euclidean-distance&quot;&gt;Minimize Euclidean distance:&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-\min_w \sum_i || f(x_t^i;w) - x_{t+1}^i||_2^2
-\end{equation}&lt;/p&gt;
-
-&lt;h3 id=&quot;train&quot;&gt;Train&lt;/h3&gt;
-&lt;p&gt;\begin{equation}
-\min_f \sum_i ||f(x_t^i) - g(x_{t+1}^i)||_2^2
-\end{equation}&lt;/p&gt;
-
-&lt;p&gt;\begin{equation}
-\min_{f,\delta} \sum_i \sum_k^K \delta_k^i \cdot ||f_k(x_t^i) - g(x_{t+1}^i)||_2^2
-\end{equation}
-s.t. \(\delta^i \in{0,1}^K\) and \(||\delta^i||_1 = 1 \ \forall_i\)&lt;/p&gt;
-
-&lt;h3 id=&quot;expectation-maximization&quot;&gt;Expectation-Maximization&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;E Step: Fill in missing variables and estimate latent variables&lt;/li&gt;
-  &lt;li&gt;M Step: Fit the model (with back-propagation in this case)&lt;/li&gt;
-  &lt;li&gt;Repeat&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cv" /><summary type="html">Behavior Continuum</summary></entry></feed>
+&lt;p&gt;[2] Zhihu BLOG (&lt;a href=&quot;https://zhuanlan.zhihu.com/p/91839581&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Encoder-Decoder in NLP</summary></entry></feed>
