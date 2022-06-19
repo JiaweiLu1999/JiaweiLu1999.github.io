@@ -49,7 +49,7 @@ education:
     studyType: "Master"
     startDate: "2021-09-07"
     endDate: "2022-12-23 (Expected)"
-    gpa: "3.75/4.00"
+    gpa: "3.80/4.00"
     courses:
       - "COMS4732 - Computer Vision II: Learning"
       - "EECS6691 - Advanced Deep Learning"
