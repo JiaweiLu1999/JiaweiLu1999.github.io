@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2022-06-28T23:46:06-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I'm Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-04:00</published><updated>2022-06-01T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-13T22:49:14-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Dec 2023</title><link href="http://localhost:4000/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>http://localhost:4000/studylog/diary</id><content type="html" xml:base="http://localhost:4000/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
+&lt;p&gt;Done:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Review &lt;a href=&quot;https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf&quot;&gt;AlexNet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Review &lt;a href=&quot;https://arxiv.org/pdf/1512.03385.pdf&quot;&gt;ResNet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Todo:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improve personal website&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Dec 13, 2023 Done: Review AlexNet Review ResNet</summary></entry><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-07:00</published><updated>2022-06-01T00:00:00-07:00</updated><id>http://localhost:4000/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
   &lt;li&gt;Follow the Instrctions in &lt;a href=&quot;https://docs.google.com/document/d/1EFezfWFGqiPyRJZg4xyv0d0knfPTdvLabWUzX6JuR34/edit#heading=h.9uriig7xeant&quot;&gt;this file&lt;/a&gt; to set up YOLO V4 environment and workflow on GCP.
     &lt;ul&gt;
       &lt;li&gt;Personal Vertex AI instance &lt;a href=&quot;https://console.cloud.google.com/vertex-ai/workbench/details/locations/us-central1/runtimes/yolov4-pytorch-jl5999?project=ecbm4040-ta&quot;&gt;[Link]&lt;/a&gt;.&lt;/li&gt;
@@ -20,7 +30,7 @@
       &lt;li&gt;&lt;img alt=&quot;Screenshots 4&quot; src=&quot;../../../assets/img/blog/2022-06-01/4.png&quot; width=&quot;500&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Follow the Instrctions in this file to set up YOLO V4 environment and workflow on GCP. Personal Vertex AI instance [Link]. Clone the GitHub repository related to this project. Run demo.ipynb. Screenshots:</summary></entry><entry><title type="html">Chapter 1: Computer Networks and the Internet</title><link href="http://localhost:4000/studylog/cn_1.html" rel="alternate" type="text/html" title="Chapter 1: Computer Networks and the Internet" /><published>2022-05-28T00:00:00-04:00</published><updated>2022-05-28T00:00:00-04:00</updated><id>http://localhost:4000/studylog/cn_1</id><content type="html" xml:base="http://localhost:4000/studylog/cn_1.html">&lt;p&gt;Done:&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Follow the Instrctions in this file to set up YOLO V4 environment and workflow on GCP. Personal Vertex AI instance [Link]. Clone the GitHub repository related to this project. Run demo.ipynb. Screenshots:</summary></entry><entry><title type="html">Chapter 1: Computer Networks and the Internet</title><link href="http://localhost:4000/studylog/cn_1.html" rel="alternate" type="text/html" title="Chapter 1: Computer Networks and the Internet" /><published>2022-05-28T00:00:00-07:00</published><updated>2022-05-28T00:00:00-07:00</updated><id>http://localhost:4000/studylog/cn_1</id><content type="html" xml:base="http://localhost:4000/studylog/cn_1.html">&lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;1.1 What Is the Internet?
     &lt;ul&gt;
@@ -90,7 +100,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;1.8 Summary&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cn" /><summary type="html">Done: 1.1 What Is the Internet? 1.1.1 A Nuts-and-Bolts Description 1.1.2 A Services Description 1.1.3 What Is a Protocol? A Human Analogy Network Protocols 1.2 The Network Edge 1.2.1 Access Networks Home Access: DSL, Cable, FTTH, Dial-Up, and Satellite Access in the Enterprise (and the Home): Ethernet and WiFi Wide-Area Wireless Access: 3G and LTE 1.2.2 Physical Media Twisted-Pair Copper Wire Coaxial Cable Fiber Optics Terrestrial Radio Channels Satellite Radio Channels 1.3 The Network Core 1.3.1 Packet Switching 1.3.2 Circuit Switching 1.3.3 A Network of Networks</summary></entry><entry><title type="html">[ZK Lab] #6: Concept - Re-identification</title><link href="http://localhost:4000/studylog/concept_reid.html" rel="alternate" type="text/html" title="[ZK Lab] #6: Concept - Re-identification" /><published>2022-05-25T00:00:00-04:00</published><updated>2022-05-25T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_reid</id><content type="html" xml:base="http://localhost:4000/studylog/concept_reid.html">&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="cn" /><summary type="html">Done: 1.1 What Is the Internet? 1.1.1 A Nuts-and-Bolts Description 1.1.2 A Services Description 1.1.3 What Is a Protocol? A Human Analogy Network Protocols 1.2 The Network Edge 1.2.1 Access Networks Home Access: DSL, Cable, FTTH, Dial-Up, and Satellite Access in the Enterprise (and the Home): Ethernet and WiFi Wide-Area Wireless Access: 3G and LTE 1.2.2 Physical Media Twisted-Pair Copper Wire Coaxial Cable Fiber Optics Terrestrial Radio Channels Satellite Radio Channels 1.3 The Network Core 1.3.1 Packet Switching 1.3.2 Circuit Switching 1.3.3 A Network of Networks</summary></entry><entry><title type="html">[ZK Lab] #6: Concept - Re-identification</title><link href="http://localhost:4000/studylog/concept_reid.html" rel="alternate" type="text/html" title="[ZK Lab] #6: Concept - Re-identification" /><published>2022-05-25T00:00:00-07:00</published><updated>2022-05-25T00:00:00-07:00</updated><id>http://localhost:4000/studylog/concept_reid</id><content type="html" xml:base="http://localhost:4000/studylog/concept_reid.html">&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
 &lt;p&gt;Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.&lt;/p&gt;
 
 &lt;h2 id=&quot;previous-work&quot;&gt;Previous Work&lt;/h2&gt;
@@ -128,7 +138,7 @@ not need this token for your local testing environment.&lt;/li&gt;
 
 &lt;h2 id=&quot;attention--vision-transformer&quot;&gt;Attention &amp;amp; Vision Transformer&lt;/h2&gt;
 
-&lt;iframe width=&quot;735&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/YAgjfMR9R_M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Definition Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.</summary></entry><entry><title type="html">[ZK Lab] #5: Tool - Prior Projects</title><link href="http://localhost:4000/studylog/tool_prior_work.html" rel="alternate" type="text/html" title="[ZK Lab] #5: Tool - Prior Projects" /><published>2022-05-22T00:00:00-04:00</published><updated>2022-05-22T00:00:00-04:00</updated><id>http://localhost:4000/studylog/tool_prior_work</id><content type="html" xml:base="http://localhost:4000/studylog/tool_prior_work.html">&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
+&lt;iframe width=&quot;735&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/YAgjfMR9R_M&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Definition Person re-identification (Re-ID) aims at retrieving a person of interest across multiple non-overlapping cameras.</summary></entry><entry><title type="html">[ZK Lab] #5: Tool - Prior Projects</title><link href="http://localhost:4000/studylog/tool_prior_work.html" rel="alternate" type="text/html" title="[ZK Lab] #5: Tool - Prior Projects" /><published>2022-05-22T00:00:00-07:00</published><updated>2022-05-22T00:00:00-07:00</updated><id>http://localhost:4000/studylog/tool_prior_work</id><content type="html" xml:base="http://localhost:4000/studylog/tool_prior_work.html">&lt;h2 id=&quot;outline&quot;&gt;Outline&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#2022-spring&quot;&gt;2022 Spring&lt;/a&gt;
     &lt;ul&gt;
@@ -470,7 +480,7 @@ not need this token for your local testing environment.&lt;/li&gt;
 
 &lt;p&gt;[25] &lt;a href=&quot;https://docs.google.com/document/d/1kQxKhYx2DeSAZT6LpTT87QXxGOltnPinwvH_44qE9KA&quot;&gt;Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[26] &lt;a href=&quot;https://docs.google.com/document/d/1GYK7ALfPJ3hdZoWXaljmG52uqOjUwkGP3SP7jm-ulbg&quot;&gt;COSMOS Traffic Intersection Research Final report&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Outline 2022 Spring Re-identification Based on Direct Linear Transform Unsupervised re-identification in intersections 2021 Fall Face and License Plate Blurring in Street Level Intersection Videos Data Augmentation with Causal Inference to Improve Small Object Detection 2-Stage (2D and 3D) Approach for Small Pedestrian Detection 2021 Summer Using Data Augmentation to Improve Pedestrian Detection Efficient Det: Comparative Study Software engineering support for RTSP streaming Deepstream pipeline COSMOS Vehicle Counting Stage Report 2021 Spring Using Data Augmentation to Improve Pedestrian Detection Face and License Plate Blurring for COSMOS Traffic Intersection 2020 Fall Multi-Resolution and Density Study for Object Detection using YOLOv4 Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study 2020 Summer Profiling and Deploying Mask R-CNN with TensorRT and Deepstream Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4 Object Detection with Temporal Information 2020 Summer Report: Tracking Data Management using DVC (Data Version Control) 2020 Summer Report: Tracking with FairMOT DeepStream Deployment and Custom SSD Object Detection Model Research Report on Data Management Using DVC (Data Version Control) Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections COSMOS Traffic Intersection Research Final report</summary></entry><entry><title type="html">[ZK Lab] #4: Concept - Validation</title><link href="http://localhost:4000/studylog/concept_validation.html" rel="alternate" type="text/html" title="[ZK Lab] #4: Concept - Validation" /><published>2022-05-21T00:00:00-04:00</published><updated>2022-05-21T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_validation</id><content type="html" xml:base="http://localhost:4000/studylog/concept_validation.html">&lt;h2 id=&quot;validation-dataset&quot;&gt;Validation Dataset&lt;/h2&gt;
+&lt;p&gt;[26] &lt;a href=&quot;https://docs.google.com/document/d/1GYK7ALfPJ3hdZoWXaljmG52uqOjUwkGP3SP7jm-ulbg&quot;&gt;COSMOS Traffic Intersection Research Final report&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Outline 2022 Spring Re-identification Based on Direct Linear Transform Unsupervised re-identification in intersections 2021 Fall Face and License Plate Blurring in Street Level Intersection Videos Data Augmentation with Causal Inference to Improve Small Object Detection 2-Stage (2D and 3D) Approach for Small Pedestrian Detection 2021 Summer Using Data Augmentation to Improve Pedestrian Detection Efficient Det: Comparative Study Software engineering support for RTSP streaming Deepstream pipeline COSMOS Vehicle Counting Stage Report 2021 Spring Using Data Augmentation to Improve Pedestrian Detection Face and License Plate Blurring for COSMOS Traffic Intersection 2020 Fall Multi-Resolution and Density Study for Object Detection using YOLOv4 Injection of EfficientDet model into Object Detection Pipeline and setting VPN to connect any device to the COSMOS server Research about SSD-832 Adjustment, Non-Maximum Suppression and TensorRT Conversion Research about bounding box transformation 832 for Multi-camera-fusion , Resolution Study and Density Study 2020 Summer Profiling and Deploying Mask R-CNN with TensorRT and Deepstream Research about bounding box transformation for multiple cameras fusion, Robust PCA implementation and cropping images for YOLOv4 Object Detection with Temporal Information 2020 Summer Report: Tracking Data Management using DVC (Data Version Control) 2020 Summer Report: Tracking with FairMOT DeepStream Deployment and Custom SSD Object Detection Model Research Report on Data Management Using DVC (Data Version Control) Single Shot Multibox Detector (SSD) Implementation for Traffic Intersection Summer 2020 Report: Measurements for Object Detection and Tracking for COSMOS Smart Intersections COSMOS Traffic Intersection Research Final report</summary></entry><entry><title type="html">[ZK Lab] #4: Concept - Validation</title><link href="http://localhost:4000/studylog/concept_validation.html" rel="alternate" type="text/html" title="[ZK Lab] #4: Concept - Validation" /><published>2022-05-21T00:00:00-07:00</published><updated>2022-05-21T00:00:00-07:00</updated><id>http://localhost:4000/studylog/concept_validation</id><content type="html" xml:base="http://localhost:4000/studylog/concept_validation.html">&lt;h2 id=&quot;validation-dataset&quot;&gt;Validation Dataset&lt;/h2&gt;
 
 &lt;p&gt;A validation data set is a data-set of examples used to tune the hyperparameters (i.e. the architecture) of a classifier. It is sometimes also called the development set or the “dev set”. An example of a hyperparameter for artificial neural networks includes the number of hidden units in each layer. It, as well as the testing set (as mentioned below), should follow the same probability distribution as the training data set.&lt;/p&gt;
 
@@ -521,67 +531,7 @@ not need this token for your local testing environment.&lt;/li&gt;
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;[1] &lt;a href=&quot;https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets&quot;&gt;Wikipedia: Training, validation, and test data sets&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[2] &lt;a href=&quot;https://machinelearningmastery.com/k-fold-cross-validation/&quot;&gt;A Gentle Introduction to k-fold Cross-Validation&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Validation Dataset</summary></entry><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
-&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
-
-&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
-&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
-
-&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;models&lt;/li&gt;
-  &lt;li&gt;datasets&lt;/li&gt;
-  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;versioning&lt;/li&gt;
-  &lt;li&gt;commit history and diffs&lt;/li&gt;
-  &lt;li&gt;branches&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
-  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
-  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
-  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
-&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
-
-&lt;p&gt;Some examples:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
-&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
-
-&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
-
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
-
-&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-04:00</published><updated>2022-05-20T00:00:00-04:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href=&quot;https://machinelearningmastery.com/k-fold-cross-validation/&quot;&gt;A Gentle Introduction to k-fold Cross-Validation&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Validation Dataset</summary></entry><entry><title type="html">[ZK Lab] #3: Platform - Weights &amp;amp; Biases</title><link href="http://localhost:4000/studylog/platform_weights_and_biases.html" rel="alternate" type="text/html" title="[ZK Lab] #3: Platform - Weights &amp;amp; Biases" /><published>2022-05-20T00:00:00-07:00</published><updated>2022-05-20T00:00:00-07:00</updated><id>http://localhost:4000/studylog/platform_weights_and_biases</id><content type="html" xml:base="http://localhost:4000/studylog/platform_weights_and_biases.html">&lt;p&gt;Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.&lt;/p&gt;
 
 &lt;p&gt;Use W&amp;amp;B’s lightweight, interoperable tools to&lt;/p&gt;
 &lt;ul&gt;
@@ -677,7 +627,67 @@ not need this token for your local testing environment.&lt;/li&gt;
   &lt;li&gt;Model Lineage Tracking &amp;amp; Reproducibility: Track the exact code, hyperparameters, &amp;amp; training dataset used to produce the model.&lt;/li&gt;
   &lt;li&gt;Model Lifecycle: Promote promising models to positions like “staging” or “production” - allowing downstream users to fetch the best model automatically.
 Model Reporting: Create a Report dashboard to summarize model progression and performance over time&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-04:00</published><updated>2022-05-19T00:00:00-04:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Weights &amp;amp; Biases is the machine learning platform for developers to build better models faster.</summary></entry><entry><title type="html">[ZK Lab] #2: Platform - Hugging Face</title><link href="http://localhost:4000/studylog/platform_hugging_face.html" rel="alternate" type="text/html" title="[ZK Lab] #2: Platform - Hugging Face" /><published>2022-05-20T00:00:00-07:00</published><updated>2022-05-20T00:00:00-07:00</updated><id>http://localhost:4000/studylog/platform_hugging_face</id><content type="html" xml:base="http://localhost:4000/studylog/platform_hugging_face.html">&lt;h2 id=&quot;hugging-face&quot;&gt;&lt;a href=&quot;https://huggingface.co/&quot;&gt;Hugging Face&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;goal&quot;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Hugging Face Hub is building the largest collection of models, datasets and metrics in order to democratize and advance AI for everyone.&lt;/p&gt;
+
+&lt;h3 id=&quot;repository&quot;&gt;Repository&lt;/h3&gt;
+&lt;p&gt;The Hugging Face Hub hosts Git-based repositories which are storage spaces that can contain all your files.&lt;/p&gt;
+
+&lt;p&gt;The Hub currently hosts three different repo types:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;models&lt;/li&gt;
+  &lt;li&gt;datasets&lt;/li&gt;
+  &lt;li&gt;Spaces, which are ML demo apps&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These repositories have multiple advantages over other hosting solutions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;versioning&lt;/li&gt;
+  &lt;li&gt;commit history and diffs&lt;/li&gt;
+  &lt;li&gt;branches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On top of that, Hugging Face Hub repositories have many other advantages, for instance for models:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Model repos provide useful metadata about their tasks, languages, metrics, etc.&lt;/li&gt;
+  &lt;li&gt;Anyone can play with the model directly in the browser!&lt;/li&gt;
+  &lt;li&gt;Training metrics charts are displayed if the repository contains TensorBoard traces.&lt;/li&gt;
+  &lt;li&gt;An API is provided to use the models in production settings.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/docs/hub/libraries&quot;&gt;Over 10 frameworks&lt;/a&gt; such as Transformers, Asteroid and ESPnet support using models from the Hugging Face Hub.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;widget&quot;&gt;widget&lt;/h3&gt;
+&lt;p&gt;Many model repos have a widget that allows anyone to do inference directly in the browser.&lt;/p&gt;
+
+&lt;p&gt;Some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/spacy/en_core_web_sm?text=My+name+is+Sarah+and+I+live+in+London&quot;&gt;Named Entity Recognition&lt;/a&gt; using spaCy[https://spacy.io/].&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/google/vit-base-patch16-224&quot;&gt;Image Classification&lt;/a&gt; using &lt;a href=&quot;https://github.com/huggingface/transformers&quot;&gt;Transformers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/julien-c/ljspeech_tts_train_tacotron2_raw_phn_tacotron_g2p_en_no_space_train&quot;&gt;Text to Speech&lt;/a&gt; using &lt;a href=&quot;https://github.com/espnet/espnet&quot;&gt;ESPnet&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://huggingface.co/osanseviero/full-sentence-distillroberta3&quot;&gt;Sentence Similarity&lt;/a&gt; using &lt;a href=&quot;https://github.com/UKPLab/sentence-transformers&quot;&gt;Sentence Transformers&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can try out all the widgets &lt;a href=&quot;https://huggingface-widgets.netlify.app/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;inference-api&quot;&gt;Inference API&lt;/h3&gt;
+&lt;p&gt;The Inference API allows you to send HTTP requests to models in the Hugging Face Hub. The Inference API is 2x to 10x faster than the widgets.&lt;/p&gt;
+
+&lt;h3 id=&quot;explore-hugging-face-hub&quot;&gt;Explore Hugging Face Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/XvSGPZFEjDY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;models-type-of-inference-api-and-widget&quot;&gt;Model’s Type of Inference API and Widget&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline_tag&lt;/code&gt;: determine which pipeline and widget to display&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt;: transformers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loadpush-fromto-the-hub&quot;&gt;Load/Push from/to the Hub&lt;/h3&gt;
+
+&lt;iframe width=&quot;735&quot; height=&quot;414&quot; src=&quot;https://www.youtube.com/embed/rkCly_cbMBk&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Hugging Face</summary></entry><entry><title type="html">[ZK Lab] #1: Concept - Data Centric AI</title><link href="http://localhost:4000/studylog/concept_data_centric_AI.html" rel="alternate" type="text/html" title="[ZK Lab] #1: Concept - Data Centric AI" /><published>2022-05-19T00:00:00-07:00</published><updated>2022-05-19T00:00:00-07:00</updated><id>http://localhost:4000/studylog/concept_data_centric_AI</id><content type="html" xml:base="http://localhost:4000/studylog/concept_data_centric_AI.html">&lt;h2 id=&quot;data-centric-ai&quot;&gt;&lt;a href=&quot;https://datacentricai.org/&quot;&gt;Data Centric AI&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 &lt;p&gt;Data-centric AI is the discipline of systematically engineering the data used to build an AI system.&lt;/p&gt;
@@ -753,7 +763,7 @@ Model Reporting: Create a Report dashboard to summarize model progression and pe
       &lt;li&gt;Create and apply stress tests using data.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-04:00</published><updated>2022-04-14T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="http://localhost:4000/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-07:00</published><updated>2022-04-14T00:00:00-07:00</updated><id>http://localhost:4000/studylog/Transformer</id><content type="html" xml:base="http://localhost:4000/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
 
@@ -812,142 +822,4 @@ Model Reporting: Create a Report dashboard to summarize model progression and pe
 
 &lt;p&gt;[2] &lt;a href=&quot;https://jalammar.github.io/illustrated-transformer/&quot;&gt;The Illustrated Transformer&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[3] &lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention Is All You Need&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html"></summary></entry><entry><title type="html">Attention Mechanism</title><link href="http://localhost:4000/studylog/Attention.html" rel="alternate" type="text/html" title="Attention Mechanism" /><published>2022-04-13T00:00:00-04:00</published><updated>2022-04-13T00:00:00-04:00</updated><id>http://localhost:4000/studylog/Attention</id><content type="html" xml:base="http://localhost:4000/studylog/Attention.html">&lt;h2 id=&quot;encoder-decoder-in-nlp&quot;&gt;Encoder-Decoder in NLP&lt;/h2&gt;
-
-&lt;p&gt;Encoder-Decoder This framework is a good illustration of the core ideas of machine learning:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Transforming real-world problems into mathematical problems and solving real-world problems by solving mathematical problems.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Encoder’s role is to “transform real problems into mathematical problems.”&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Decoder’s role is to “solve mathematical problems and transform them into real-world solutions.”&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Regardless of the length of the input and output, the length of the vector in the middle (the output of encoder) is fixed (this is also its drawback, as explained below).&lt;/li&gt;
-  &lt;li&gt;Different encoders and decoders can be selected depending on the task (can be one RNN But usually its variant LSTM Or CRANE).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As long as it conforms to the above framework, it can be collectively referred to as the Encoder-Decoder model. Speaking of the Encoder-Decoder model, a term is often mentioned - Seq2Seq.&lt;/p&gt;
-
-&lt;h3 id=&quot;seq2seq&quot;&gt;Seq2Seq&lt;/h3&gt;
-
-&lt;p&gt;Seq2Seq (short for Sequence-to-sequence), as literally, enters a sequence and outputs another sequence. The most important aspect of this structure is that the length of the input sequence and the output sequence are variable.&lt;/p&gt;
-
-&lt;h3 id=&quot;origin-of-seq2seq&quot;&gt;Origin of Seq2Seq&lt;/h3&gt;
-
-&lt;p&gt;Before the Seq2Seq framework was proposed, deep neural networks achieved very good results in image classification and other issues. In the problem that it is good at solving, the input and output can usually be represented as a fixed-length vector. If the length is slightly changed, the zero-padding operation is used.&lt;/p&gt;
-
-&lt;p&gt;However, many important issues, such as machine translation, speech recognition, automatic dialogue, etc., are expressed in sequence, and their length is not known in advance. Therefore, how to break through the limitations of the previous deep neural network, so that it can adapt to these scenarios, has become a research hotspot since 2013, and the Seq2Seq framework came into being.&lt;/p&gt;
-
-&lt;h3 id=&quot;relationship-between-seq2seq-and-encoder-decoder&quot;&gt;Relationship between “Seq2Seq” and “Encoder-Decoder”&lt;/h3&gt;
-
-&lt;p&gt;Seq2Seq does not specifically refer to specific methods. For the purpose of “input is a sequence, output is also a sequence”, it can be collectively referred to as Seq2Seq model.&lt;/p&gt;
-
-&lt;p&gt;The specific methods used by Seq2Seq are basically in the scope of the Encoder-Decoder model.&lt;/p&gt;
-
-&lt;p&gt;To sum up:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Seq2Seq belongs to the broad category of Encoder-Decoder&lt;/li&gt;
-  &lt;li&gt;Seq2Seq emphasizes the purpose, Encoder-Decoder emphasizes the method&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;defects-of-encoder-decoder&quot;&gt;Defects of Encoder-Decoder&lt;/h3&gt;
-
-&lt;p&gt;When the input information is too long, some information will be lost in the output.&lt;/p&gt;
-
-&lt;p&gt;Attention solves the problem of information loss.&lt;/p&gt;
-
-&lt;h2 id=&quot;principle-of-attention&quot;&gt;Principle of Attention&lt;/h2&gt;
-
-&lt;p&gt;Attention is a technique that mimics cognitive attention. The effect enhances some parts of the input data while diminishing other parts — the thought being that the network should devote more focus to that small but important part of the data. Learning which part of the data is more important than others depends on the context and is trained by gradient descent.&lt;/p&gt;
-
-&lt;p&gt;In a nutshell, attention in deep learning can be broadly interpreted as a vector of importance weights: in order to predict or infer one element, such as a pixel in an image or a word in a sentence, we estimate using the attention vector how strongly it is correlated with (or “attends to” as you may have read in many papers) other elements and take the sum of their values weighted by the attention vector as the approximation of the target.&lt;/p&gt;
-
-&lt;h2 id=&quot;definition-of-attention-mechanism-in-neural-machine-translation&quot;&gt;Definition of Attention Mechanism in Neural Machine Translation&lt;/h2&gt;
-
-&lt;p&gt;Say, we have a source sequence \(\mathbf{x}\) of length \(n\) and try to output a target sequence \(y\) of length \(m\):&lt;/p&gt;
-
-\[\begin{align}
-    \mathbf{x} &amp;amp; = [x_1, x_2, ..., x_n]\\
-    \mathbf{y} &amp;amp; = [y_1, y_2, ..., y_m]
-\end{align}\]
-
-&lt;p&gt;The encoder is a bidirectional RNN (or other recurrent network setting of your choice) with a forward hidden state \(\overrightarrow{\mathbf{h}_i}\) and a backward one \(\overleftarrow{\mathbf{h}_i}\). A simple concatenation of two represents the encoder state. The motivation is to include both the preceding and following words in the annotation of one word.&lt;/p&gt;
-
-\[\mathbf{h}_i = [\overrightarrow{\mathbf{h}_i}^\top; \overleftarrow{\mathbf{h}_i}^\top]^\top, \ i = 1,...,n\]
-
-&lt;p&gt;The decoder network has hidden state \(\mathbf{s}_t = f(\mathbf{s}_{t-1}, y_{t-1}, \mathbf{c}_t)\) for the output word at position \(t\), \(t = 1, ..., m\), where the context vector \(\mathbf{c}_t\) is a sum of hidden states of the input sequence, weighted by alignment scores:&lt;/p&gt;
-
-\[\begin{align}
-    \mathbf{c}_t &amp;amp; = \sum_{i=1}^n \alpha_{t,i} \mathbf{h_i} \\
-    \alpha_{t,i} &amp;amp; = \text{align}(y_t, x_i) \\
-    &amp;amp; = \frac{\exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_i))}{\sum_{i' = 1}^n \exp(\text{score}(\mathbf{s}_{t-1}, \mathbf{h}_{i'}))}
-\end{align}\]
-
-&lt;p&gt;The alignment model assigns a score \(\alpha_{t, i}\) to the pair of input at position \(i\) and output at position \(t\), \((y_t, x_i)\),  based on how well they match. The set of \(\{\alpha_{t, i\}\) are weights defining how much of each source hidden state should be considered for each output. In Bahdanau’s paper, the alignment score \(\alpha\) is parametrized by a &lt;strong&gt;feed-forward network&lt;/strong&gt; with a single hidden layer and this network is jointly trained with other parts of the model. The score function is therefore in the following form, given that tanh is used as the non-linear activation function:&lt;/p&gt;
-
-&lt;p&gt;\(\text{score}(\mathbf{s}_t, \mathbf{h}_i) = \mathbf{v}_a^\top \tanh \left( \mathbf{W}_a \left[ \mathbf{s}_t; \mathbf{h}_i \right] \right)\)
-where both \(\mathbf{v}_a\) and \(\mathbf{W}_a\) are weight matrices to be learned in the alignment model.&lt;/p&gt;
-
-&lt;h2 id=&quot;self-attention&quot;&gt;Self-Attention&lt;/h2&gt;
-&lt;p&gt;Self-attention, also known as intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the same sequence. It has been shown to be very useful in machine reading, abstractive summarization, or image description generation.&lt;/p&gt;
-
-&lt;p&gt;The long short-term memory network paper used self-attention to do machine reading. In the example below, the self-attention mechanism enables us to learn the correlation between the current words and the previous part of the sentence.&lt;/p&gt;
-
-&lt;h2 id=&quot;soft-vs-hard-attention&quot;&gt;Soft vs Hard Attention&lt;/h2&gt;
-&lt;p&gt;In the &lt;a href=&quot;http://proceedings.mlr.press/v37/xuc15.pdf&quot;&gt;show, attend and tell&lt;/a&gt; paper, attention mechanism is applied to images to generate captions. The image is first encoded by a CNN to extract features. Then a LSTM decoder consumes the convolution features to produce descriptive words one by one, where the weights are learned through attention. The visualization of the attention weights clearly demonstrates which regions of the image the model is paying attention to so as to output a certain word.&lt;/p&gt;
-
-&lt;p&gt;This paper first proposed the distinction between “soft” vs “hard” attention, based on whether the attention has access to the entire image or only a patch:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Soft Attention: the alignment weights are learned and placed “softly” over all patches in the source image; essentially the same type of attention as in &lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;Pro: the model is smooth and differentiable.&lt;/li&gt;
-      &lt;li&gt;Con: expensive when the source input is large.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hard Attention: only selects one patch of the image to attend to at a time.
-    &lt;ul&gt;
-      &lt;li&gt;Pro: less calculation at the inference time.&lt;/li&gt;
-      &lt;li&gt;Con: the model is non-differentiable and requires more complicated techniques such as variance reduction or reinforcement learning to train. (&lt;a href=&quot;https://arxiv.org/abs/1508.04025&quot;&gt;Luong, et al., 2015&lt;/a&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;advantage-of-attention-mechanism&quot;&gt;Advantage of Attention mechanism&lt;/h2&gt;
-
-&lt;p&gt;3 main reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Less source&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In comparison, the complexity is smaller and the parameters are less than CNN and RNN based model. Therefore, the requirements for computing power are even smaller.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;High speed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Attention solves the problem that RNN cannot be computed in parallel. Each step of the Attention mechanism calculation does not depend on the calculation results of the previous step, so it can be processed in parallel as CNN.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Good result&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Before the introduction of the Attention mechanism, there was a problem that everyone had been annoyed: long-distance information would be weakened, just like people with weak memory, and the same thing could not be remembered in the past.&lt;/p&gt;
-
-&lt;p&gt;However, Attention can make model focus without losing important information.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;[1] Lil’Log: Attention? Attention! (&lt;a href=&quot;https://lilianweng.github.io/posts/2018-06-24-attention/#definition&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;[2] Zhihu BLOG (&lt;a href=&quot;https://zhuanlan.zhihu.com/p/91839581&quot;&gt;Link&lt;/a&gt;)&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html">Encoder-Decoder in NLP</summary></entry></feed>
+&lt;p&gt;[3] &lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention Is All You Need&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html"></summary></entry></feed>
