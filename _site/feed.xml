@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-16T23:19:14-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-17T23:18:11-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Dec 2023</title><link href="http://localhost:4000/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>http://localhost:4000/studylog/diary</id><content type="html" xml:base="http://localhost:4000/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
 &lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
@@ -34,6 +34,18 @@
 &lt;ul&gt;
   &lt;li&gt;Continue to learn Javascript&lt;/li&gt;
   &lt;li&gt;Leetcode week contest 12/18&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dec-17-2023&quot;&gt;Dec 17, 2023&lt;/h2&gt;
+&lt;p&gt;Done:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start learning C in a structured way (let’s go!)&lt;/li&gt;
+  &lt;li&gt;Review Git commands
+    &lt;ul&gt;
+      &lt;li&gt;remote, merge, fork, pull request related&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dive into the architecture of Walmart Seller Vetting System&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Dec 13, 2023 Done: Review AlexNet Review ResNet</summary></entry><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-07:00</published><updated>2022-06-01T00:00:00-07:00</updated><id>http://localhost:4000/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="http://localhost:4000/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
   &lt;li&gt;Follow the Instrctions in &lt;a href=&quot;https://docs.google.com/document/d/1EFezfWFGqiPyRJZg4xyv0d0knfPTdvLabWUzX6JuR34/edit#heading=h.9uriig7xeant&quot;&gt;this file&lt;/a&gt; to set up YOLO V4 environment and workflow on GCP.
     &lt;ul&gt;
