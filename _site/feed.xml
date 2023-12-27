@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-21T23:29:20-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-26T23:03:36-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Dec 2023</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
 &lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
@@ -123,6 +123,44 @@
     &lt;ul&gt;
       &lt;li&gt;Dive into EDS architecture&lt;/li&gt;
       &lt;li&gt;UT coverage&lt;/li&gt;
+      &lt;li&gt;Review React&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dec-22-2023&quot;&gt;Dec 22, 2023&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Done:
+    &lt;ul&gt;
+      &lt;li&gt;Workday:
+        &lt;ul&gt;
+          &lt;li&gt;Examine service code for UT&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dec-23---25-2023&quot;&gt;Dec 23 - 25, 2023&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Christmas Holiday&lt;/li&gt;
+  &lt;li&gt;Move from Sunnyvale to Santa Clara&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dec-26-2023&quot;&gt;Dec 26, 2023&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Done:
+    &lt;ul&gt;
+      &lt;li&gt;Workday:
+        &lt;ul&gt;
+          &lt;li&gt;Sonar check failed dut to copy &amp;amp; paste code rather than git revert, solved by creating a new branch by merging&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Learn Mockito for SpringBoot Unit Test&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Todo:
+    &lt;ul&gt;
       &lt;li&gt;Review React&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
