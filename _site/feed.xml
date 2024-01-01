@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-29T23:57:40-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-31T22:24:21-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Dec 2023</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
 &lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
@@ -205,7 +205,21 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Dec 13, 2023 Done: Review AlexNet Review ResNet</summary></entry><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-07:00</published><updated>2022-06-01T00:00:00-07:00</updated><id>https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dec-30-2023&quot;&gt;Dec 30, 2023&lt;/h2&gt;
+&lt;p&gt;Feel uncomfortable, rest&lt;/p&gt;
+
+&lt;h2 id=&quot;dec-31-2023&quot;&gt;Dec 31, 2023&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Done:
+    &lt;ul&gt;
+      &lt;li&gt;Review Javascript&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Happy New Year! Go 2024!&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Dec 13, 2023 Done: Review AlexNet Review ResNet</summary></entry><entry><title type="html">[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B</title><link href="https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo.html" rel="alternate" type="text/html" title="[ZK Lab] #7: Tool: Demo of YOLO V4 + W&amp;amp;B" /><published>2022-06-01T00:00:00-07:00</published><updated>2022-06-01T00:00:00-07:00</updated><id>https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/tool_yolov4_wnb_demo.html">&lt;ul&gt;
   &lt;li&gt;Follow the Instrctions in &lt;a href=&quot;https://docs.google.com/document/d/1EFezfWFGqiPyRJZg4xyv0d0knfPTdvLabWUzX6JuR34/edit#heading=h.9uriig7xeant&quot;&gt;this file&lt;/a&gt; to set up YOLO V4 environment and workflow on GCP.
     &lt;ul&gt;
       &lt;li&gt;Personal Vertex AI instance &lt;a href=&quot;https://console.cloud.google.com/vertex-ai/workbench/details/locations/us-central1/runtimes/yolov4-pytorch-jl5999?project=ecbm4040-ta&quot;&gt;[Link]&lt;/a&gt;.&lt;/li&gt;
