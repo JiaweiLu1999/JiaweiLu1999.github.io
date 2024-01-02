@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2023-12-31T22:24:21-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
-</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Dec 2023</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2024-01-01T22:42:04-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+</subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Jan 2024</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Jan 2024" /><published>2024-01-01T00:00:00-08:00</published><updated>2024-01-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;jan-01-2024&quot;&gt;Jan 01, 2024&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Done:
+    &lt;ul&gt;
+      &lt;li&gt;Add userInfo to Main.jsx&lt;/li&gt;
+      &lt;li&gt;Improve UT coverage&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Jan 01, 2024 Done: Add userInfo to Main.jsx Improve UT coverage</summary></entry><entry><title type="html">Dec 2023</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
 &lt;p&gt;Done:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Review &lt;a href=&quot;https://papers.nips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf&quot;&gt;AlexNet&lt;/a&gt;&lt;/li&gt;
@@ -973,63 +981,4 @@ Model Reporting: Create a Report dashboard to summarize model progression and pe
       &lt;li&gt;Create and apply stress tests using data.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry><entry><title type="html">Transformer</title><link href="https://jiaweilu1999.github.io/studylog/Transformer.html" rel="alternate" type="text/html" title="Transformer" /><published>2022-04-14T00:00:00-07:00</published><updated>2022-04-14T00:00:00-07:00</updated><id>https://jiaweilu1999.github.io/studylog/Transformer</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/Transformer.html">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/2022-04-14/1.png&quot; alt=&quot;transformer struct&quot; /&gt;&lt;/p&gt;
-
-&lt;p class=&quot;figcaption&quot;&gt;The full model architecture of the transformer.[3]&lt;/p&gt;
-
-&lt;p&gt;“&lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention is All you Need&lt;/a&gt;” (Vaswani, et al., 2017), without a doubt, is one of the most impactful and interesting paper in 2017. It presented a lot of improvements to the soft attention and make it possible to do seq2seq modeling without recurrent network units. The proposed “transformer” model is entirely built on the self-attention mechanisms without using sequence-aligned recurrent architecture.&lt;/p&gt;
-
-&lt;p&gt;The secret recipe is carried in its model architecture.&lt;/p&gt;
-
-&lt;h2 id=&quot;key-value-and-query&quot;&gt;Key, Value and Query&lt;/h2&gt;
-&lt;p&gt;The major component in the transformer is the unit of multi-head self-attention mechanism. The transformer views the encoded representation of the input as a set of &lt;strong&gt;key-value&lt;/strong&gt; pairs, \((\mathbf{K}, \mathbf{V})\), both of dimension \(n\) (input sequence length); in the context of NMT, both the keys and values are the encoder hidden states. In the decoder, the previous output is compressed into a &lt;strong&gt;query&lt;/strong&gt; (\(\mathbf{Q}\) of dimension \(m\)) and the next output is produced by mapping this query and the set of keys and values.&lt;/p&gt;
-
-&lt;p&gt;The transformer adopts the scaled dot-product attention: the output is a weighted sum of the values, where the weight assigned to each value is determined by the dot-product of the query with all the keys:&lt;/p&gt;
-
-\[\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \text{softmax}\left( \frac{\mathbf{Q}\mathbf{K}^\top}{\sqrt{n}}\right) \mathbf{V}\]
-
-&lt;h2 id=&quot;multi-head-self-attention&quot;&gt;Multi-Head Self-Attention&lt;/h2&gt;
-&lt;p&gt;Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, “multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.”&lt;/p&gt;
-
-\[\begin{align}
-\text{MultiHead}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) &amp;amp; = [\text{head}_1; ...; \text{head}_h]\mathbf{W}^O \\
-\text{where head_i} &amp;amp; = \text{Attention}(\mathbf{QW}_i^Q, \mathbf{KW}_i^K, \mathbf{VW}_i^V)
-\end{align}\]
-
-&lt;p&gt;where \(\mathbf{W}_i^Q\), \(\mathbf{W}_i^K\), \(\mathbf{W}_i^V\) and \(\mathbf{W}_i^O\) are parameter matrices to be learned.&lt;/p&gt;
-
-&lt;h2 id=&quot;encoder&quot;&gt;Encoder&lt;/h2&gt;
-&lt;p&gt;The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A stack of \(N=6\) identical layers.&lt;/li&gt;
-  &lt;li&gt;Each layer has a &lt;strong&gt;multi-head self-attention layer&lt;/strong&gt; and a simple position-wise &lt;strong&gt;fully connected feed-forward network&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Each sub-layer adopts a &lt;strong&gt;residual&lt;/strong&gt; connection and a layer &lt;strong&gt;normalization&lt;/strong&gt;. All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;decoder&quot;&gt;Decoder&lt;/h2&gt;
-&lt;p&gt;The decoder is able to retrieval from the encoded representation.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A stack of N = 6 identical layers&lt;/li&gt;
-  &lt;li&gt;Each layer has two sub-layers of multi-head attention mechanisms and one sub-layer of fully-connected feed-forward network.&lt;/li&gt;
-  &lt;li&gt;Similar to the encoder, each sub-layer adopts a residual connection and a layer normalization.&lt;/li&gt;
-  &lt;li&gt;The first multi-head attention sub-layer is modified to prevent positions from attending to subsequent positions, as we don’t want to look into the future of the target sequence when predicting the current position.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;full-architecture&quot;&gt;Full Architecture&lt;/h2&gt;
-&lt;p&gt;Finally here is the complete view of the transformer’s architecture:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Both the source and target sequences first go through embedding layers to produce data of the same dimension \(d_\text{model} = 512\).&lt;/li&gt;
-  &lt;li&gt;To preserve the position information, a sinusoid-wave-based positional encoding is applied and summed with the embedding output.&lt;/li&gt;
-  &lt;li&gt;A softmax and linear layer are added to the final decoder output.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;p&gt;[1] &lt;a href=&quot;https://lilianweng.github.io/posts/2018-06-24-attention/&quot;&gt;Lil’Log: Attention? Attention!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[2] &lt;a href=&quot;https://jalammar.github.io/illustrated-transformer/&quot;&gt;The Illustrated Transformer&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[3] &lt;a href=&quot;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&quot;&gt;Attention Is All You Need&lt;/a&gt;&lt;/p&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="dl" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="zklab" /><summary type="html">Data Centric AI</summary></entry></feed>
