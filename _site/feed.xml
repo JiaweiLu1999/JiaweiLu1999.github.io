@@ -1,10 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2024-01-01T22:42:04-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh, en"><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://jiaweilu1999.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jiaweilu1999.github.io/" rel="alternate" type="text/html" hreflang="zh, en" /><updated>2024-01-02T20:37:34-08:00</updated><id>https://jiaweilu1999.github.io/feed.xml</id><title type="html">Jiawei Lu</title><subtitle>Hello World!  I&apos;m Jiawei Lu, a Master Student at Columbia University.  My research interest is Computer Vision, Deep Learning and Reinforcement Learning.
 </subtitle><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><entry><title type="html">Jan 2024</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Jan 2024" /><published>2024-01-01T00:00:00-08:00</published><updated>2024-01-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;jan-01-2024&quot;&gt;Jan 01, 2024&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Done:
     &lt;ul&gt;
       &lt;li&gt;Add userInfo to Main.jsx&lt;/li&gt;
       &lt;li&gt;Improve UT coverage&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jan-02-2024&quot;&gt;Jan 02, 2024&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Done:
+    &lt;ul&gt;
+      &lt;li&gt;Improve the unit test coverage&lt;/li&gt;
+      &lt;li&gt;Study electrode&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Jiawei Lu</name><email>jl5999@columbia.edu</email></author><category term="studylog" /><category term="diary" /><summary type="html">Jan 01, 2024 Done: Add userInfo to Main.jsx Improve UT coverage</summary></entry><entry><title type="html">Dec 2023</title><link href="https://jiaweilu1999.github.io/studylog/diary.html" rel="alternate" type="text/html" title="Dec 2023" /><published>2023-12-01T00:00:00-08:00</published><updated>2023-12-01T00:00:00-08:00</updated><id>https://jiaweilu1999.github.io/studylog/diary</id><content type="html" xml:base="https://jiaweilu1999.github.io/studylog/diary.html">&lt;h2 id=&quot;dec-13-2023&quot;&gt;Dec 13, 2023&lt;/h2&gt;
